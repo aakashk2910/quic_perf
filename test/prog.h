@@ -48,7 +48,7 @@ struct prog
     const char                     *prog_keylog_dir;
     /*If true than the code outputs a timemeasurement in machinereadable form*/
     int time_option;
-    struct timespec ts_start, ts_end, ts_result;
+    struct timespec ts_start, ts_end, ts_result, ts_ttbf, ts_total;
     enum {
         PROG_FLAG_COOLDOWN  = 1 << 0,
 #if LSQUIC_PREFERRED_ADDR
