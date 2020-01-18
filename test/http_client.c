@@ -651,6 +651,8 @@ http_client_on_write (lsquic_stream_t *stream, lsquic_stream_ctx_t *st_h)
 {
     ssize_t nw;
 
+    LSQ_INFO("Client write");
+
     if (st_h->sh_flags & HEADERS_SENT)
     {
         if (st_h->client_ctx->payload && test_reader_size(st_h->reader.lsqr_ctx) > 0)
@@ -688,6 +690,8 @@ http_client_on_write (lsquic_stream_t *stream, lsquic_stream_ctx_t *st_h)
 static void
 http_client_on_read (lsquic_stream_t *stream, lsquic_stream_ctx_t *st_h)
 {
+    LSQ_INFO("Client read");
+
     struct http_client_ctx *const client_ctx = st_h->client_ctx;
     struct hset *hset;
     ssize_t nread;
