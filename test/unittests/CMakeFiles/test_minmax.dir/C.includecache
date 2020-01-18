@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/src/liblsquic/lsquic_minmax.c
+stdint.h
+-
+string.h
+-
+lsquic_minmax.h
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/src/liblsquic/lsquic_minmax.h
+
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/src/liblsquic/lsquic_minmax.h
+
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_minmax.c
+assert.h
+-
+stdint.h
+-
+string.h
+-
+lsquic_minmax.h
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/lsquic_minmax.h
+
+src/liblsquic/lsquic_minmax.h
+

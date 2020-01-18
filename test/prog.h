@@ -34,8 +34,8 @@ struct prog
     int                             prog_use_stock_pmi;
     struct event_base              *prog_eb;
     struct event                   *prog_timer,
-                                   *prog_send,
-                                   *prog_usr1;
+            *prog_send,
+            *prog_usr1;
     struct event                   *prog_usr2;
     struct ssl_ctx_st              *prog_ssl_ctx;
     struct lsquic_hash             *prog_certs;
@@ -46,6 +46,9 @@ struct prog
     const char                     *prog_hostname;
     int                             prog_ipver;     /* 0, 4, or 6 */
     const char                     *prog_keylog_dir;
+    /*If true than the code outputs a timemeasurement in machinereadable form*/
+    int time_option;
+    struct timespec ts_start, ts_end, ts_result;
     enum {
         PROG_FLAG_COOLDOWN  = 1 << 0,
 #if LSQUIC_PREFERRED_ADDR
@@ -56,7 +59,7 @@ struct prog
 
 void
 prog_init (struct prog *, unsigned lsquic_engine_flags, struct sport_head *,
-                    const struct lsquic_stream_if *, void *stream_if_ctx);
+           const struct lsquic_stream_if *, void *stream_if_ctx);
 
 #if HAVE_SENDMMSG
 #   define SENDMMSG_FLAG "g"

@@ -31,6 +31,7 @@
 #endif
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <time.h>
 #include <event2/event.h>
 #include <math.h>
 
@@ -66,6 +67,11 @@ static int s_display_cert_chain;
  */
 static int promise_fd = -1;
 
+char response_buf[5000];
+int once = 1;
+int time_option;
+struct timespec ts_start, ts_end, ts_result;
+
 /* Set to true value to use header bypass.  This means that the use code
  * creates header set via callbacks and then fetches it by calling
  * lsquic_stream_get_hset() when the first "on_read" event is called.
@@ -83,8 +89,8 @@ struct sample_stats
 };
 
 static struct sample_stats  s_stat_to_conn,     /* Time to connect */
-                            s_stat_ttfb,
-                            s_stat_req;     /* From TTFB to EOS */
+        s_stat_ttfb,
+        s_stat_req;     /* From TTFB to EOS */
 static unsigned s_stat_conns_ok, s_stat_conns_failed;
 static unsigned long s_stat_downloaded_bytes;
 
@@ -112,7 +118,7 @@ update_sample_stats (struct sample_stats *stats, unsigned long val)
 
 static void
 calc_sample_stats (const struct sample_stats *stats,
-        long double *mean_p, long double *stddev_p)
+                   long double *mean_p, long double *stddev_p)
 {
     unsigned long mean, tmp;
 
@@ -163,7 +169,7 @@ struct path_elem {
 
 struct http_client_ctx {
     TAILQ_HEAD(, lsquic_conn_ctx)
-                                 conn_ctxs;
+    conn_ctxs;
     const char                  *hostname;
     const char                  *method;
     const char                  *payload;
@@ -184,7 +190,7 @@ struct http_client_ctx {
     unsigned                     hcc_n_open_conns;
     unsigned                     hcc_reset_after_nbytes;
     unsigned                     hcc_retire_cid_after_nbytes;
-    
+
     char                        *hcc_zero_rtt_file_name;
 
     enum {
@@ -242,19 +248,19 @@ create_connections (struct http_client_ctx *client_ctx)
     unsigned char zero_rtt[0x2000];
 
     if (0 == (client_ctx->hcc_flags & HCC_SKIP_0RTT)
-                                    && client_ctx->hcc_zero_rtt_file_name)
+        && client_ctx->hcc_zero_rtt_file_name)
     {
         file = fopen(client_ctx->hcc_zero_rtt_file_name, "rb");
         if (!file)
         {
             LSQ_DEBUG("cannot open %s for reading: %s",
-                        client_ctx->hcc_zero_rtt_file_name, strerror(errno));
+                      client_ctx->hcc_zero_rtt_file_name, strerror(errno));
             goto no_file;
         }
         len = fread(zero_rtt, 1, sizeof(zero_rtt), file);
         if (0 == len && !feof(file))
             LSQ_WARN("error reading %s: %s",
-                        client_ctx->hcc_zero_rtt_file_name, strerror(errno));
+                     client_ctx->hcc_zero_rtt_file_name, strerror(errno));
         fclose(file);
         LSQ_INFO("create connection zero_rtt %zu bytes", len);
     }
@@ -275,7 +281,7 @@ static void
 create_streams (struct http_client_ctx *client_ctx, lsquic_conn_ctx_t *conn_h)
 {
     while (conn_h->ch_n_reqs - conn_h->ch_n_cc_streams &&
-            conn_h->ch_n_cc_streams < client_ctx->hcc_cc_reqs_per_conn)
+           conn_h->ch_n_cc_streams < client_ctx->hcc_cc_reqs_per_conn)
     {
         lsquic_conn_make_stream(conn_h->conn);
         conn_h->ch_n_cc_streams++;
@@ -291,7 +297,7 @@ http_client_on_new_conn (void *stream_if_ctx, lsquic_conn_t *conn)
     conn_h->conn = conn;
     conn_h->client_ctx = client_ctx;
     conn_h->ch_n_reqs = MIN(client_ctx->hcc_total_n_reqs,
-                                                client_ctx->hcc_reqs_per_conn);
+                            client_ctx->hcc_reqs_per_conn);
     client_ctx->hcc_total_n_reqs -= conn_h->ch_n_reqs;
     TAILQ_INSERT_TAIL(&client_ctx->conn_ctxs, conn_h, next_ch);
     ++conn_h->client_ctx->hcc_n_open_conns;
@@ -339,7 +345,7 @@ http_client_on_conn_closed (lsquic_conn_t *conn)
 
     status = lsquic_conn_status(conn, errmsg, sizeof(errmsg));
     LSQ_INFO("Connection closed.  Status: %d.  Message: %s", status,
-        errmsg[0] ? errmsg : "<not set>");
+             errmsg[0] ? errmsg : "<not set>");
     if (conn_h->client_ctx->hcc_flags & HCC_ABORT_ON_INCOMPLETE)
     {
         if (!(conn_h->client_ctx->hcc_flags & HCC_SEEN_FIN))
@@ -372,6 +378,19 @@ http_client_on_conn_closed (lsquic_conn_t *conn)
     free(conn_h);
 }
 
+/*from https://gist.github.com/diabloneo/9619917*/
+void timespec_diff(struct timespec *start, struct timespec *stop, struct timespec *result)
+{
+    if ((stop->tv_nsec - start->tv_nsec) < 0) {
+        result->tv_sec = stop->tv_sec - start->tv_sec - 1;
+        result->tv_nsec = stop->tv_nsec - start->tv_nsec + 1000000000;
+    } else {
+        result->tv_sec = stop->tv_sec - start->tv_sec;
+        result->tv_nsec = stop->tv_nsec - start->tv_nsec;
+    }
+
+    return;
+}
 
 static int
 hsk_status_ok (enum lsquic_hsk_status status)
@@ -386,9 +405,16 @@ http_client_on_hsk_done (lsquic_conn_t *conn, enum lsquic_hsk_status status)
     lsquic_conn_ctx_t *conn_h = lsquic_conn_get_ctx(conn);
     struct http_client_ctx *client_ctx = conn_h->client_ctx;
 
+    if(time_option == 1)
+    {
+        timespec_get(&ts_end, TIME_UTC);
+        timespec_diff(&ts_start,&ts_end, &ts_result);
+        number_filled += snprintf(output + number_filled, 500 - number_filled, "%.3lf;", (ts_result.tv_nsec/(double) 1000000));
+    }
+
     if (hsk_status_ok(status))
         LSQ_INFO("handshake success %s",
-                                status == LSQ_HSK_0RTT_OK ? "with 0-RTT" : "");
+                 status == LSQ_HSK_0RTT_OK ? "with 0-RTT" : "");
     else if (status == LSQ_HSK_FAIL)
         LSQ_INFO("handshake failed");
     else if (status == LSQ_HSK_0RTT_FAIL)
@@ -409,7 +435,7 @@ http_client_on_hsk_done (lsquic_conn_t *conn, enum lsquic_hsk_status status)
         conn_h = lsquic_conn_get_ctx(conn);
         ++s_stat_conns_ok;
         update_sample_stats(&s_stat_to_conn,
-                                    lsquic_time_now() - conn_h->ch_created);
+                            lsquic_time_now() - conn_h->ch_created);
         if (TAILQ_EMPTY(&client_ctx->hcc_path_elems))
         {
             LSQ_INFO("no paths mode: close connection");
@@ -423,7 +449,7 @@ http_client_on_hsk_done (lsquic_conn_t *conn, enum lsquic_hsk_status status)
 
 static void
 http_client_on_zero_rtt_info (lsquic_conn_t *conn, const unsigned char *buf,
-                                                                size_t bufsz)
+                              size_t bufsz)
 {
     lsquic_conn_ctx_t *const conn_h = lsquic_conn_get_ctx(conn);
     struct http_client_ctx *const client_ctx = conn_h->client_ctx;
@@ -445,7 +471,7 @@ http_client_on_zero_rtt_info (lsquic_conn_t *conn, const unsigned char *buf,
     if (!file)
     {
         LSQ_WARN("cannot open %s for writing: %s",
-            client_ctx->hcc_zero_rtt_file_name, strerror(errno));
+                 client_ctx->hcc_zero_rtt_file_name, strerror(errno));
         return;
     }
 
@@ -453,12 +479,12 @@ http_client_on_zero_rtt_info (lsquic_conn_t *conn, const unsigned char *buf,
     if (nw == bufsz)
     {
         LSQ_DEBUG("wrote %zd bytes of zero-rtt information to %s",
-            nw, client_ctx->hcc_zero_rtt_file_name);
+                  nw, client_ctx->hcc_zero_rtt_file_name);
         conn_h->ch_flags |= CH_ZERO_RTT_SAVED;
     }
     else
         LSQ_WARN("error: fwrite(%s) returns %zd instead of %zd: %s",
-            client_ctx->hcc_zero_rtt_file_name, nw, bufsz, strerror(errno));
+                 client_ctx->hcc_zero_rtt_file_name, nw, bufsz, strerror(errno));
 
     fclose(file);
 }
@@ -498,14 +524,14 @@ http_client_on_new_stream (void *stream_if_ctx, lsquic_stream_t *stream)
     if (st_h->client_ctx->hcc_cur_pe)
     {
         st_h->client_ctx->hcc_cur_pe = TAILQ_NEXT(
-                                        st_h->client_ctx->hcc_cur_pe, next_pe);
+                st_h->client_ctx->hcc_cur_pe, next_pe);
         if (!st_h->client_ctx->hcc_cur_pe)  /* Wrap around */
             st_h->client_ctx->hcc_cur_pe =
-                                TAILQ_FIRST(&st_h->client_ctx->hcc_path_elems);
+                    TAILQ_FIRST(&st_h->client_ctx->hcc_path_elems);
     }
     else
         st_h->client_ctx->hcc_cur_pe = TAILQ_FIRST(
-                                            &st_h->client_ctx->hcc_path_elems);
+                &st_h->client_ctx->hcc_path_elems);
     st_h->path = st_h->client_ctx->hcc_cur_pe->path;
     if (st_h->client_ctx->payload)
     {
@@ -533,56 +559,56 @@ send_headers (lsquic_stream_ctx_t *st_h)
     if (!hostname)
         hostname = st_h->client_ctx->prog->prog_hostname;
     lsquic_http_header_t headers_arr[] = {
-        {
-            .name  = { .iov_base = ":method",       .iov_len = 7, },
-            .value = { .iov_base = (void *) st_h->client_ctx->method,
-                       .iov_len = strlen(st_h->client_ctx->method), },
-        },
-        {
-            .name  = { .iov_base = ":scheme",       .iov_len = 7, },
-            .value = { .iov_base = "https",         .iov_len = 5, }
-        },
-        {
-            .name  = { .iov_base = ":path",         .iov_len = 5, },
-            .value = { .iov_base = (void *) st_h->path,
-                       .iov_len = strlen(st_h->path), },
-        },
-        {
-            .name  = { ":authority",     10, },
-            .value = { .iov_base = (void *) hostname,
-                       .iov_len = strlen(hostname), },
-        },
-        /*
-        {
-            .name  = { "host",      4 },
-            .value = { .iov_base = (void *) st_h->client_ctx->hostname,
-                       .iov_len = strlen(st_h->client_ctx->hostname), },
-        },
-        */
-        {
-            .name  = { .iov_base = "user-agent",    .iov_len = 10, },
-            .value = { .iov_base = (char *) st_h->client_ctx->prog->prog_settings.es_ua,
-                       .iov_len  = strlen(st_h->client_ctx->prog->prog_settings.es_ua), },
-        },
-        /* The following headers only gets sent if there is request payload: */
-        {
-            .name  = { .iov_base = "content-type", .iov_len = 12, },
-            .value = { .iov_base = "application/octet-stream", .iov_len = 24, },
-        },
-        {
-            .name  = { .iov_base = "content-length", .iov_len = 14, },
-            .value = { .iov_base = (void *) st_h->client_ctx->payload_size,
-                       .iov_len = strlen(st_h->client_ctx->payload_size), },
-        },
+            {
+                    .name  = { .iov_base = ":method",       .iov_len = 7, },
+                    .value = { .iov_base = (void *) st_h->client_ctx->method,
+                            .iov_len = strlen(st_h->client_ctx->method), },
+            },
+            {
+                    .name  = { .iov_base = ":scheme",       .iov_len = 7, },
+                    .value = { .iov_base = "https",         .iov_len = 5, }
+            },
+            {
+                    .name  = { .iov_base = ":path",         .iov_len = 5, },
+                    .value = { .iov_base = (void *) st_h->path,
+                            .iov_len = strlen(st_h->path), },
+            },
+            {
+                    .name  = { ":authority",     10, },
+                    .value = { .iov_base = (void *) hostname,
+                            .iov_len = strlen(hostname), },
+            },
+            /*
+            {
+                .name  = { "host",      4 },
+                .value = { .iov_base = (void *) st_h->client_ctx->hostname,
+                           .iov_len = strlen(st_h->client_ctx->hostname), },
+            },
+            */
+            {
+                    .name  = { .iov_base = "user-agent",    .iov_len = 10, },
+                    .value = { .iov_base = (char *) st_h->client_ctx->prog->prog_settings.es_ua,
+                            .iov_len  = strlen(st_h->client_ctx->prog->prog_settings.es_ua), },
+            },
+            /* The following headers only gets sent if there is request payload: */
+            {
+                    .name  = { .iov_base = "content-type", .iov_len = 12, },
+                    .value = { .iov_base = "application/octet-stream", .iov_len = 24, },
+            },
+            {
+                    .name  = { .iov_base = "content-length", .iov_len = 14, },
+                    .value = { .iov_base = (void *) st_h->client_ctx->payload_size,
+                            .iov_len = strlen(st_h->client_ctx->payload_size), },
+            },
     };
     lsquic_http_headers_t headers = {
-        .count = sizeof(headers_arr) / sizeof(headers_arr[0]),
-        .headers = headers_arr,
+            .count = sizeof(headers_arr) / sizeof(headers_arr[0]),
+            .headers = headers_arr,
     };
     if (!st_h->client_ctx->payload)
         headers.count -= 2;
     if (0 != lsquic_stream_send_headers(st_h->stream, &headers,
-                                    st_h->client_ctx->payload == NULL))
+                                        st_h->client_ctx->payload == NULL))
     {
         LSQ_ERROR("cannot send headers: %s", strerror(errno));
         exit(1);
@@ -612,7 +638,7 @@ display_cert_chain (lsquic_conn_t *conn)
         cert = sk_X509_value(chain, i);
         name = X509_get_subject_name(cert);
         LSQ_INFO("cert #%u: name: %s", i,
-                            X509_NAME_oneline(name, buf, sizeof(buf)));
+                 X509_NAME_oneline(name, buf, sizeof(buf)));
         X509_free(cert);
     }
 
@@ -669,11 +695,19 @@ http_client_on_read (lsquic_stream_t *stream, lsquic_stream_ctx_t *st_h)
     unsigned char buf[0x200];
     unsigned nreads = 0;
 #ifdef WIN32
-	srand(GetTickCount());
+    srand(GetTickCount());
 #endif
 
     do
     {
+        if (time_option == 1 && once == 1)
+        {
+            once = 0;
+            nread = lsquic_stream_read(stream, response_buf, sizeof(response_buf));
+        }
+        else
+            nread = lsquic_stream_read(stream, buf, sizeof(buf));
+
         if (g_header_bypass && !(st_h->sh_flags & PROCESSED_HEADERS))
         {
             hset = lsquic_stream_get_hset(stream);
@@ -691,7 +725,7 @@ http_client_on_read (lsquic_stream_t *stream, lsquic_stream_ctx_t *st_h)
             hset_destroy(hset);
             st_h->sh_flags |= PROCESSED_HEADERS;
         }
-        else if (nread = lsquic_stream_read(stream, buf, sizeof(buf)), nread > 0)
+        else if (nread > 0)
         {
             s_stat_downloaded_bytes += nread;
             /* test stream_reset after some number of read bytes */
@@ -716,8 +750,15 @@ http_client_on_read (lsquic_stream_t *stream, lsquic_stream_ctx_t *st_h)
                                     st_h->sh_ttfb - st_h->sh_created);
                 st_h->sh_flags |= PROCESSED_HEADERS;
             }
-            if (!s_discard_response)
-                fwrite(buf, 1, nread, stdout);
+//            if (!s_discard_response)
+//                fwrite(buf, 1, nread, stdout);
+
+            if(time_option != 1)
+            {
+                if (!s_discard_response)
+                    fwrite(buf, 1, nread, stdout);
+            }
+
             if (randomly_reprioritize_streams && (st_h->count++ & 0x3F) == 0)
             {
                 old_prio = lsquic_stream_priority(stream);
@@ -725,10 +766,10 @@ http_client_on_read (lsquic_stream_t *stream, lsquic_stream_ctx_t *st_h)
 #ifndef NDEBUG
                 const int s =
 #endif
-                lsquic_stream_set_priority(stream, new_prio);
+                        lsquic_stream_set_priority(stream, new_prio);
                 assert(s == 0);
                 LSQ_DEBUG("changed stream %"PRIu64" priority from %u to %u",
-                                lsquic_stream_id(stream), old_prio, new_prio);
+                          lsquic_stream_id(stream), old_prio, new_prio);
             }
         }
         else if (0 == nread)
@@ -756,7 +797,7 @@ http_client_on_read (lsquic_stream_t *stream, lsquic_stream_ctx_t *st_h)
         }
     }
     while (client_ctx->prog->prog_settings.es_rw_once
-            && nreads++ < 3 /* Emulate just a few reads */);
+           && nreads++ < 3 /* Emulate just a few reads */);
 }
 
 
@@ -774,9 +815,50 @@ http_client_on_close (lsquic_stream_t *stream, lsquic_stream_ctx_t *st_h)
     struct http_client_ctx *const client_ctx = st_h->client_ctx;
     lsquic_conn_t *conn = lsquic_stream_conn(stream);
     lsquic_conn_ctx_t *conn_h;
+
+    if (time_option == 1)
+    {
+        char *c;
+        c = strchr(response_buf, ' ');
+        if (c != NULL)
+        {
+            c++;
+            c = strchr(c, ' ');
+            if(c != NULL)
+            {
+                *c = '\0';
+                c = strchr(response_buf, ' ');
+                if(c != NULL)
+                {
+                    c++;
+                    enum lsquic_version version = lsquic_conn_quic_version(conn);
+                    number_filled += snprintf(output + number_filled, 500 - number_filled,"%s;%s;\n",c, lsquic_ver2str[version]);        /*Print connection details on the console*/
+                }
+                else
+                {
+                    LSQ_ERROR("Server response is unusual\n");
+                    free(st_h);
+                    exit(EXIT_FAILURE);
+                }
+            }
+            else
+            {
+                LSQ_ERROR("Server response is unusual\n");
+                free(st_h);
+                exit(EXIT_FAILURE);
+            }
+        }
+        else
+        {
+            LSQ_ERROR("Server response is unusual\n");
+            free(st_h);
+            exit(EXIT_FAILURE);
+        }
+    }
+
     TAILQ_FOREACH(conn_h, &client_ctx->conn_ctxs, next_ch)
-        if (conn_h->conn == conn)
-            break;
+    if (conn_h->conn == conn)
+        break;
     assert(conn_h);
     --conn_h->ch_n_reqs;
     --conn_h->ch_n_cc_streams;
@@ -788,10 +870,10 @@ http_client_on_close (lsquic_stream_t *stream, lsquic_stream_ctx_t *st_h)
     else
     {
         LSQ_INFO("%u active stream, %u request remain, creating %u new stream",
-            conn_h->ch_n_cc_streams,
-            conn_h->ch_n_reqs - conn_h->ch_n_cc_streams,
-            MIN((conn_h->ch_n_reqs - conn_h->ch_n_cc_streams),
-                (client_ctx->hcc_cc_reqs_per_conn - conn_h->ch_n_cc_streams)));
+                 conn_h->ch_n_cc_streams,
+                 conn_h->ch_n_reqs - conn_h->ch_n_cc_streams,
+                 MIN((conn_h->ch_n_reqs - conn_h->ch_n_cc_streams),
+                     (client_ctx->hcc_cc_reqs_per_conn - conn_h->ch_n_cc_streams)));
         create_streams(client_ctx, conn_h);
     }
     if (st_h->reader.lsqr_ctx)
@@ -801,13 +883,13 @@ http_client_on_close (lsquic_stream_t *stream, lsquic_stream_ctx_t *st_h)
 
 
 static struct lsquic_stream_if http_client_if = {
-    .on_new_conn            = http_client_on_new_conn,
-    .on_conn_closed         = http_client_on_conn_closed,
-    .on_new_stream          = http_client_on_new_stream,
-    .on_read                = http_client_on_read,
-    .on_write               = http_client_on_write,
-    .on_close               = http_client_on_close,
-    .on_hsk_done            = http_client_on_hsk_done,
+        .on_new_conn            = http_client_on_new_conn,
+        .on_conn_closed         = http_client_on_conn_closed,
+        .on_new_stream          = http_client_on_new_stream,
+        .on_read                = http_client_on_read,
+        .on_write               = http_client_on_write,
+        .on_close               = http_client_on_close,
+        .on_hsk_done            = http_client_on_hsk_done,
 };
 
 
@@ -818,38 +900,44 @@ usage (const char *prog)
     if (slash)
         prog = slash + 1;
     printf(
-"Usage: %s [opts]\n"
-"\n"
-"Options:\n"
-"   -p PATH     Path to request.  May be specified more than once.  If no\n"
-"                 path is specified, the connection is closed as soon as\n"
-"                 handshake succeeds.\n"
-"   -n CONNS    Number of concurrent connections.  Defaults to 1.\n"
-"   -r NREQS    Total number of requests to send.  Defaults to 1.\n"
-"   -R MAXREQS  Maximum number of requests per single connection.  Some\n"
-"                 connections will have fewer requests than this.\n"
-"   -w CONCUR   Number of concurrent requests per single connection.\n"
-"                 Defaults to 1.\n"
-"   -M METHOD   Method.  Defaults to GET.\n"
-"   -P PAYLOAD  Name of the file that contains payload to be used in the\n"
-"                 request.  This adds two more headers to the request:\n"
-"                 content-type: application/octet-stream and\n"
-"                 content-length\n"
-"   -K          Discard server response\n"
-"   -I          Abort on incomplete reponse from server\n"
-"   -4          Prefer IPv4 when resolving hostname\n"
-"   -6          Prefer IPv6 when resolving hostname\n"
-"   -0 FILE     Provide RTT info file (reading or writing)\n"
-#ifndef WIN32
-"   -C DIR      Certificate store.  If specified, server certificate will\n"
-"                 be verified.\n"
-#endif
-"   -a          Display server certificate chain after successful handshake.\n"
-"   -b N_BYTES  Send RESET_STREAM frame after the client has read n bytes.\n"
-"   -t          Print stats to stdout.\n"
-"   -T FILE     Print stats to FILE.  If FILE is -, print stats to stdout.\n"
-"   -q FILE     QIF mode: issue requests from the QIF file and validate\n"
-"                 server responses.\n"
+            "Usage: %s [opts]\n"
+            "\n"
+            "Options:\n"
+            "   -p PATH     Path to request.  May be specified more than once.  If no\n"
+            "                 path is specified, the connection is closed as soon as\n"
+            "                 handshake succeeds.\n"
+            "   -n CONNS    Number of concurrent connections.  Defaults to 1.\n"
+            "   -r NREQS    Total number of requests to send.  Defaults to 1.\n"
+            "   -R MAXREQS  Maximum number of requests per single connection.  Some\n"
+            "                 connections will have fewer requests than this.\n"
+            "   -w CONCUR   Number of concurrent requests per single connection.\n"
+            "                 Defaults to 1.\n"
+            "   -M METHOD   Method.  Defaults to GET.\n"
+            "   -P PAYLOAD  Name of the file that contains payload to be used in the\n"
+            "                 request.  This adds two more headers to the request:\n"
+            "                 content-type: application/octet-stream and\n"
+            "                 content-length\n"
+            "   -K          Discard server response\n"
+            "   -I          Abort on incomplete reponse from server\n"
+            "   -4          Prefer IPv4 when resolving hostname\n"
+            "   -6          Prefer IPv6 when resolving hostname\n"
+            "   -t          Output information about the connection in machine readable form.\n"
+            "                 Format:\n"
+            "                 Time it took to resolve DNS;CurrentTime;Hostname;Path;IpAdress;Port;\n"
+            "                 Time to establish quic connection in milliseconds;Result;QuicVersion;\n"
+            "   -c PORT     Defines which port will be used locally on the machine for the connection.\n"
+            "                 Defaults to 0 which means random port.\n"
+            "   -0 FILE     Provide RTT info file (reading or writing)\n"
+            #ifndef WIN32
+            "   -C DIR      Certificate store.  If specified, server certificate will\n"
+            "                 be verified.\n"
+            #endif
+            "   -a          Display server certificate chain after successful handshake.\n"
+            "   -b N_BYTES  Send RESET_STREAM frame after the client has read n bytes.\n"
+            "   -t          Print stats to stdout.\n"
+            "   -T FILE     Print stats to FILE.  If FILE is -, print stats to stdout.\n"
+            "   -q FILE     QIF mode: issue requests from the QIF file and validate\n"
+            "                 server responses.\n"
             , prog);
 }
 
@@ -866,7 +954,7 @@ ends_in_pem (const char *s)
     len = strlen(s);
 
     return len >= 4
-        && 0 == strcasecmp(s + len - 4, ".pem");
+           && 0 == strcasecmp(s + len - 4, ".pem");
 }
 
 
@@ -885,7 +973,7 @@ file2cert (const char *path)
 
     cert = PEM_read_bio_X509_AUX(in, NULL, NULL, NULL);
 
-  end:
+    end:
     BIO_free(in);
     return cert;
 }
@@ -914,7 +1002,7 @@ init_x509_cert_store (const char *path)
         if (ends_in_pem(ent->d_name))
         {
             ret = snprintf(file_path, sizeof(file_path), "%s/%s",
-                                                            path, ent->d_name);
+                           path, ent->d_name);
             if (ret < 0)
             {
                 LSQ_WARN("file_path formatting error %s", strerror(errno));
@@ -943,27 +1031,27 @@ init_x509_cert_store (const char *path)
 static int
 verify_server_cert (void *ctx, STACK_OF(X509) *chain)
 {
-    X509_STORE_CTX store_ctx;
-    X509 *cert;
-    int ver;
+X509_STORE_CTX store_ctx;
+X509 *cert;
+int ver;
 
-    if (!store)
-    {
-        if (0 != init_x509_cert_store(ctx))
-            return -1;
-    }
+if (!store)
+{
+if (0 != init_x509_cert_store(ctx))
+return -1;
+}
 
-    cert = sk_X509_shift(chain);
-    X509_STORE_CTX_init(&store_ctx, store, cert, chain);
+cert = sk_X509_shift(chain);
+X509_STORE_CTX_init(&store_ctx, store, cert, chain);
 
-    ver = X509_verify_cert(&store_ctx);
+ver = X509_verify_cert(&store_ctx);
 
-    X509_STORE_CTX_cleanup(&store_ctx);
+X509_STORE_CTX_cleanup(&store_ctx);
 
-    if (ver != 1)
-        LSQ_WARN("could not verify server certificate");
+if (ver != 1)
+LSQ_WARN("could not verify server certificate");
 
-    return ver == 1 ? 0 : -1;
+return ver == 1 ? 0 : -1;
 }
 #endif
 
@@ -1050,11 +1138,11 @@ hset_dump (const struct hset *hset, FILE *out)
     const struct hset_elem *el;
 
     STAILQ_FOREACH(el, hset, next)
-        if (el->name_idx)
-            fprintf(out, "%s (static table idx %u): %s\n", el->name,
-                                                    el->name_idx, el->value);
-        else
-            fprintf(out, "%s: %s\n", el->name, el->value);
+    if (el->name_idx)
+        fprintf(out, "%s (static table idx %u): %s\n", el->name,
+                el->name_idx, el->value);
+    else
+        fprintf(out, "%s: %s\n", el->name, el->value);
 
     fprintf(out, "\n");
     fflush(out);
@@ -1066,11 +1154,11 @@ hset_dump (const struct hset *hset, FILE *out)
  * in src/liblsquic/lsquic_http1x_if.c
  */
 static const struct lsquic_hset_if header_bypass_api =
-{
-    .hsi_create_header_set  = hset_create,
-    .hsi_process_header     = hset_add_header,
-    .hsi_discard_header_set = hset_destroy,
-};
+        {
+                .hsi_create_header_set  = hset_create,
+                .hsi_process_header     = hset_add_header,
+                .hsi_discard_header_set = hset_destroy,
+        };
 
 
 static void
@@ -1080,8 +1168,8 @@ display_stat (FILE *out, const struct sample_stats *stats, const char *name)
 
     calc_sample_stats(stats, &mean, &stddev);
     fprintf(out, "%s: n: %u; min: %.2Lf ms; max: %.2Lf ms; mean: %.2Lf ms; "
-        "sd: %.2Lf ms\n", name, stats->n, (long double) stats->min / 1000,
-        (long double) stats->max / 1000, mean / 1000, stddev / 1000);
+                 "sd: %.2Lf ms\n", name, stats->n, (long double) stats->min / 1000,
+            (long double) stats->max / 1000, mean / 1000, stddev / 1000);
 }
 
 
@@ -1179,7 +1267,7 @@ qif_client_on_new_stream (void *stream_if_ctx, lsquic_stream_t *stream)
         memcpy(ctx->qif_str + ctx->qif_sz, line, end + 1 - line);
 
         ctx->headers.headers = realloc(ctx->headers.headers,
-                sizeof(ctx->headers.headers[0]) * (ctx->headers.count + 1));
+                                       sizeof(ctx->headers.headers[0]) * (ctx->headers.count + 1));
         if (!ctx->headers.headers)
         {
             perror("realloc");
@@ -1197,9 +1285,9 @@ qif_client_on_new_stream (void *stream_if_ctx, lsquic_stream_t *stream)
     for (i = 0; i < ctx->headers.count; ++i)
     {
         ctx->headers.headers[i].name.iov_base = ctx->qif_str
-                + (uintptr_t) ctx->headers.headers[i].name.iov_base;
+                                                + (uintptr_t) ctx->headers.headers[i].name.iov_base;
         ctx->headers.headers[i].value.iov_base = ctx->qif_str
-                + (uintptr_t) ctx->headers.headers[i].value.iov_base;
+                                                 + (uintptr_t) ctx->headers.headers[i].value.iov_base;
     }
 
     lsquic_stream_wantwrite(stream, 1);
@@ -1298,7 +1386,7 @@ qif_client_on_read (struct lsquic_stream *stream, lsquic_stream_ctx_t *h)
         if (ctx->resp_off < ctx->qif_sz)
         {
             nr = lsquic_stream_read(stream, ctx->resp_str + ctx->resp_off,
-                                        ctx->qif_sz - ctx->resp_off);
+                                    ctx->qif_sz - ctx->resp_off);
             if (nr > 0)
             {
                 ctx->resp_off += nr;
@@ -1364,12 +1452,12 @@ qif_client_on_close (struct lsquic_stream *stream, lsquic_stream_ctx_t *h)
 
 
 const struct lsquic_stream_if qif_client_if = {
-    .on_new_conn            = qif_client_on_new_conn,
-    .on_conn_closed         = qif_client_on_conn_closed,
-    .on_new_stream          = qif_client_on_new_stream,
-    .on_read                = qif_client_on_read,
-    .on_write               = qif_client_on_write,
-    .on_close               = qif_client_on_close,
+        .on_new_conn            = qif_client_on_new_conn,
+        .on_conn_closed         = qif_client_on_conn_closed,
+        .on_new_stream          = qif_client_on_new_stream,
+        .on_read                = qif_client_on_read,
+        .on_write               = qif_client_on_write,
+        .on_close               = qif_client_on_close,
 };
 
 
@@ -1386,6 +1474,10 @@ main (int argc, char **argv)
     struct sport_head sports;
     struct prog prog;
     const char *token = NULL;
+
+    number_filled = 0;
+    time_option = 0;
+    local_port = 0; /*Pick a random port by defualt*/
 
     TAILQ_INIT(&sports);
     memset(&client_ctx, 0, sizeof(client_ctx));
@@ -1407,126 +1499,136 @@ main (int argc, char **argv)
     prog_init(&prog, LSENG_HTTP, &sports, &http_client_if, &client_ctx);
 
     while (-1 != (opt = getopt(argc, argv, PROG_OPTS
-                                    "46Br:R:IKu:EP:M:n:w:H:p:0:q:e:hatT:b:d:"
-#ifndef WIN32
-                                                                      "C:"
+                                           "46Br:R:IKu:EP:M:n:w:H:p:0:q:e:hatT:b:d:V:t"
+                                           #ifndef WIN32
+                                           "C:"
 #endif
-                                                                            )))
+    )))
     {
         switch (opt) {
-        case 'a':
-            ++s_display_cert_chain;
-            break;
-        case '4':
-        case '6':
-            prog.prog_ipver = opt - '0';
-            break;
-        case 'B':
-            g_header_bypass = 1;
-            prog.prog_api.ea_hsi_if = &header_bypass_api;
-            prog.prog_api.ea_hsi_ctx = NULL;
-            break;
-        case 'I':
-            client_ctx.hcc_flags |= HCC_ABORT_ON_INCOMPLETE;
-            break;
-        case 'K':
-            ++s_discard_response;
-            break;
-        case 'u':   /* Accept p<U>sh promise */
-            promise_fd = open(optarg, O_WRONLY|O_CREAT|O_TRUNC, 0644);
-            if (promise_fd < 0)
-            {
-                perror("open");
-                exit(1);
-            }
-            prog.prog_settings.es_support_push = 1;     /* Pokes into prog */
-            break;
-        case 'E':   /* E: randomly reprioritize str<E>ams.  Now, that's
-                     * pretty random. :)
-                     */
-            randomly_reprioritize_streams = 1;
-            break;
-        case 'n':
-            client_ctx.hcc_concurrency = atoi(optarg);
-            break;
-        case 'w':
-            client_ctx.hcc_cc_reqs_per_conn = atoi(optarg);
-            break;
-        case 'P':
-            client_ctx.payload = optarg;
-            if (0 != stat(optarg, &st))
-            {
-                perror("stat");
-                exit(2);
-            }
-            sprintf(client_ctx.payload_size, "%jd", (intmax_t) st.st_size);
-            break;
-        case 'M':
-            client_ctx.method = optarg;
-            break;
-        case 'r':
-            client_ctx.hcc_total_n_reqs = atoi(optarg);
-            break;
-        case 'R':
-            client_ctx.hcc_reqs_per_conn = atoi(optarg);
-            break;
-        case 'H':
-            client_ctx.hostname = optarg;
-            prog.prog_hostname = optarg;            /* Pokes into prog */
-            break;
-        case 'p':
-            pe = calloc(1, sizeof(*pe));
-            pe->path = optarg;
-            TAILQ_INSERT_TAIL(&client_ctx.hcc_path_elems, pe, next_pe);
-            break;
-        case 'h':
-            usage(argv[0]);
-            prog_print_common_options(&prog, stdout);
-            exit(0);
-        case 'q':
-            client_ctx.qif_file = optarg;
-            break;
-        case 'e':
-            if (TAILQ_EMPTY(&sports))
-                token = optarg;
-            else
-                sport_set_token(TAILQ_LAST(&sports, sport_head), optarg);
-            break;
-#ifndef WIN32
-        case 'C':
-            prog.prog_api.ea_verify_cert = verify_server_cert;
-            prog.prog_api.ea_verify_ctx = optarg;
-            break;
-#endif
-        case 't':
-            stats_fh = stdout;
-            break;
-        case 'T':
-            if (0 == strcmp(optarg, "-"))
-                stats_fh = stdout;
-            else
-            {
-                stats_fh = fopen(optarg, "w");
-                if (!stats_fh)
+            case 'a':
+                ++s_display_cert_chain;
+                break;
+            case '4':
+            case '6':
+                prog.prog_ipver = opt - '0';
+                break;
+            case 'c':
+                local_port = atoi(optarg);
+                break;
+            case 'B':
+                g_header_bypass = 1;
+                prog.prog_api.ea_hsi_if = &header_bypass_api;
+                prog.prog_api.ea_hsi_ctx = NULL;
+                break;
+            case 'I':
+                client_ctx.hcc_flags |= HCC_ABORT_ON_INCOMPLETE;
+                break;
+            case 'K':
+                ++s_discard_response;
+                break;
+            case 'u':   /* Accept p<U>sh promise */
+                promise_fd = open(optarg, O_WRONLY|O_CREAT|O_TRUNC, 0644);
+                if (promise_fd < 0)
                 {
-                    perror("fopen");
+                    perror("open");
                     exit(1);
                 }
-            }
-            break;
-        case 'b':
-            client_ctx.hcc_reset_after_nbytes = atoi(optarg);
-            break;
-        case 'd':
-            client_ctx.hcc_retire_cid_after_nbytes = atoi(optarg);
-            break;
-        case '0':
-            http_client_if.on_zero_rtt_info = http_client_on_zero_rtt_info;
-            client_ctx.hcc_zero_rtt_file_name = optarg;
-            break;
-        default:
-            if (0 != prog_set_opt(&prog, opt, optarg))
-                exit(1);
+                prog.prog_settings.es_support_push = 1;     /* Pokes into prog */
+                break;
+            case 'E':   /* E: randomly reprioritize str<E>ams.  Now, that's
+                     * pretty random. :)
+                     */
+                randomly_reprioritize_streams = 1;
+                break;
+            case 'n':
+                client_ctx.hcc_concurrency = atoi(optarg);
+                break;
+            case 'w':
+                client_ctx.hcc_cc_reqs_per_conn = atoi(optarg);
+                break;
+            case 'P':
+                client_ctx.payload = optarg;
+                if (0 != stat(optarg, &st))
+                {
+                    perror("stat");
+                    exit(2);
+                }
+                sprintf(client_ctx.payload_size, "%jd", (intmax_t) st.st_size);
+                break;
+            case 'M':
+                client_ctx.method = optarg;
+                break;
+            case 'r':
+                client_ctx.hcc_total_n_reqs = atoi(optarg);
+                break;
+            case 'R':
+                client_ctx.hcc_reqs_per_conn = atoi(optarg);
+                break;
+            case 'H':
+                client_ctx.hostname = optarg;
+                prog.prog_hostname = optarg;            /* Pokes into prog */
+                break;
+            case 'p':
+                pe = calloc(1, sizeof(*pe));
+                pe->path = optarg;
+                TAILQ_INSERT_TAIL(&client_ctx.hcc_path_elems, pe, next_pe);
+                break;
+            case 'h':
+                usage(argv[0]);
+                prog_print_common_options(&prog, stdout);
+                exit(0);
+//            case 't':
+//                time_option = 1;
+//                break;
+            case 'q':
+                client_ctx.qif_file = optarg;
+                break;
+            case 'e':
+                if (TAILQ_EMPTY(&sports))
+                    token = optarg;
+                else
+                    sport_set_token(TAILQ_LAST(&sports, sport_head), optarg);
+                break;
+#ifndef WIN32
+            case 'C':
+                prog.prog_api.ea_verify_cert = verify_server_cert;
+                prog.prog_api.ea_verify_ctx = optarg;
+                break;
+            case 'V':
+                prog.prog_settings.es_versions = 1 << lsquic_str2ver(optarg, 4);
+                break;
+#endif
+            case 't':
+                time_option = 1;
+                //stats_fh = stdout;
+                break;
+            case 'T':
+                if (0 == strcmp(optarg, "-"))
+                    stats_fh = stdout;
+                else
+                {
+                    stats_fh = fopen(optarg, "w");
+                    if (!stats_fh)
+                    {
+                        perror("fopen");
+                        exit(1);
+                    }
+                }
+                break;
+            case 'b':
+                client_ctx.hcc_reset_after_nbytes = atoi(optarg);
+                break;
+            case 'd':
+                client_ctx.hcc_retire_cid_after_nbytes = atoi(optarg);
+                break;
+            case '0':
+                http_client_if.on_zero_rtt_info = http_client_on_zero_rtt_info;
+                client_ctx.hcc_zero_rtt_file_name = optarg;
+                break;
+            default:
+                if (0 != prog_set_opt(&prog, opt, optarg))
+                    exit(1);
         }
     }
 
@@ -1541,7 +1643,7 @@ main (int argc, char **argv)
         if (!client_ctx.qif_fh)
         {
             fprintf(stderr, "Cannot open %s for reading: %s\n",
-                                    client_ctx.qif_file, strerror(errno));
+                    client_ctx.qif_file, strerror(errno));
             exit(1);
         }
         LSQ_NOTICE("opened QIF file %s for reading\n", client_ctx.qif_file);
@@ -1566,7 +1668,7 @@ main (int argc, char **argv)
     if (!(client_ctx.hostname || prog.prog_hostname))
     {
         fprintf(stderr, "Specify hostname (used for SNI and :authority) via "
-            "-H option\n");
+                        "-H option\n");
         exit(EXIT_FAILURE);
     }
     if (was_empty && token)
@@ -1583,6 +1685,34 @@ main (int argc, char **argv)
     else
         create_connections(&client_ctx);
 
+    if (time_option == 1)
+    {
+        /*Get the ipadress and port. Partly taken from prog_connect()*/
+        struct service_port *sport;
+        sport = TAILQ_FIRST(prog.prog_sports);
+        char ip[46];
+        int port;
+        if(sport->sas.ss_family == 2)
+        {
+            struct sockaddr_in  *const sa = (void *)&sport->sas;
+            inet_ntop(AF_INET, &sa->sin_addr, ip, 46);
+            port = ntohs(sa->sin_port);
+        }
+        else
+        {
+            struct sockaddr_in6  *const sa6 = (void *)&sport->sas;
+            inet_ntop(AF_INET6, &sa6->sin6_addr, ip, 46);
+            port = ntohs(sa6->sin6_port);
+        }
+        /*Measure current time*/
+        time_t rawtime;
+        time(&rawtime);
+
+        /*Store the output in a buffer to print at the end so that nothing gets printed on the console if the connection fails*/
+        number_filled += snprintf(output + number_filled, 500 - number_filled, "%li;%s;%s;%s;%d;", (long)rawtime, prog.prog_hostname, pe->path, ip, port);
+
+    }
+
     LSQ_DEBUG("entering event loop");
 
     s = prog_run(&prog);
@@ -1595,10 +1725,10 @@ main (int argc, char **argv)
         display_stat(stats_fh, &s_stat_req, "time for request");
         display_stat(stats_fh, &s_stat_ttfb, "time to 1st byte");
         fprintf(stats_fh, "downloaded %lu application bytes in %.3Lf seconds\n",
-            s_stat_downloaded_bytes, elapsed);
+                s_stat_downloaded_bytes, elapsed);
         fprintf(stats_fh, "%.2Lf reqs/sec; %.0Lf bytes/sec\n",
-            (long double) s_stat_req.n / elapsed,
-            (long double) s_stat_downloaded_bytes / elapsed);
+                (long double) s_stat_req.n / elapsed,
+                (long double) s_stat_downloaded_bytes / elapsed);
         fprintf(stats_fh, "read handler count %lu\n", prog.prog_read_count);
     }
 
@@ -1610,6 +1740,12 @@ main (int argc, char **argv)
     {
         TAILQ_REMOVE(&client_ctx.hcc_path_elems, pe, next_pe);
         free(pe);
+    }
+
+    if(time_option == 1)
+    {
+        /*Only print the whole output right before exit*/
+        printf("%s", output);
     }
 
     if (client_ctx.qif_fh)

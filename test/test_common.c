@@ -85,7 +85,6 @@
 
 #define CTL_SZ (CMSG_SPACE(MAX(DST_MSG_SZ, \
                         sizeof(struct in6_pktinfo))) + NDROPPED_SZ + ECN_SZ)
-
 /* There are `n_alloc' elements in `vecs', `local_addresses', and
  * `peer_addresses' arrays.  `ctlmsg_data' is n_alloc * CTL_SZ.  Each packets
  * gets a single `vecs' element that points somewhere into `packet_data'.
@@ -93,6 +92,9 @@
  * `n_alloc' is calculated at run-time based on the socket's receive buffer
  * size.
  */
+int time_option;
+struct timespec ts_start, ts_end, ts_result;
+
 struct packets_in
 {
     unsigned char           *packet_data;
@@ -106,7 +108,7 @@ struct packets_in
     int                     *ecn;
 #endif
     struct sockaddr_storage *local_addresses,
-                            *peer_addresses;
+            *peer_addresses;
     unsigned                 n_alloc;
     unsigned                 data_sz;
 };
@@ -179,7 +181,7 @@ allocate_packets_in (SOCKET_TYPE fd)
 
     n_alloc = (unsigned) recvsz / MAX_PACKET_SZ * 2;
     LSQ_INFO("socket buffer size: %d bytes; max # packets is set to %u",
-        recvsz, n_alloc);
+             recvsz, n_alloc);
 
     packs_in = malloc(sizeof(*packs_in));
     packs_in->data_sz = recvsz;
@@ -336,7 +338,7 @@ sport_new (const char *optarg, struct prog *prog)
         sa4->sin_family = AF_INET;
         sa4->sin_port   = htons(port);
     } else if (memset(sa6, 0, sizeof(*sa6)),
-                    inet_pton(AF_INET6, host, &sa6->sin6_addr)) {
+            inet_pton(AF_INET6, host, &sa6->sin6_addr)) {
         sa6->sin6_family = AF_INET6;
         sa6->sin6_port   = htons(port);
     } else
@@ -347,11 +349,24 @@ sport_new (const char *optarg, struct prog *prog)
             hints.ai_family = AF_INET;
         else if (prog->prog_ipver == 6)
             hints.ai_family = AF_INET6;
+
+        struct timespec ts_dns_start, ts_dns_end, ts_dns_result;
+        if(time_option == 1)
+            timespec_get(&ts_dns_start, TIME_UTC);
+
         e = getaddrinfo(host, port_str, &hints, &res);
+
+        if(time_option == 1)
+        {
+            timespec_get(&ts_dns_end, TIME_UTC);
+            timespec_diff(&ts_dns_start,&ts_dns_end, &ts_dns_result);
+            number_filled += snprintf(output + number_filled, 500 - number_filled,"%.3lf;", (ts_dns_result.tv_nsec/(double) 1000000));
+        }
+
         if (e != 0)
         {
             LSQ_ERROR("could not resolve %s:%s: %s", host, port_str,
-                                                        gai_strerror(e));
+                      gai_strerror(e));
             goto err;
         }
         if (res->ai_addrlen > sizeof(sport->sas))
@@ -374,7 +389,7 @@ sport_new (const char *optarg, struct prog *prog)
     sport->sp_prog = prog;
     return sport;
 
-  err:
+    err:
 #if HAVE_REGEX
     if (0 == re_code)
         regfree(&re);
@@ -393,18 +408,18 @@ sport_new (const char *optarg, struct prog *prog)
 static void
 proc_ancillary (
 #ifndef WIN32
-                struct msghdr
+        struct msghdr
 #else
-                WSAMSG
+WSAMSG
 #endif
-                              *msg, struct sockaddr_storage *storage
+*msg, struct sockaddr_storage *storage
 #if __linux__
-                , uint32_t *n_dropped
+        , uint32_t *n_dropped
 #endif
 #if ECN_SUPPORTED
-                , int *ecn
+        , int *ecn
 #endif
-                )
+)
 {
     const struct in6_pktinfo *in6_pkt;
     struct cmsghdr *cmsg;
@@ -413,14 +428,14 @@ proc_ancillary (
     {
         if (cmsg->cmsg_level == IPPROTO_IP &&
             cmsg->cmsg_type  ==
-#if __linux__ && defined(IP_RECVORIGDSTADDR)
-                                IP_ORIGDSTADDR
-#elif __linux__ || WIN32 || __APPLE__
-                                IP_PKTINFO
-#else
-                                IP_RECVDSTADDR
+            #if __linux__ && defined(IP_RECVORIGDSTADDR)
+            IP_ORIGDSTADDR
+            #elif __linux__ || WIN32 || __APPLE__
+            IP_PKTINFO
+            #else
+            IP_RECVDSTADDR
 #endif
-                                              )
+                )
         {
 #if __linux__ && defined(IP_RECVORIGDSTADDR)
             memcpy(storage, CMSG_DATA(cmsg), sizeof(struct sockaddr_in));
@@ -434,7 +449,7 @@ proc_ancillary (
             ((struct sockaddr_in *) storage)->sin_addr = in_pkt->ipi_addr;
 #else
             memcpy(&((struct sockaddr_in *) storage)->sin_addr,
-                            CMSG_DATA(cmsg), sizeof(struct in_addr));
+                   CMSG_DATA(cmsg), sizeof(struct in_addr));
 #endif
         }
         else if (cmsg->cmsg_level == IPPROTO_IPV6 &&
@@ -446,7 +461,7 @@ proc_ancillary (
             in6_pkt = (void *) WSA_CMSG_DATA(cmsg);
 #endif
             ((struct sockaddr_in6 *) storage)->sin6_addr =
-                                                    in6_pkt->ipi6_addr;
+                    in6_pkt->ipi6_addr;
         }
 #if __linux__
         else if (cmsg->cmsg_level == SOL_SOCKET &&
@@ -520,17 +535,17 @@ read_one_packet (struct read_iter *iter)
     packs_in->vecs[iter->ri_idx].len = MAX_PACKET_SZ;
 #endif
 
-  top:
+    top:
     ctl_buf = packs_in->ctlmsg_data + iter->ri_idx * CTL_SZ;
 
 #ifndef WIN32
     struct msghdr msg = {
-        .msg_name       = &packs_in->peer_addresses[iter->ri_idx],
-        .msg_namelen    = sizeof(packs_in->peer_addresses[iter->ri_idx]),
-        .msg_iov        = &packs_in->vecs[iter->ri_idx],
-        .msg_iovlen     = 1,
-        .msg_control    = ctl_buf,
-        .msg_controllen = CTL_SZ,
+            .msg_name       = &packs_in->peer_addresses[iter->ri_idx],
+            .msg_namelen    = sizeof(packs_in->peer_addresses[iter->ri_idx]),
+            .msg_iov        = &packs_in->vecs[iter->ri_idx],
+            .msg_iovlen     = 1,
+            .msg_control    = ctl_buf,
+            .msg_controllen = CTL_SZ,
     };
     nread = recvmsg(sport->fd, &msg, 0);
     if (-1 == nread) {
@@ -572,10 +587,10 @@ read_one_packet (struct read_iter *iter)
 #endif
     proc_ancillary(&msg, local_addr
 #if __linux__
-        , &n_dropped
+            , &n_dropped
 #endif
 #if ECN_SUPPORTED
-        , &packs_in->ecn[iter->ri_idx]
+            , &packs_in->ecn[iter->ri_idx]
 #endif
     );
 #if LSQUIC_ECN_BLACK_HOLE && ECN_SUPPORTED
@@ -733,12 +748,12 @@ read_handler (evutil_socket_t fd, short flags, void *ctx)
             rop = read_using_recvmmsg(&iter);
         else
 #endif
-            do
-                rop = read_one_packet(&iter);
-            while (ROP_OK == rop);
+        do
+            rop = read_one_packet(&iter);
+        while (ROP_OK == rop);
 
         if (UNLIKELY(ROP_ERROR == rop && (sport->sp_flags & SPORT_CONNECT)
-                                                    && errno == ECONNREFUSED))
+                     && errno == ECONNREFUSED))
         {
             LSQ_ERROR("connection refused: exit program");
             prog_cleanup(sport->sp_prog);
@@ -750,21 +765,21 @@ read_handler (evutil_socket_t fd, short flags, void *ctx)
         for (n = 0; n < iter.ri_idx; ++n)
             if (0 > lsquic_engine_packet_in(engine,
 #ifndef WIN32
-                        packs_in->vecs[n].iov_base,
-                        packs_in->vecs[n].iov_len,
+                                            packs_in->vecs[n].iov_base,
+                                            packs_in->vecs[n].iov_len,
 #else
-                        (const unsigned char *) packs_in->vecs[n].buf,
+            (const unsigned char *) packs_in->vecs[n].buf,
                         packs_in->vecs[n].len,
 #endif
-                        (struct sockaddr *) &packs_in->local_addresses[n],
-                        (struct sockaddr *) &packs_in->peer_addresses[n],
-                        sport,
+                                            (struct sockaddr *) &packs_in->local_addresses[n],
+                                            (struct sockaddr *) &packs_in->peer_addresses[n],
+                                            sport,
 #if ECN_SUPPORTED
-                        packs_in->ecn[n]
+                    packs_in->ecn[n]
 #else
-                        0
+                                            0
 #endif
-                        ))
+            ))
                 break;
 
         if (n > 0)
@@ -783,7 +798,7 @@ static int
 add_to_event_loop (struct service_port *sport, struct event_base *eb)
 {
     sport->ev = event_new(eb, sport->fd, EV_READ|EV_PERSIST, read_handler,
-                                                                    sport);
+                          sport);
     if (sport->ev)
     {
         event_add(sport->ev, NULL);
@@ -805,15 +820,15 @@ sport_init_server (struct service_port *sport, struct lsquic_engine *engine,
 
     switch (sa_local->sa_family)
     {
-    case AF_INET:
-        socklen = sizeof(struct sockaddr_in);
-        break;
-    case AF_INET6:
-        socklen = sizeof(struct sockaddr_in6);
-        break;
-    default:
-        errno = EINVAL;
-        return -1;
+        case AF_INET:
+            socklen = sizeof(struct sockaddr_in);
+            break;
+        case AF_INET6:
+            socklen = sizeof(struct sockaddr_in6);
+            break;
+        default:
+            errno = EINVAL;
+            return -1;
     }
 
     sockfd = socket(sa_local->sa_family, SOCK_DGRAM, 0);
@@ -848,13 +863,13 @@ sport_init_server (struct service_port *sport, struct lsquic_engine *engine,
     if (AF_INET == sa_local->sa_family)
         s = setsockopt(sockfd, IPPROTO_IP,
 #if __linux__ && defined(IP_RECVORIGDSTADDR)
-                                           IP_RECVORIGDSTADDR,
+                IP_RECVORIGDSTADDR,
 #elif __linux__ || __APPLE__
-                                           IP_PKTINFO,
+                IP_PKTINFO,
 #else
-                                           IP_RECVDSTADDR,
+                       IP_RECVDSTADDR,
 #endif
-                                                               &on, sizeof(on));
+                       &on, sizeof(on));
     else
         s = setsockopt(sockfd, IPPROTO_IPV6, IPV6_RECVPKTINFO, &on, sizeof(on));
     if (0 != s)
@@ -963,7 +978,7 @@ sport_init_server (struct service_port *sport, struct lsquic_engine *engine,
     if (sport->sp_flags & SPORT_SET_SNDBUF)
     {
         s = setsockopt(sockfd, SOL_SOCKET, SO_SNDBUF, &sport->sp_sndbuf,
-                                                    sizeof(sport->sp_sndbuf));
+                       sizeof(sport->sp_sndbuf));
         if (0 != s)
         {
             saved_errno = errno;
@@ -976,7 +991,7 @@ sport_init_server (struct service_port *sport, struct lsquic_engine *engine,
     if (sport->sp_flags & SPORT_SET_RCVBUF)
     {
         s = setsockopt(sockfd, SOL_SOCKET, SO_RCVBUF, &sport->sp_rcvbuf,
-                                                    sizeof(sport->sp_rcvbuf));
+                       sizeof(sport->sp_rcvbuf));
         if (0 != s)
         {
             saved_errno = errno;
@@ -1004,15 +1019,15 @@ sport_init_server (struct service_port *sport, struct lsquic_engine *engine,
     }
 
     memcpy((void *) &sport->sp_local_addr, sa_local,
-        sa_local->sa_family == AF_INET ?
-        sizeof(struct sockaddr_in) : sizeof(struct sockaddr_in6));
+           sa_local->sa_family == AF_INET ?
+           sizeof(struct sockaddr_in) : sizeof(struct sockaddr_in6));
     switch (sa_local->sa_family) {
-    case AF_INET:
-        LSQ_DEBUG("local address: %s:%d",
-            inet_ntop(AF_INET, &((struct sockaddr_in *) sa_local)->sin_addr,
-            addr_str, sizeof(addr_str)),
-            ntohs(((struct sockaddr_in *) sa_local)->sin_port));
-        break;
+        case AF_INET:
+            LSQ_DEBUG("local address: %s:%d",
+                      inet_ntop(AF_INET, &((struct sockaddr_in *) sa_local)->sin_addr,
+                                addr_str, sizeof(addr_str)),
+                      ntohs(((struct sockaddr_in *) sa_local)->sin_port));
+            break;
     }
 
     sport->engine = engine;
@@ -1043,20 +1058,22 @@ sport_init_client (struct service_port *sport, struct lsquic_engine *engine,
 
     switch (sa_peer->sa_family)
     {
-    case AF_INET:
-        socklen = sizeof(struct sockaddr_in);
-        u.sin.sin_family      = AF_INET;
-        u.sin.sin_addr.s_addr = INADDR_ANY;
-        u.sin.sin_port        = 0;
-        break;
-    case AF_INET6:
-        socklen = sizeof(struct sockaddr_in6);
-        memset(&u.sin6, 0, sizeof(u.sin6));
-        u.sin6.sin6_family = AF_INET6;
-        break;
-    default:
-        errno = EINVAL;
-        return -1;
+        case AF_INET:
+            socklen = sizeof(struct sockaddr_in);
+            u.sin.sin_family      = AF_INET;
+            u.sin.sin_addr.s_addr = INADDR_ANY;
+            u.sin.sin_port        = 0;
+            u.sin.sin_port        = htons(local_port); /*Port that is used on the local client*/
+            break;
+        case AF_INET6:
+            socklen = sizeof(struct sockaddr_in6);
+            memset(&u.sin6, 0, sizeof(u.sin6));
+            u.sin6.sin6_family = AF_INET6;
+            u.sin6.sin6_port = htons(local_port);
+            break;
+        default:
+            errno = EINVAL;
+            return -1;
     }
 
 #if WIN32
@@ -1076,7 +1093,7 @@ sport_init_client (struct service_port *sport, struct lsquic_engine *engine,
     if (sport->sp_flags & SPORT_CONNECT)
     {
         peer_socklen = AF_INET == sa_peer->sa_family
-                    ? sizeof(struct sockaddr_in) : sizeof(struct sockaddr_in6);
+                       ? sizeof(struct sockaddr_in) : sizeof(struct sockaddr_in6);
         if (0 != connect(sockfd, sa_peer, peer_socklen))
         {
             saved_errno = errno;
@@ -1199,14 +1216,14 @@ sport_init_client (struct service_port *sport, struct lsquic_engine *engine,
     }
 
     memcpy((void *) &sport->sp_local_addr, sa_local,
-        sa_local->sa_family == AF_INET ?
-        sizeof(struct sockaddr_in) : sizeof(struct sockaddr_in6));
+           sa_local->sa_family == AF_INET ?
+           sizeof(struct sockaddr_in) : sizeof(struct sockaddr_in6));
     switch (sa_local->sa_family) {
-    case AF_INET:
-        LSQ_DEBUG("local address: %s:%d",
-            inet_ntop(AF_INET, &u.sin.sin_addr, addr_str, sizeof(addr_str)),
-            ntohs(u.sin.sin_port));
-        break;
+        case AF_INET:
+            LSQ_DEBUG("local address: %s:%d",
+                      inet_ntop(AF_INET, &u.sin.sin_addr, addr_str, sizeof(addr_str)),
+                      ntohs(u.sin.sin_port));
+            break;
     }
 
     sport->engine = engine;
@@ -1239,11 +1256,11 @@ enum ctl_what
 static void
 setup_control_msg (
 #ifndef WIN32
-                   struct msghdr
+        struct msghdr
 #else
-                   WSAMSG
+WSAMSG
 #endif
-                                 *msg, enum ctl_what cw,
+*msg, enum ctl_what cw,
         const struct lsquic_out_spec *spec, unsigned char *buf, size_t bufsz)
 {
     struct cmsghdr *cmsg;
@@ -1298,7 +1315,7 @@ setup_control_msg (
                 cmsg->cmsg_len      = CMSG_LEN(sizeof(local_sa->sin_addr));
                 ctl_len += CMSG_SPACE(sizeof(local_sa->sin_addr));
                 memcpy(CMSG_DATA(cmsg), &local_sa->sin_addr,
-                                                    sizeof(local_sa->sin_addr));
+                       sizeof(local_sa->sin_addr));
 #endif
             }
             else
@@ -1319,7 +1336,7 @@ setup_control_msg (
             cw &= ~CW_SENDADDR;
         }
 #if ECN_SUPPORTED
-        else if (cw & CW_ECN)
+            else if (cw & CW_ECN)
         {
             if (AF_INET == spec->dest_sa->sa_family)
             {
@@ -1536,9 +1553,9 @@ send_packets_one_by_one (const struct lsquic_out_spec *specs, unsigned count)
 #	define SIZE1 sizeof(struct in_addr)
 #endif
         unsigned char buf[
-            CMSG_SPACE(MAX(SIZE1, sizeof(struct in6_pktinfo)))
+                CMSG_SPACE(MAX(SIZE1, sizeof(struct in6_pktinfo)))
 #if ECN_SUPPORTED
-            + CMSG_SPACE(sizeof(int))
+                + CMSG_SPACE(sizeof(int))
 #endif
         ];
         struct cmsghdr cmsg;
@@ -1583,9 +1600,9 @@ send_packets_one_by_one (const struct lsquic_out_spec *specs, unsigned count)
 #ifndef WIN32
         msg.msg_name       = (void *) specs[n].dest_sa;
         msg.msg_namelen    = (AF_INET == specs[n].dest_sa->sa_family ?
-                                            sizeof(struct sockaddr_in) :
-                                            sizeof(struct sockaddr_in6)),
-        msg.msg_iov        = specs[n].iov;
+                              sizeof(struct sockaddr_in) :
+                              sizeof(struct sockaddr_in6)),
+                msg.msg_iov        = specs[n].iov;
         msg.msg_iovlen     = specs[n].iovlen;
         msg.msg_flags      = 0;
 #else
@@ -1663,7 +1680,7 @@ send_packets_one_by_one (const struct lsquic_out_spec *specs, unsigned count)
     {
         assert(s < 0);
 #if LSQUIC_RANDOM_SEND_FAILURE
-  random_send_failure:
+        random_send_failure:
 #endif
         return -1;
     }
@@ -1680,7 +1697,7 @@ sport_packets_out (void *ctx, const struct lsquic_out_spec *specs,
         return send_packets_using_sendmmsg(specs, count);
     else
 #endif
-        return send_packets_one_by_one(specs, count);
+    return send_packets_one_by_one(specs, count);
 }
 
 
@@ -1697,246 +1714,246 @@ set_engine_option (struct lsquic_engine_settings *settings,
 
     switch (len)
     {
-    case 2:
-        if (0 == strncmp(name, "ua", 2))
-        {
-            settings->es_ua = val;
-            return 0;
-        }
-        break;
-    case 3:
-        if (0 == strncmp(name, "ecn", 1))
-        {
-            settings->es_ecn = atoi(val);
+        case 2:
+            if (0 == strncmp(name, "ua", 2))
+            {
+                settings->es_ua = val;
+                return 0;
+            }
+            break;
+        case 3:
+            if (0 == strncmp(name, "ecn", 1))
+            {
+                settings->es_ecn = atoi(val);
 #if !ECN_SUPPORTED
-            if (settings->es_ecn)
-            {
-                LSQ_ERROR("ECN is not supported on this platform");
-                break;
-            }
+                if (settings->es_ecn)
+                {
+                    LSQ_ERROR("ECN is not supported on this platform");
+                    break;
+                }
 #endif
-            return 0;
-        }
-        break;
-    case 4:
-        if (0 == strncmp(name, "cfcw", 4))
-        {
-            settings->es_cfcw = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "sfcw", 4))
-        {
-            settings->es_sfcw = atoi(val);
-            return 0;
-        }
-        break;
-    case 7:
-        if (0 == strncmp(name, "version", 7))
-        {
-            if (!*version_cleared)
-            {
-                *version_cleared = 1;
-                settings->es_versions = 0;
-            }
-            enum lsquic_version ver = lsquic_str2ver(val, strlen(val));
-            if (ver < N_LSQVER)
-            {
-                settings->es_versions |= 1 << ver;
                 return 0;
             }
-            ver = lsquic_alpn2ver(val, strlen(val));
-            if (ver < N_LSQVER)
+            break;
+        case 4:
+            if (0 == strncmp(name, "cfcw", 4))
             {
-                settings->es_versions |= 1 << ver;
+                settings->es_cfcw = atoi(val);
                 return 0;
             }
-        }
-        else if (0 == strncmp(name, "rw_once", 7))
-        {
-            settings->es_rw_once = atoi(val);
-            return 0;
-        }
-        else if (0 == strncmp(name, "cc_algo", 7))
-        {
-            settings->es_cc_algo = atoi(val);
-            return 0;
-        }
-        else if (0 == strncmp(name, "ql_bits", 7))
-        {
-            settings->es_ql_bits = atoi(val);
-            return 0;
-        }
-        break;
-    case 8:
-        if (0 == strncmp(name, "max_cfcw", 8))
-        {
-            settings->es_max_cfcw = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "max_sfcw", 8))
-        {
-            settings->es_max_sfcw = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "scid_len", 8))
-        {
-            settings->es_scid_len = atoi(val);
-            return 0;
-        }
-        break;
-    case 9:
-        if (0 == strncmp(name, "send_prst", 9))
-        {
-            settings->es_send_prst = atoi(val);
-            return 0;
-        }
-        break;
-    case 10:
-        if (0 == strncmp(name, "honor_prst", 10))
-        {
-            settings->es_honor_prst = atoi(val);
-            return 0;
-        }
-        break;
-    case 11:
-        if (0 == strncmp(name, "ping_period", 11))
-        {
-            settings->es_ping_period = atoi(val);
-            return 0;
-        }
-        break;
-    case 12:
-        if (0 == strncmp(name, "idle_conn_to", 12))
-        {
-            settings->es_idle_conn_to = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "silent_close", 12))
-        {
-            settings->es_silent_close = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "support_push", 12))
-        {
-            settings->es_support_push = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "support_nstp", 12))
-        {
-            settings->es_support_nstp = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "pace_packets", 12))
-        {
-            settings->es_pace_packets = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "handshake_to", 12))
-        {
-            settings->es_handshake_to = atoi(val);
-            return 0;
-        }
-        break;
-    case 13:
-        if (0 == strncmp(name, "support_tcid0", 13))
-        {
-            settings->es_support_tcid0 = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "init_max_data", 13))
-        {
-            settings->es_init_max_data = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "scid_iss_rate", 13))
-        {
-            settings->es_scid_iss_rate = atoi(val);
-            return 0;
-        }
-        break;
-    case 14:
-        if (0 == strncmp(name, "max_streams_in", 14))
-        {
-            settings->es_max_streams_in = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "progress_check", 14))
-        {
-            settings->es_progress_check = atoi(val);
-            return 0;
-        }
-        break;
-    case 15:
-        if (0 == strncmp(name, "allow_migration", 15))
-        {
-            settings->es_allow_migration = atoi(val);
-            return 0;
-        }
-        break;
-    case 16:
-        if (0 == strncmp(name, "proc_time_thresh", 16))
-        {
-            settings->es_proc_time_thresh = atoi(val);
-            return 0;
-        }
-        break;
-    case 18:
-        if (0 == strncmp(name, "qpack_enc_max_size", 18))
-        {
-            settings->es_qpack_enc_max_size = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "qpack_dec_max_size", 18))
-        {
-            settings->es_qpack_dec_max_size = atoi(val);
-            return 0;
-        }
-        break;
-    case 20:
-        if (0 == strncmp(name, "max_header_list_size", 20))
-        {
-            settings->es_max_header_list_size = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "init_max_streams_uni", 20))
-        {
-            settings->es_init_max_streams_uni = atoi(val);
-            return 0;
-        }
-        break;
-    case 21:
-        if (0 == strncmp(name, "qpack_enc_max_blocked", 21))
-        {
-            settings->es_qpack_enc_max_blocked = atoi(val);
-            return 0;
-        }
-        if (0 == strncmp(name, "qpack_dec_max_blocked", 21))
-        {
-            settings->es_qpack_dec_max_blocked = atoi(val);
-            return 0;
-        }
-        break;
-    case 24:
-        if (0 == strncmp(name, "init_max_stream_data_uni", 24))
-        {
-            settings->es_init_max_stream_data_uni = atoi(val);
-            return 0;
-        }
-        break;
-    case 31:
-        if (0 == strncmp(name, "init_max_stream_data_bidi_local", 31))
-        {
-            settings->es_init_max_stream_data_bidi_local = atoi(val);
-            return 0;
-        }
-        break;
-    case 32:
-        if (0 == strncmp(name, "init_max_stream_data_bidi_remote", 32))
-        {
-            settings->es_init_max_stream_data_bidi_remote = atoi(val);
-            return 0;
-        }
-        break;
+            if (0 == strncmp(name, "sfcw", 4))
+            {
+                settings->es_sfcw = atoi(val);
+                return 0;
+            }
+            break;
+        case 7:
+            if (0 == strncmp(name, "version", 7))
+            {
+                if (!*version_cleared)
+                {
+                    *version_cleared = 1;
+                    settings->es_versions = 0;
+                }
+                enum lsquic_version ver = lsquic_str2ver(val, strlen(val));
+                if (ver < N_LSQVER)
+                {
+                    settings->es_versions |= 1 << ver;
+                    return 0;
+                }
+                ver = lsquic_alpn2ver(val, strlen(val));
+                if (ver < N_LSQVER)
+                {
+                    settings->es_versions |= 1 << ver;
+                    return 0;
+                }
+            }
+            else if (0 == strncmp(name, "rw_once", 7))
+            {
+                settings->es_rw_once = atoi(val);
+                return 0;
+            }
+            else if (0 == strncmp(name, "cc_algo", 7))
+            {
+                settings->es_cc_algo = atoi(val);
+                return 0;
+            }
+            else if (0 == strncmp(name, "ql_bits", 7))
+            {
+                settings->es_ql_bits = atoi(val);
+                return 0;
+            }
+            break;
+        case 8:
+            if (0 == strncmp(name, "max_cfcw", 8))
+            {
+                settings->es_max_cfcw = atoi(val);
+                return 0;
+            }
+            if (0 == strncmp(name, "max_sfcw", 8))
+            {
+                settings->es_max_sfcw = atoi(val);
+                return 0;
+            }
+            if (0 == strncmp(name, "scid_len", 8))
+            {
+                settings->es_scid_len = atoi(val);
+                return 0;
+            }
+            break;
+        case 9:
+            if (0 == strncmp(name, "send_prst", 9))
+            {
+                settings->es_send_prst = atoi(val);
+                return 0;
+            }
+            break;
+        case 10:
+            if (0 == strncmp(name, "honor_prst", 10))
+            {
+                settings->es_honor_prst = atoi(val);
+                return 0;
+            }
+            break;
+        case 11:
+            if (0 == strncmp(name, "ping_period", 11))
+            {
+                settings->es_ping_period = atoi(val);
+                return 0;
+            }
+            break;
+        case 12:
+            if (0 == strncmp(name, "idle_conn_to", 12))
+            {
+                settings->es_idle_conn_to = atoi(val);
+                return 0;
+            }
+            if (0 == strncmp(name, "silent_close", 12))
+            {
+                settings->es_silent_close = atoi(val);
+                return 0;
+            }
+            if (0 == strncmp(name, "support_push", 12))
+            {
+                settings->es_support_push = atoi(val);
+                return 0;
+            }
+            if (0 == strncmp(name, "support_nstp", 12))
+            {
+                settings->es_support_nstp = atoi(val);
+                return 0;
+            }
+            if (0 == strncmp(name, "pace_packets", 12))
+            {
+                settings->es_pace_packets = atoi(val);
+                return 0;
+            }
+            if (0 == strncmp(name, "handshake_to", 12))
+            {
+                settings->es_handshake_to = atoi(val);
+                return 0;
+            }
+            break;
+        case 13:
+            if (0 == strncmp(name, "support_tcid0", 13))
+            {
+                settings->es_support_tcid0 = atoi(val);
+                return 0;
+            }
+            if (0 == strncmp(name, "init_max_data", 13))
+            {
+                settings->es_init_max_data = atoi(val);
+                return 0;
+            }
+            if (0 == strncmp(name, "scid_iss_rate", 13))
+            {
+                settings->es_scid_iss_rate = atoi(val);
+                return 0;
+            }
+            break;
+        case 14:
+            if (0 == strncmp(name, "max_streams_in", 14))
+            {
+                settings->es_max_streams_in = atoi(val);
+                return 0;
+            }
+            if (0 == strncmp(name, "progress_check", 14))
+            {
+                settings->es_progress_check = atoi(val);
+                return 0;
+            }
+            break;
+        case 15:
+            if (0 == strncmp(name, "allow_migration", 15))
+            {
+                settings->es_allow_migration = atoi(val);
+                return 0;
+            }
+            break;
+        case 16:
+            if (0 == strncmp(name, "proc_time_thresh", 16))
+            {
+                settings->es_proc_time_thresh = atoi(val);
+                return 0;
+            }
+            break;
+        case 18:
+            if (0 == strncmp(name, "qpack_enc_max_size", 18))
+            {
+                settings->es_qpack_enc_max_size = atoi(val);
+                return 0;
+            }
+            if (0 == strncmp(name, "qpack_dec_max_size", 18))
+            {
+                settings->es_qpack_dec_max_size = atoi(val);
+                return 0;
+            }
+            break;
+        case 20:
+            if (0 == strncmp(name, "max_header_list_size", 20))
+            {
+                settings->es_max_header_list_size = atoi(val);
+                return 0;
+            }
+            if (0 == strncmp(name, "init_max_streams_uni", 20))
+            {
+                settings->es_init_max_streams_uni = atoi(val);
+                return 0;
+            }
+            break;
+        case 21:
+            if (0 == strncmp(name, "qpack_enc_max_blocked", 21))
+            {
+                settings->es_qpack_enc_max_blocked = atoi(val);
+                return 0;
+            }
+            if (0 == strncmp(name, "qpack_dec_max_blocked", 21))
+            {
+                settings->es_qpack_dec_max_blocked = atoi(val);
+                return 0;
+            }
+            break;
+        case 24:
+            if (0 == strncmp(name, "init_max_stream_data_uni", 24))
+            {
+                settings->es_init_max_stream_data_uni = atoi(val);
+                return 0;
+            }
+            break;
+        case 31:
+            if (0 == strncmp(name, "init_max_stream_data_bidi_local", 31))
+            {
+                settings->es_init_max_stream_data_bidi_local = atoi(val);
+                return 0;
+            }
+            break;
+        case 32:
+            if (0 == strncmp(name, "init_max_stream_data_bidi_remote", 32))
+            {
+                settings->es_init_max_stream_data_bidi_remote = atoi(val);
+                return 0;
+            }
+            break;
     }
 
     return -1;
@@ -1962,7 +1979,7 @@ pba_init (struct packout_buf_allocator *pba, unsigned max)
 
 void *
 pba_allocate (void *packout_buf_allocator, void *peer_ctx, unsigned short size,
-                                                                char is_ipv6)
+              char is_ipv6)
 {
     struct packout_buf_allocator *const pba = packout_buf_allocator;
     struct packout_buf *pb;
@@ -1976,7 +1993,7 @@ pba_allocate (void *packout_buf_allocator, void *peer_ctx, unsigned short size,
     if (pba->max && pba->n_out >= pba->max)
     {
         LSQ_DEBUG("# outstanding packout bufs reached the limit of %u, "
-            "returning NULL", pba->max);
+                  "returning NULL", pba->max);
         return NULL;
     }
 
@@ -2041,10 +2058,10 @@ print_conn_info (const lsquic_conn_t *conn)
     cipher = lsquic_conn_crypto_cipher(conn);
 
     LSQ_INFO("Connection info: version: %u; cipher: %s; key size: %d, alg key size: %d",
-        lsquic_conn_quic_version(conn),
-        cipher ? cipher : "<null>",
-        lsquic_conn_crypto_keysize(conn),
-        lsquic_conn_crypto_alg_keysize(conn)
+             lsquic_conn_quic_version(conn),
+             cipher ? cipher : "<null>",
+             lsquic_conn_crypto_keysize(conn),
+             lsquic_conn_crypto_alg_keysize(conn)
     );
 }
 
@@ -2136,30 +2153,30 @@ int
 sport_set_token (struct service_port *sport, const char *token_str)
 {
     static const unsigned char c2b[0x100] =
-    {
-        [(int)'0'] = 0,
-        [(int)'1'] = 1,
-        [(int)'2'] = 2,
-        [(int)'3'] = 3,
-        [(int)'4'] = 4,
-        [(int)'5'] = 5,
-        [(int)'6'] = 6,
-        [(int)'7'] = 7,
-        [(int)'8'] = 8,
-        [(int)'9'] = 9,
-        [(int)'A'] = 0xA,
-        [(int)'B'] = 0xB,
-        [(int)'C'] = 0xC,
-        [(int)'D'] = 0xD,
-        [(int)'E'] = 0xE,
-        [(int)'F'] = 0xF,
-        [(int)'a'] = 0xA,
-        [(int)'b'] = 0xB,
-        [(int)'c'] = 0xC,
-        [(int)'d'] = 0xD,
-        [(int)'e'] = 0xE,
-        [(int)'f'] = 0xF,
-    };
+            {
+                    [(int)'0'] = 0,
+                    [(int)'1'] = 1,
+                    [(int)'2'] = 2,
+                    [(int)'3'] = 3,
+                    [(int)'4'] = 4,
+                    [(int)'5'] = 5,
+                    [(int)'6'] = 6,
+                    [(int)'7'] = 7,
+                    [(int)'8'] = 8,
+                    [(int)'9'] = 9,
+                    [(int)'A'] = 0xA,
+                    [(int)'B'] = 0xB,
+                    [(int)'C'] = 0xC,
+                    [(int)'D'] = 0xD,
+                    [(int)'E'] = 0xE,
+                    [(int)'F'] = 0xF,
+                    [(int)'a'] = 0xA,
+                    [(int)'b'] = 0xB,
+                    [(int)'c'] = 0xC,
+                    [(int)'d'] = 0xD,
+                    [(int)'e'] = 0xE,
+                    [(int)'f'] = 0xF,
+            };
     unsigned char *token;
     int len, i;
 
@@ -2169,7 +2186,7 @@ sport_set_token (struct service_port *sport, const char *token_str)
         return -1;
     for (i = 0; i < len / 2; ++i)
         token[i] = (c2b[ (int) token_str[i * 2] ] << 4)
-                 |  c2b[ (int) token_str[i * 2 + 1] ];
+                   |  c2b[ (int) token_str[i * 2 + 1] ];
 
     free(sport->sp_token_buf);
     sport->sp_token_buf = token;

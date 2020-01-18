@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/src/liblsquic/lsquic_min_heap.c
+assert.h
+-
+stddef.h
+-
+stdint.h
+-
+lsquic_min_heap.h
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/src/liblsquic/lsquic_min_heap.h
+
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/src/liblsquic/lsquic_min_heap.h
+
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_min_heap.c
+assert.h
+-
+stddef.h
+-
+stdint.h
+-
+stdio.h
+-
+stdlib.h
+-
+lsquic_min_heap.h
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/lsquic_min_heap.h
+
+src/liblsquic/lsquic_min_heap.h
+

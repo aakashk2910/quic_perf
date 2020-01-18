@@ -1,0 +1,96 @@
+Determining if the function sendmmsg exists failed with the following output:
+Change Dir: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e8413/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_e8413.dir/build.make CMakeFiles/cmTC_e8413.dir/build
+Building C object CMakeFiles/cmTC_e8413.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -DLSQUIC_DEBUG_NEXT_ADV_TICK=1 -Wall -Wextra -Wno-unused-parameter -fno-omit-frame-pointer -Wno-implicit-fallthrough -O0 -g3 -Werror  -DCHECK_FUNCTION_EXISTS=sendmmsg -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/cmTC_e8413.dir/CheckFunctionExists.c.o   -c /usr/local/Cellar/cmake/3.15.5/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e8413
+/usr/local/Cellar/cmake/3.15.5/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8413.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -DLSQUIC_DEBUG_NEXT_ADV_TICK=1 -Wall -Wextra -Wno-unused-parameter -fno-omit-frame-pointer -Wno-implicit-fallthrough -O0 -g3 -Werror  -DCHECK_FUNCTION_EXISTS=sendmmsg -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_e8413.dir/CheckFunctionExists.c.o  -o cmTC_e8413 
+Undefined symbols for architecture x86_64:
+  "_sendmmsg", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_e8413] Error 1
+make: *** [cmTC_e8413/fast] Error 2
+
+
+
+Determining if the function recvmmsg exists failed with the following output:
+Change Dir: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_11db7/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_11db7.dir/build.make CMakeFiles/cmTC_11db7.dir/build
+Building C object CMakeFiles/cmTC_11db7.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -DLSQUIC_DEBUG_NEXT_ADV_TICK=1 -Wall -Wextra -Wno-unused-parameter -fno-omit-frame-pointer -Wno-implicit-fallthrough -O0 -g3 -Werror  -DCHECK_FUNCTION_EXISTS=recvmmsg -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/cmTC_11db7.dir/CheckFunctionExists.c.o   -c /usr/local/Cellar/cmake/3.15.5/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_11db7
+/usr/local/Cellar/cmake/3.15.5/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11db7.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -DLSQUIC_DEBUG_NEXT_ADV_TICK=1 -Wall -Wextra -Wno-unused-parameter -fno-omit-frame-pointer -Wno-implicit-fallthrough -O0 -g3 -Werror  -DCHECK_FUNCTION_EXISTS=recvmmsg -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_11db7.dir/CheckFunctionExists.c.o  -o cmTC_11db7 
+Undefined symbols for architecture x86_64:
+  "_recvmmsg", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_11db7] Error 1
+make: *** [cmTC_11db7/fast] Error 2
+
+
+
+Determining if the IP_MTU_DISCOVER exist failed with the following output:
+Change Dir: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_071bf/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_071bf.dir/build.make CMakeFiles/cmTC_071bf.dir/build
+Building C object CMakeFiles/cmTC_071bf.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -DLSQUIC_DEBUG_NEXT_ADV_TICK=1 -Wall -Wextra -Wno-unused-parameter -fno-omit-frame-pointer -Wno-implicit-fallthrough -O0 -g3 -Werror   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/cmTC_071bf.dir/CheckSymbolExists.c.o   -c /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'IP_MTU_DISCOVER'
+  return ((int*)(&IP_MTU_DISCOVER))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_071bf.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_071bf/fast] Error 2
+
+
+File /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netinet/in.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IP_MTU_DISCOVER
+  return ((int*)(&IP_MTU_DISCOVER))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the IP_DONTFRAG exist failed with the following output:
+Change Dir: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3af29/fast && /Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_3af29.dir/build.make CMakeFiles/cmTC_3af29.dir/build
+Building C object CMakeFiles/cmTC_3af29.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -DLSQUIC_DEBUG_NEXT_ADV_TICK=1 -Wall -Wextra -Wno-unused-parameter -fno-omit-frame-pointer -Wno-implicit-fallthrough -O0 -g3 -Werror   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/cmTC_3af29.dir/CheckSymbolExists.c.o   -c /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'IP_DONTFRAG'
+  return ((int*)(&IP_DONTFRAG))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_3af29.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_3af29/fast] Error 2
+
+
+File /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netinet/in.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IP_DONTFRAG
+  return ((int*)(&IP_DONTFRAG))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

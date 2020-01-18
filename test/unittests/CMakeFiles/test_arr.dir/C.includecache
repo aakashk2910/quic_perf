@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_arr.c
+assert.h
+-
+lsquic_arr.h
+/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/lsquic_arr.h
+
+src/liblsquic/lsquic_arr.h
+assert.h
+-
+string.h
+-
+stdint.h
+-
+stdlib.h
+-
+

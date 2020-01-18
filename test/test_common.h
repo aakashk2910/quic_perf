@@ -58,6 +58,11 @@ struct service_port {
     size_t                     sp_token_sz;
 };
 
+/*Output string*/
+char output[500];
+int number_filled;
+int local_port;
+
 TAILQ_HEAD(sport_head, service_port);
 
 struct service_port *
@@ -89,7 +94,7 @@ struct packout_buf;
 struct packout_buf_allocator
 {
     unsigned                    n_out,      /* Number of buffers outstanding */
-                                max;        /* Maximum outstanding.  Zero mean no limit */
+            max;        /* Maximum outstanding.  Zero mean no limit */
     SLIST_HEAD(, packout_buf)   free_packout_bufs;
 };
 
@@ -119,6 +124,8 @@ create_lsquic_reader_ctx (const char *filename);
 
 void
 destroy_lsquic_reader_ctx (struct reader_ctx *ctx);
+
+void timespec_diff(struct timespec *start, struct timespec *stop, struct timespec *result);
 
 #define STRINGIFY(x) #x
 #define TOSTRING(x) STRINGIFY(x)
