@@ -1595,10 +1595,10 @@ main (int argc, char **argv)
                 prog.prog_api.ea_verify_cert = verify_server_cert;
                 prog.prog_api.ea_verify_ctx = optarg;
                 break;
+#endif
             case 'V':
                 prog.prog_settings.es_versions = 1 << lsquic_str2ver(optarg, 4);
                 break;
-#endif
             case 't':
                 time_option = 1;
                 //stats_fh = stdout;
@@ -1631,6 +1631,9 @@ main (int argc, char **argv)
                     exit(1);
         }
     }
+
+    lsquic_log_to_fstream(stderr, 5);
+    lsquic_set_log_level("INFO");
 
 #if LSQUIC_CONN_STATS
     prog.prog_api.ea_stats_fh = stats_fh;
