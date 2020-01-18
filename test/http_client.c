@@ -71,6 +71,7 @@ char response_buf[5000];
 int once = 1;
 int time_option;
 struct timespec ts_start, ts_end, ts_result, ts_ttbf, ts_total;
+int version_negotiation;
 
 /* Set to true value to use header bypass.  This means that the use code
  * creates header set via callbacks and then fetches it by calling
@@ -735,7 +736,7 @@ http_client_on_read (lsquic_stream_t *stream, lsquic_stream_ctx_t *st_h)
 
     do
     {
-        if (time_option == 1 && once == 1)
+        if ((time_option == 1 || version_negotiation == 1) && once == 1)
         {
             timespec_get(&ts_ttbf, TIME_UTC);
             timespec_diff(&ts_start,&ts_ttbf, &ts_result);
@@ -1476,6 +1477,7 @@ main (int argc, char **argv)
 
     number_filled = 0;
     time_option = 0;
+    version_negotiation = 0;
     local_port = 0; /*Pick a random port by defualt*/
 
     TAILQ_INIT(&sports);
@@ -1498,7 +1500,7 @@ main (int argc, char **argv)
     prog_init(&prog, LSENG_HTTP, &sports, &http_client_if, &client_ctx);
 
     while (-1 != (opt = getopt(argc, argv, PROG_OPTS
-                                           "46Br:R:IKu:EP:M:n:w:H:p:0:q:e:hatT:b:d:V:t"
+                                           "46Br:R:IKu:EP:M:n:w:H:p:0:q:e:hatT:b:d:V:tN"
                                            #ifndef WIN32
                                            "C:"
 #endif
@@ -1624,6 +1626,14 @@ main (int argc, char **argv)
             case '0':
                 http_client_if.on_zero_rtt_info = http_client_on_zero_rtt_info;
                 client_ctx.hcc_zero_rtt_file_name = optarg;
+                break;
+            case 'N':
+                prog.prog_settings.es_versions = 1 << lsquic_str2ver("Q098", 4);
+                version_negotiation = 0;
+                /*Measure current time*/
+                time_t rawtime;
+                time(&rawtime);
+                printf("%li;%s", (long)rawtime, prog.prog_hostname);
                 break;
             default:
                 if (0 != prog_set_opt(&prog, opt, optarg))

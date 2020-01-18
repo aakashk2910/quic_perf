@@ -119,7 +119,7 @@ enum lsquic_version
      */
     LSQVER_050,
 
-#if LSQUIC_USE_Q098
+//#if LSQUIC_USE_Q098
     /**
      * Q098.  This is a made-up, experimental version used to test version
      * negotiation.  The choice of 98 is similar to Google's choice of 99
@@ -127,9 +127,9 @@ enum lsquic_version
      */
     LSQVER_098,
 #define LSQUIC_EXPERIMENTAL_Q098 (1 << LSQVER_098)
-#else
-#define LSQUIC_EXPERIMENTAL_Q098 0
-#endif
+//#else
+//#define LSQUIC_EXPERIMENTAL_Q098 0
+//#endif
 
     /**
      * IETF QUIC Draft-23
