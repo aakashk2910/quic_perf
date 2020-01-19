@@ -1499,9 +1499,12 @@ main (int argc, char **argv)
 
     prog_init(&prog, LSENG_HTTP, &sports, &http_client_if, &client_ctx);
 
-    while (-1 != (opt = getopt(argc, argv, PROG_OPTS
-                                           "46Br:R:IKu:EP:M:n:w:H:p:0:q:e:hatT:b:d:V:tN"
-                                           #ifndef WIN32
+//    while (-1 != (opt = getopt(argc, argv, PROG_OPTS
+//                                           "46Br:R:IKu:EP:M:n:w:H:p:0:q:e:hatT:b:d:V:tN"
+    prog.prog_settings.es_handshake_to = (2 * 1000 * 1000);
+
+    while (-1 != (opt = getopt(argc, argv, PROG_OPTS "c:46Br:R:IKu:EP:M:n:H:p:h:V:tNU"
+#ifndef WIN32
                                            "C:"
 #endif
     )))
@@ -1634,6 +1637,10 @@ main (int argc, char **argv)
                 time_t rawtime;
                 time(&rawtime);
                 printf("%li;%s", (long)rawtime, prog.prog_hostname);
+                break;
+            case 'U':
+                //prog.prog_settings.es_ua = "Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1A543a Safari/419.3";
+                prog.prog_settings.es_ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36";
                 break;
             default:
                 if (0 != prog_set_opt(&prog, opt, optarg))
