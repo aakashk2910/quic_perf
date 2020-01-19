@@ -56,6 +56,63 @@ CMAKE_BINARY_DIR = /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/local/Cellar/cmake/3.15.5/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -66,6 +123,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -78,16 +146,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cpack --config ./CPackSourceConfig.cmake /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/CPackSourceConfig.cmake
+.PHONY : package_source
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target package_source
+package_source/fast: package_source
 
-.PHONY : edit_cache/fast
+.PHONY : package_source/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -135,17 +203,17 @@ docs/fast:
 .PHONY : docs/fast
 
 #=============================================================================
-# Target rules for targets named http_client
+# Target rules for targets named quic_perf
 
 # Build rule for target.
-http_client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 http_client
-.PHONY : http_client
+quic_perf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 quic_perf
+.PHONY : quic_perf
 
 # fast build rule for target.
-http_client/fast:
-	$(MAKE) -f CMakeFiles/http_client.dir/build.make CMakeFiles/http_client.dir/build
-.PHONY : http_client/fast
+quic_perf/fast:
+	$(MAKE) -f CMakeFiles/quic_perf.dir/build.make CMakeFiles/quic_perf.dir/build
+.PHONY : quic_perf/fast
 
 #=============================================================================
 # Target rules for targets named lsquic
@@ -907,7 +975,7 @@ test/http_client.o: test/http_client.c.o
 
 # target to build an object file
 test/http_client.c.o:
-	$(MAKE) -f CMakeFiles/http_client.dir/build.make CMakeFiles/http_client.dir/test/http_client.c.o
+	$(MAKE) -f CMakeFiles/quic_perf.dir/build.make CMakeFiles/quic_perf.dir/test/http_client.c.o
 .PHONY : test/http_client.c.o
 
 test/http_client.i: test/http_client.c.i
@@ -916,7 +984,7 @@ test/http_client.i: test/http_client.c.i
 
 # target to preprocess a source file
 test/http_client.c.i:
-	$(MAKE) -f CMakeFiles/http_client.dir/build.make CMakeFiles/http_client.dir/test/http_client.c.i
+	$(MAKE) -f CMakeFiles/quic_perf.dir/build.make CMakeFiles/quic_perf.dir/test/http_client.c.i
 .PHONY : test/http_client.c.i
 
 test/http_client.s: test/http_client.c.s
@@ -925,7 +993,7 @@ test/http_client.s: test/http_client.c.s
 
 # target to generate assembly for a file
 test/http_client.c.s:
-	$(MAKE) -f CMakeFiles/http_client.dir/build.make CMakeFiles/http_client.dir/test/http_client.c.s
+	$(MAKE) -f CMakeFiles/quic_perf.dir/build.make CMakeFiles/quic_perf.dir/test/http_client.c.s
 .PHONY : test/http_client.c.s
 
 test/prog.o: test/prog.c.o
@@ -934,7 +1002,7 @@ test/prog.o: test/prog.c.o
 
 # target to build an object file
 test/prog.c.o:
-	$(MAKE) -f CMakeFiles/http_client.dir/build.make CMakeFiles/http_client.dir/test/prog.c.o
+	$(MAKE) -f CMakeFiles/quic_perf.dir/build.make CMakeFiles/quic_perf.dir/test/prog.c.o
 .PHONY : test/prog.c.o
 
 test/prog.i: test/prog.c.i
@@ -943,7 +1011,7 @@ test/prog.i: test/prog.c.i
 
 # target to preprocess a source file
 test/prog.c.i:
-	$(MAKE) -f CMakeFiles/http_client.dir/build.make CMakeFiles/http_client.dir/test/prog.c.i
+	$(MAKE) -f CMakeFiles/quic_perf.dir/build.make CMakeFiles/quic_perf.dir/test/prog.c.i
 .PHONY : test/prog.c.i
 
 test/prog.s: test/prog.c.s
@@ -952,7 +1020,7 @@ test/prog.s: test/prog.c.s
 
 # target to generate assembly for a file
 test/prog.c.s:
-	$(MAKE) -f CMakeFiles/http_client.dir/build.make CMakeFiles/http_client.dir/test/prog.c.s
+	$(MAKE) -f CMakeFiles/quic_perf.dir/build.make CMakeFiles/quic_perf.dir/test/prog.c.s
 .PHONY : test/prog.c.s
 
 test/test_cert.o: test/test_cert.c.o
@@ -961,7 +1029,7 @@ test/test_cert.o: test/test_cert.c.o
 
 # target to build an object file
 test/test_cert.c.o:
-	$(MAKE) -f CMakeFiles/http_client.dir/build.make CMakeFiles/http_client.dir/test/test_cert.c.o
+	$(MAKE) -f CMakeFiles/quic_perf.dir/build.make CMakeFiles/quic_perf.dir/test/test_cert.c.o
 .PHONY : test/test_cert.c.o
 
 test/test_cert.i: test/test_cert.c.i
@@ -970,7 +1038,7 @@ test/test_cert.i: test/test_cert.c.i
 
 # target to preprocess a source file
 test/test_cert.c.i:
-	$(MAKE) -f CMakeFiles/http_client.dir/build.make CMakeFiles/http_client.dir/test/test_cert.c.i
+	$(MAKE) -f CMakeFiles/quic_perf.dir/build.make CMakeFiles/quic_perf.dir/test/test_cert.c.i
 .PHONY : test/test_cert.c.i
 
 test/test_cert.s: test/test_cert.c.s
@@ -979,7 +1047,7 @@ test/test_cert.s: test/test_cert.c.s
 
 # target to generate assembly for a file
 test/test_cert.c.s:
-	$(MAKE) -f CMakeFiles/http_client.dir/build.make CMakeFiles/http_client.dir/test/test_cert.c.s
+	$(MAKE) -f CMakeFiles/quic_perf.dir/build.make CMakeFiles/quic_perf.dir/test/test_cert.c.s
 .PHONY : test/test_cert.c.s
 
 test/test_common.o: test/test_common.c.o
@@ -988,7 +1056,7 @@ test/test_common.o: test/test_common.c.o
 
 # target to build an object file
 test/test_common.c.o:
-	$(MAKE) -f CMakeFiles/http_client.dir/build.make CMakeFiles/http_client.dir/test/test_common.c.o
+	$(MAKE) -f CMakeFiles/quic_perf.dir/build.make CMakeFiles/quic_perf.dir/test/test_common.c.o
 .PHONY : test/test_common.c.o
 
 test/test_common.i: test/test_common.c.i
@@ -997,7 +1065,7 @@ test/test_common.i: test/test_common.c.i
 
 # target to preprocess a source file
 test/test_common.c.i:
-	$(MAKE) -f CMakeFiles/http_client.dir/build.make CMakeFiles/http_client.dir/test/test_common.c.i
+	$(MAKE) -f CMakeFiles/quic_perf.dir/build.make CMakeFiles/quic_perf.dir/test/test_common.c.i
 .PHONY : test/test_common.c.i
 
 test/test_common.s: test/test_common.c.s
@@ -1006,7 +1074,7 @@ test/test_common.s: test/test_common.c.s
 
 # target to generate assembly for a file
 test/test_common.c.s:
-	$(MAKE) -f CMakeFiles/http_client.dir/build.make CMakeFiles/http_client.dir/test/test_common.c.s
+	$(MAKE) -f CMakeFiles/quic_perf.dir/build.make CMakeFiles/quic_perf.dir/test/test_common.c.s
 .PHONY : test/test_common.c.s
 
 # Help Target
@@ -1015,11 +1083,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... test"
-	@echo "... rebuild_cache"
+	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... test"
+	@echo "... package"
+	@echo "... rebuild_cache"
+	@echo "... package_source"
 	@echo "... docs"
-	@echo "... http_client"
+	@echo "... quic_perf"
 	@echo "... lsquic"
 	@echo "... test_malo_pooled"
 	@echo "... test_min_heap"
