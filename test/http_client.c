@@ -1721,7 +1721,8 @@ main (int argc, char **argv)
         time(&rawtime);
 
         /*Store the output in a buffer to print at the end so that nothing gets printed on the console if the connection fails*/
-        number_filled += snprintf(output + number_filled, 500 - number_filled, "%li;%s;%s;%s;%d;", (long)rawtime, prog.prog_hostname, pe->path, ip, port);
+        //number_filled += snprintf(output + number_filled, 500 - number_filled, "%li;%s;%s;%s;%d;", (long)rawtime, prog.prog_hostname, pe->path, ip, port);
+        number_filled += snprintf(output + number_filled, 500 - number_filled, "%li;%s;%s;%s;%d;%.3lf;", (long)rawtime, prog.prog_hostname, pe->path, ip, port, (ts_dns_result.tv_nsec/(double) 1000000));
 
     }
 

@@ -63,6 +63,8 @@ char output[500];
 int number_filled;
 int local_port;
 
+struct timespec ts_dns_start, ts_dns_end, ts_dns_result;
+
 TAILQ_HEAD(sport_head, service_port);
 
 struct service_port *

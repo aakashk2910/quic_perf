@@ -1,0 +1,20 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE= -G "CodeBlocks - Unix Makefiles" /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic
+-- The C compiler identification is AppleClang 11.0.0.11000033
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Build type: Debug
+-- AddressSanitizer is OFF
+-- Compiler flags:   -DLSQUIC_DEBUG_NEXT_ADV_TICK=1 -Wall -Wextra -Wno-unused-parameter -fno-omit-frame-pointer -Wno-implicit-fallthrough -O0 -g3 -Werror 
+-- BoringSSL include directory /Users/aakash/MastersThesisTUM/2020/boringssl/include
+-- Found ssl library: /Users/aakash/MastersThesisTUM/2020/boringssl/ssl/libssl.a
+-- Found crypto library: /Users/aakash/MastersThesisTUM/2020/boringssl/crypto/libcrypto.a
+-- Found decrepit library: /Users/aakash/MastersThesisTUM/2020/boringssl/decrepit/libdecrepit.a
+-- Found zlib: z
+-- Found event: /usr/local/lib/libevent.a
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic
