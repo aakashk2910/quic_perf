@@ -371,7 +371,7 @@ http_client_on_conn_closed (lsquic_conn_t *conn)
                 {
                     c++;
                     enum lsquic_version version = lsquic_conn_quic_version(conn);
-                    number_filled += snprintf(output + number_filled, 500 - number_filled,"%s;%s\n",c, lsquic_ver2str[version]);        /*Print connection details on the console*/
+                    number_filled += snprintf(output + number_filled, 500 - number_filled,"%s;%s",c, lsquic_ver2str[version]);        /*Print connection details on the console*/
                 }
 
             }
@@ -1765,7 +1765,8 @@ main (int argc, char **argv)
     if(time_option == 1)
     {
         /*Only print the whole output right before exit*/
-        printf("%s", output);
+        //printf("Time it took to resolve DNS;CurrentTime;Hostname;Path;IpAdress;Port;Time to establish quic connection in milliseconds;Result;QuicVersion;\n");
+        printf("%s\n", output);
     }
 
     if (client_ctx.qif_fh)

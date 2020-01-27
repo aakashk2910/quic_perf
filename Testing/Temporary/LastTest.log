@@ -1,0 +1,6925 @@
+Start testing: Jan 19 19:30 CET
+----------------------------------------------------------
+1/58 Testing: ack
+1/58 Test: ack
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_ack"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"ack" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.39 sec
+----------------------------------------------------------
+Test Passed.
+"ack" end time: Jan 19 19:30 CET
+"ack" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/58 Testing: ackgen_gquic_be
+2/58 Test: ackgen_gquic_be
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_ackgen_gquic_be"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"ackgen_gquic_be" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+[DEBUG] parse: gquic_be_gen_ack_frame: diff: 134184960; encoded: 0xFF87
+[DEBUG] parse: gquic_be_gen_ack_frame: diff: 0; encoded: 0x0000
+[DEBUG] parse: gquic_be_gen_ack_frame: diff: 0; encoded: 0x0000
+[DEBUG] parse: gquic_be_gen_ack_frame: diff: 0; encoded: 0x0000
+[DEBUG] parse: gquic_be_gen_ack_frame: diff: 0; encoded: 0x0000
+[DEBUG] parse: gquic_be_gen_ack_frame: diff: 0; encoded: 0x0000
+[DEBUG] parse: gquic_be_gen_ack_frame: diff: 0; encoded: 0x0000
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"ackgen_gquic_be" end time: Jan 19 19:30 CET
+"ackgen_gquic_be" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/58 Testing: ackparse_gquic_be
+3/58 Test: ackparse_gquic_be
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_ackparse_gquic_be"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"ackparse_gquic_be" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"ackparse_gquic_be" end time: Jan 19 19:30 CET
+"ackparse_gquic_be" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/58 Testing: ackparse_ietf
+4/58 Test: ackparse_ietf
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_ackparse_ietf"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"ackparse_ietf" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"ackparse_ietf" end time: Jan 19 19:30 CET
+"ackparse_ietf" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/58 Testing: alarmset
+5/58 Test: alarmset
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_alarmset"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"alarmset" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"alarmset" end time: Jan 19 19:30 CET
+"alarmset" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/58 Testing: alt_svc_ver
+6/58 Test: alt_svc_ver
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_alt_svc_ver"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"alt_svc_ver" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"alt_svc_ver" end time: Jan 19 19:30 CET
+"alt_svc_ver" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/58 Testing: arr
+7/58 Test: arr
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_arr"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"arr" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"arr" end time: Jan 19 19:30 CET
+"arr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/58 Testing: attq
+8/58 Test: attq
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_attq"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"attq" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"attq" end time: Jan 19 19:30 CET
+"attq" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/58 Testing: blocked_gquic_be
+9/58 Test: blocked_gquic_be
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_blocked_gquic_be"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"blocked_gquic_be" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"blocked_gquic_be" end time: Jan 19 19:30 CET
+"blocked_gquic_be" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/58 Testing: bw_sampler
+10/58 Test: bw_sampler
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_bw_sampler"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"bw_sampler" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"bw_sampler" end time: Jan 19 19:30 CET
+"bw_sampler" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/58 Testing: conn_close_gquic_be
+11/58 Test: conn_close_gquic_be
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_conn_close_gquic_be"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"conn_close_gquic_be" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"conn_close_gquic_be" end time: Jan 19 19:30 CET
+"conn_close_gquic_be" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/58 Testing: crypto_gen
+12/58 Test: crypto_gen
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_crypto_gen"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"crypto_gen" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"crypto_gen" end time: Jan 19 19:30 CET
+"crypto_gen" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/58 Testing: cubic
+13/58 Test: cubic
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_cubic"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"cubic" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"cubic" end time: Jan 19 19:30 CET
+"cubic" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/58 Testing: dec
+14/58 Test: dec
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_dec"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"dec" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+buffers are not aligned
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"dec" end time: Jan 19 19:30 CET
+"dec" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/58 Testing: di_nocopy
+15/58 Test: di_nocopy
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_di_nocopy"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"di_nocopy" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"di_nocopy" end time: Jan 19 19:30 CET
+"di_nocopy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/58 Testing: elision
+16/58 Test: elision
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_elision"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"elision" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.21 sec
+----------------------------------------------------------
+Test Passed.
+"elision" end time: Jan 19 19:30 CET
+"elision" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/58 Testing: engine_ctor
+17/58 Test: engine_ctor
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_engine_ctor"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"engine_ctor" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"engine_ctor" end time: Jan 19 19:30 CET
+"engine_ctor" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/58 Testing: export_key
+18/58 Test: export_key
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_export_key"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"export_key" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"export_key" end time: Jan 19 19:30 CET
+"export_key" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/58 Testing: frame_chop
+19/58 Test: frame_chop
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_frame_chop"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"frame_chop" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"frame_chop" end time: Jan 19 19:30 CET
+"frame_chop" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/58 Testing: frame_reader
+20/58 Test: frame_reader
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_frame_reader"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"frame_reader" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.21 sec
+----------------------------------------------------------
+Test Passed.
+"frame_reader" end time: Jan 19 19:30 CET
+"frame_reader" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/58 Testing: frame_writer
+21/58 Test: frame_writer
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_frame_writer"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"frame_writer" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.30 sec
+----------------------------------------------------------
+Test Passed.
+"frame_writer" end time: Jan 19 19:30 CET
+"frame_writer" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/58 Testing: goaway_gquic_be
+22/58 Test: goaway_gquic_be
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_goaway_gquic_be"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"goaway_gquic_be" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Passed.
+"goaway_gquic_be" end time: Jan 19 19:30 CET
+"goaway_gquic_be" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/58 Testing: h3_framing
+23/58 Test: h3_framing
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_h3_framing"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"h3_framing" start time: Jan 19 19:30 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  60.98 sec
+----------------------------------------------------------
+Test Passed.
+"h3_framing" end time: Jan 19 19:31 CET
+"h3_framing" time elapsed: 00:01:00
+----------------------------------------------------------
+
+24/58 Testing: hcsi_reader
+24/58 Test: hcsi_reader
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_hcsi_reader"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"hcsi_reader" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.29 sec
+----------------------------------------------------------
+Test Passed.
+"hcsi_reader" end time: Jan 19 19:31 CET
+"hcsi_reader" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/58 Testing: hkdf
+25/58 Test: hkdf
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_hkdf"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"hkdf" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"hkdf" end time: Jan 19 19:31 CET
+"hkdf" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/58 Testing: lsquic_hash
+26/58 Test: lsquic_hash
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_lsquic_hash"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"lsquic_hash" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.44 sec
+----------------------------------------------------------
+Test Passed.
+"lsquic_hash" end time: Jan 19 19:31 CET
+"lsquic_hash" time elapsed: 00:00:01
+----------------------------------------------------------
+
+27/58 Testing: packet_out
+27/58 Test: packet_out
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_packet_out"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"packet_out" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Passed.
+"packet_out" end time: Jan 19 19:31 CET
+"packet_out" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/58 Testing: packno_len
+28/58 Test: packno_len
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_packno_len"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"packno_len" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"packno_len" end time: Jan 19 19:31 CET
+"packno_len" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/58 Testing: parse_packet_in
+29/58 Test: parse_packet_in
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_parse_packet_in"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"parse_packet_in" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"parse_packet_in" end time: Jan 19 19:31 CET
+"parse_packet_in" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/58 Testing: purga
+30/58 Test: purga
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_purga"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"purga" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.44 sec
+----------------------------------------------------------
+Test Passed.
+"purga" end time: Jan 19 19:31 CET
+"purga" time elapsed: 00:00:01
+----------------------------------------------------------
+
+31/58 Testing: qlog
+31/58 Test: qlog
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_qlog"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"qlog" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+19:31:14.287 [DEBUG] [QUIC:] qlog: [17666984849,"CONNECTIVITY","NEW_CONNECTION","LINE",{"ip_version":"4","srcip":"10.0.0.1","dstip":"10.0.0.2","srcport":"12345","dstport":"443"}]
+19:31:14.288 [DEBUG] [QUIC:] qlog: [17666985997,"CONNECTIVITY","HANDSHAKE","PACKET_RX",{"status":"complete"}]
+19:31:14.288 [DEBUG] [QUIC:] qlog: [17666986008,"RECOVERY","RTT_UPDATE","PACKET_RX",{"zero_rtt":"successful"}]
+19:31:14.288 [DEBUG] [QUIC:] qlog: [17666986031,"CONNECTIVITY","VERNEG","LINE",{"proposed_version":"Q035"}]
+19:31:14.288 [DEBUG] [QUIC:] qlog: [17666986041,"CONNECTIVITY","VERNEG","LINE",{"proposed_version":"Q046"}]
+19:31:14.288 [DEBUG] [QUIC:] qlog: [17666986051,"CONNECTIVITY","VERNEG","PACKET_RX",{"agreed_version":"Q044"}]
+19:31:14.288 [DEBUG] [QUIC:] qlog: [17666986058,"CONNECTIVITY","VERNEG","PACKET_RX",{"agreed_version":"Q098"}]
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"qlog" end time: Jan 19 19:31 CET
+"qlog" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/58 Testing: quic_be_floats
+32/58 Test: quic_be_floats
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_quic_be_floats"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"quic_be_floats" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.36 sec
+----------------------------------------------------------
+Test Passed.
+"quic_be_floats" end time: Jan 19 19:31 CET
+"quic_be_floats" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/58 Testing: rechist
+33/58 Test: rechist
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_rechist"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"rechist" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+[DEBUG] [QUIC:] rechist: instantiated received packet history
+[DEBUG] [QUIC:] rechist: received 0
+[DEBUG] [QUIC:] rechist: received 1
+[DEBUG] [QUIC:] rechist: received 1
+[DEBUG] [QUIC:] rechist: received 3
+[DEBUG] [QUIC:] rechist: received 4
+[DEBUG] [QUIC:] rechist: received 5
+[INFO] [QUIC:] rechist: stop wait: 3
+[DEBUG] [QUIC:] rechist: received 1
+[DEBUG] [QUIC:] rechist: received 9
+[DEBUG] [QUIC:] rechist: received 8
+[DEBUG] [QUIC:] rechist: received 7
+[DEBUG] [QUIC:] rechist: instantiated received packet history
+[DEBUG] [QUIC:] rechist: received 11917
+[DEBUG] [QUIC:] rechist: received 11918
+[DEBUG] [QUIC:] rechist: received 11919
+[DEBUG] [QUIC:] rechist: received 11920
+[DEBUG] [QUIC:] rechist: received 11921
+[DEBUG] [QUIC:] rechist: received 11922
+[DEBUG] [QUIC:] rechist: received 11923
+[DEBUG] [QUIC:] rechist: received 11924
+[DEBUG] [QUIC:] rechist: received 11925
+[DEBUG] [QUIC:] rechist: received 11926
+[DEBUG] [QUIC:] rechist: received 11927
+[DEBUG] [QUIC:] rechist: received 11928
+[DEBUG] [QUIC:] rechist: received 11929
+[DEBUG] [QUIC:] rechist: received 11930
+[DEBUG] [QUIC:] rechist: received 11931
+[DEBUG] [QUIC:] rechist: received 11932
+[DEBUG] [QUIC:] rechist: received 11933
+[DEBUG] [QUIC:] rechist: received 11934
+[DEBUG] [QUIC:] rechist: received 11935
+[DEBUG] [QUIC:] rechist: received 11936
+[DEBUG] [QUIC:] rechist: received 11937
+[DEBUG] [QUIC:] rechist: received 11938
+[DEBUG] [QUIC:] rechist: received 11939
+[DEBUG] [QUIC:] rechist: received 11940
+[DEBUG] [QUIC:] rechist: received 11941
+[DEBUG] [QUIC:] rechist: received 11946
+[DEBUG] [QUIC:] rechist: received 11947
+[DEBUG] [QUIC:] rechist: received 11948
+[DEBUG] [QUIC:] rechist: received 11949
+[DEBUG] [QUIC:] rechist: received 11950
+[DEBUG] [QUIC:] rechist: received 11951
+[DEBUG] [QUIC:] rechist: received 11952
+[DEBUG] [QUIC:] rechist: received 11953
+[DEBUG] [QUIC:] rechist: received 11954
+[DEBUG] [QUIC:] rechist: received 11955
+[DEBUG] [QUIC:] rechist: received 11956
+[DEBUG] [QUIC:] rechist: received 11957
+[DEBUG] [QUIC:] rechist: received 11958
+[DEBUG] [QUIC:] rechist: received 11959
+[DEBUG] [QUIC:] rechist: received 11960
+[DEBUG] [QUIC:] rechist: received 11961
+[DEBUG] [QUIC:] rechist: received 11962
+[DEBUG] [QUIC:] rechist: received 11963
+[DEBUG] [QUIC:] rechist: received 11964
+[DEBUG] [QUIC:] rechist: received 11965
+[DEBUG] [QUIC:] rechist: received 11966
+[DEBUG] [QUIC:] rechist: received 11967
+[DEBUG] [QUIC:] rechist: received 11968
+[DEBUG] [QUIC:] rechist: received 11969
+[DEBUG] [QUIC:] rechist: received 11970
+[DEBUG] [QUIC:] rechist: received 11971
+[DEBUG] [QUIC:] rechist: received 11972
+[DEBUG] [QUIC:] rechist: received 11973
+[DEBUG] [QUIC:] rechist: received 11974
+[DEBUG] [QUIC:] rechist: received 11975
+[DEBUG] [QUIC:] rechist: received 11976
+[DEBUG] [QUIC:] rechist: received 11977
+[DEBUG] [QUIC:] rechist: received 11978
+[DEBUG] [QUIC:] rechist: received 11979
+[DEBUG] [QUIC:] rechist: received 11980
+[DEBUG] [QUIC:] rechist: received 11981
+[DEBUG] [QUIC:] rechist: received 11982
+[DEBUG] [QUIC:] rechist: received 11983
+[DEBUG] [QUIC:] rechist: received 11984
+[DEBUG] [QUIC:] rechist: received 11985
+[DEBUG] [QUIC:] rechist: received 11986
+[DEBUG] [QUIC:] rechist: received 11987
+[DEBUG] [QUIC:] rechist: received 11988
+[DEBUG] [QUIC:] rechist: received 11989
+[DEBUG] [QUIC:] rechist: received 11990
+[DEBUG] [QUIC:] rechist: received 11991
+[DEBUG] [QUIC:] rechist: received 11992
+[DEBUG] [QUIC:] rechist: received 11993
+[DEBUG] [QUIC:] rechist: received 11994
+[DEBUG] [QUIC:] rechist: received 11995
+[DEBUG] [QUIC:] rechist: received 11996
+[DEBUG] [QUIC:] rechist: received 11912
+[INFO] [QUIC:] rechist: stop wait: 11860
+[DEBUG] [QUIC:] rechist: received 12169
+[DEBUG] [QUIC:] rechist: received 12170
+[DEBUG] [QUIC:] rechist: received 12171
+[DEBUG] [QUIC:] rechist: received 12172
+[DEBUG] [QUIC:] rechist: received 12173
+[DEBUG] [QUIC:] rechist: received 12174
+[DEBUG] [QUIC:] rechist: received 12175
+[DEBUG] [QUIC:] rechist: received 12176
+[DEBUG] [QUIC:] rechist: received 12177
+[DEBUG] [QUIC:] rechist: received 12178
+[DEBUG] [QUIC:] rechist: received 12179
+[DEBUG] [QUIC:] rechist: received 12180
+[DEBUG] [QUIC:] rechist: received 12181
+[DEBUG] [QUIC:] rechist: received 12182
+[DEBUG] [QUIC:] rechist: received 12183
+[DEBUG] [QUIC:] rechist: received 12184
+[DEBUG] [QUIC:] rechist: received 12185
+[DEBUG] [QUIC:] rechist: received 12186
+[DEBUG] [QUIC:] rechist: received 12187
+[DEBUG] [QUIC:] rechist: received 12188
+[DEBUG] [QUIC:] rechist: received 12189
+[DEBUG] [QUIC:] rechist: received 12190
+[DEBUG] [QUIC:] rechist: received 12191
+[DEBUG] [QUIC:] rechist: received 12192
+[DEBUG] [QUIC:] rechist: received 12193
+[DEBUG] [QUIC:] rechist: instantiated received packet history
+[DEBUG] [QUIC:] rechist: received 1
+[DEBUG] [QUIC:] rechist: received 3
+[DEBUG] [QUIC:] rechist: received 12
+[DEBUG] [QUIC:] rechist: received 4
+[DEBUG] [QUIC:] rechist: received 10
+[DEBUG] [QUIC:] rechist: received 6
+[DEBUG] [QUIC:] rechist: received 7
+[DEBUG] [QUIC:] rechist: received 8
+[DEBUG] [QUIC:] rechist: received 9
+[DEBUG] [QUIC:] rechist: received 5
+[DEBUG] [QUIC:] rechist: received 11
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"rechist" end time: Jan 19 19:31 CET
+"rechist" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/58 Testing: reg_pkt_headergen
+34/58 Test: reg_pkt_headergen
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_reg_pkt_headergen"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"reg_pkt_headergen" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"reg_pkt_headergen" end time: Jan 19 19:31 CET
+"reg_pkt_headergen" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/58 Testing: rst_stream_gquic_be
+35/58 Test: rst_stream_gquic_be
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_rst_stream_gquic_be"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"rst_stream_gquic_be" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"rst_stream_gquic_be" end time: Jan 19 19:31 CET
+"rst_stream_gquic_be" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/58 Testing: rtt
+36/58 Test: rtt
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_rtt"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"rtt" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"rtt" end time: Jan 19 19:31 CET
+"rtt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/58 Testing: send_headers
+37/58 Test: send_headers
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_send_headers"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"send_headers" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"send_headers" end time: Jan 19 19:31 CET
+"send_headers" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/58 Testing: senhist
+38/58 Test: senhist
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_senhist"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"senhist" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"senhist" end time: Jan 19 19:31 CET
+"senhist" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/58 Testing: set
+39/58 Test: set
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_set"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"set" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"set" end time: Jan 19 19:31 CET
+"set" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/58 Testing: sfcw
+40/58 Test: sfcw
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_sfcw"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"sfcw" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"sfcw" end time: Jan 19 19:31 CET
+"sfcw" time elapsed: 00:00:00
+----------------------------------------------------------
+
+41/58 Testing: shi
+41/58 Test: shi
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_shi"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"shi" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   6.17 sec
+----------------------------------------------------------
+Test Passed.
+"shi" end time: Jan 19 19:31 CET
+"shi" time elapsed: 00:00:06
+----------------------------------------------------------
+
+42/58 Testing: spi
+42/58 Test: spi
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_spi"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"spi" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+[DEBUG] [QUIC:] spi: test_same_priority: initialized; # elems: 4; sets: [ 0000000000000001, 0000000000000000, 0000000000000000, 0000000000000000 ]
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_first: return stream 0, priority 0
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_next: return stream 0, priority 0
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_next: return stream 0, priority 0
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_next: return stream 0, priority 0
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_first: return stream 0, priority 0
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_next: return stream 0, priority 0
+[DEBUG] [QUIC:] spi: test_same_priority: initialized; # elems: 4; sets: [ 0000000000000000, 0000000800000000, 0000000000000000, 0000000000000000 ]
+[DEBUG] [QUIC:] spi: test_same_priority: find_and_set_lowest_priority: prio 0 -> 99
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_first: return stream 0, priority 99
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_next: return stream 0, priority 99
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_next: return stream 0, priority 99
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_next: return stream 0, priority 99
+[DEBUG] [QUIC:] spi: test_same_priority: find_and_set_lowest_priority: prio 0 -> 99
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_first: return stream 0, priority 99
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_next: return stream 0, priority 99
+[DEBUG] [QUIC:] spi: test_same_priority: initialized; # elems: 4; sets: [ 0000000000000000, 0000000000000000, 0000000000000000, 8000000000000000 ]
+[DEBUG] [QUIC:] spi: test_same_priority: find_and_set_lowest_priority: prio 0 -> 255
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_first: return stream 0, priority 255
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_next: return stream 0, priority 255
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_next: return stream 0, priority 255
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_next: return stream 0, priority 255
+[DEBUG] [QUIC:] spi: test_same_priority: find_and_set_lowest_priority: prio 0 -> 255
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_first: return stream 0, priority 255
+[DEBUG] [QUIC:] spi: test_same_priority: lsquic_spi_next: return stream 0, priority 255
+[DEBUG] [QUIC:] spi: test_different_priorities: initialized; # elems: 7; sets: [ 00000000000000FE, 0000000000000000, 0000000000000000, 0000000000000000 ]
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_lowest_priority: prio 0 -> 1
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_first: return stream 0, priority 1
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 1 -> 2
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 2
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 2 -> 3
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 3
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 3 -> 4
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 4
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 4 -> 5
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 5
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 5 -> 6
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 6
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 6 -> 7
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 7
+[DEBUG] [QUIC:] spi: test_different_priorities: initialized; # elems: 7; sets: [ 00000000000000FE, 0000000000000000, 0000000000000000, 0000000000000000 ]
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_lowest_priority: prio 0 -> 1
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_first: return stream 0, priority 1
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 1 -> 2
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 2
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 2 -> 3
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 3
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 3 -> 4
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 4
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 4 -> 5
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 5
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 5 -> 6
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 6
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 6 -> 7
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 7
+[DEBUG] [QUIC:] spi: test_different_priorities: initialized; # elems: 12; sets: [ 0000000040900087, 0000003000010000, 0000000000000000, 8000000000000000 ]
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_first: return stream 0, priority 0
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 0
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 0 -> 1
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 1
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 1 -> 2
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 2
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 2 -> 7
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 7
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 7 -> 20
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 20
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 20 -> 23
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 23
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 23 -> 30
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 30
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 30 -> 80
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 80
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 80 -> 100
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 100
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 100 -> 101
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 101
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 101 -> 255
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 255
+[DEBUG] [QUIC:] spi: test_different_priorities: initialized; # elems: 6; sets: [ 0000000000000000, 0000000000000000, 0000000000000000, 0001000000000780 ]
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_lowest_priority: prio 0 -> 199
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_first: return stream 0, priority 199
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 199 -> 200
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 200
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 200
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 200 -> 201
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 201
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 201 -> 202
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 202
+[DEBUG] [QUIC:] spi: test_different_priorities: find_and_set_next_priority: prio 202 -> 240
+[DEBUG] [QUIC:] spi: test_different_priorities: lsquic_spi_next: return stream 0, priority 240
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: initialized; # elems: 4; sets: [ 0000000000000000, 0000000000000000, 0000000000000000, 0001000000000500 ]
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: find_and_set_lowest_priority: prio 0 -> 200
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: lsquic_spi_first: return stream 0, priority 200
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: evict stream 0
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: lsquic_spi_next: return stream 0, priority 200
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: evict stream 0
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: priority 200 now has no elements
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: find_and_set_next_priority: prio 200 -> 202
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: lsquic_spi_next: return stream 0, priority 202
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: evict stream 0
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: priority 202 now has no elements
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: find_and_set_next_priority: prio 202 -> 240
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: lsquic_spi_next: return stream 0, priority 240
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: evict stream 0
+[DEBUG] [QUIC:] spi: test_different_priorities_filter_odd: priority 240 now has no elements
+[DEBUG] [QUIC:] spi: test_drop: initialized; # elems: 5; sets: [ 0000000000000003, 0000000000000000, 0000000000000000, 0000000000000100 ]
+[DEBUG] [QUIC:] spi: test_drop: find_and_set_lowest_priority: prio 0 -> 0
+[DEBUG] [QUIC:] spi: test_drop: evict stream 1
+[DEBUG] [QUIC:] spi: test_drop: evict stream 3
+[DEBUG] [QUIC:] spi: test_drop: lsquic_spi_next: return stream 5, priority 0
+[DEBUG] [QUIC:] spi: test_drop: evict stream 5
+[DEBUG] [QUIC:] spi: test_drop: priority 0 now has no elements
+[DEBUG] [QUIC:] spi: test_drop: initialized; # elems: 5; sets: [ 0000000000000003, 0000000000000000, 0000000000000000, 0000000000000100 ]
+[DEBUG] [QUIC:] spi: test_drop: find_and_set_lowest_priority: prio 0 -> 0
+[DEBUG] [QUIC:] spi: test_drop: find_and_set_lowest_priority: prio 0 -> 1
+[DEBUG] [QUIC:] spi: test_drop: lsquic_spi_first: return stream 7, priority 1
+[DEBUG] [QUIC:] spi: test_drop: evict stream 7
+[DEBUG] [QUIC:] spi: test_drop: priority 1 now has no elements
+[DEBUG] [QUIC:] spi: test_drop: find_and_set_next_priority: prio 1 -> 200
+[DEBUG] [QUIC:] spi: test_drop: lsquic_spi_next: return stream 127, priority 200
+[DEBUG] [QUIC:] spi: test_drop: evict stream 127
+[DEBUG] [QUIC:] spi: test_drop: priority 200 now has no elements
+[DEBUG] [QUIC:] spi: test_drop: initialized; # elems: 5; sets: [ 0000000000000013, 0000000000000000, 0000000000000000, 0000000000000100 ]
+[DEBUG] [QUIC:] spi: test_drop: find_and_set_lowest_priority: prio 0 -> 0
+[DEBUG] [QUIC:] spi: test_drop: find_and_set_lowest_priority: prio 1 -> 0
+[DEBUG] [QUIC:] spi: test_drop: evict stream 1
+[DEBUG] [QUIC:] spi: test_drop: evict stream 3
+[DEBUG] [QUIC:] spi: test_drop: priority 0 now has no elements
+[DEBUG] [QUIC:] spi: test_drop: initialized; # elems: 5; sets: [ 0000000000000013, 0000000000000000, 0000000000000000, 0000000000000100 ]
+[DEBUG] [QUIC:] spi: test_drop: find_and_set_lowest_priority: prio 0 -> 0
+[DEBUG] [QUIC:] spi: test_drop: find_and_set_lowest_priority: prio 1 -> 0
+[DEBUG] [QUIC:] spi: test_drop: find_and_set_lowest_priority: prio 0 -> 1
+[DEBUG] [QUIC:] spi: test_drop: lsquic_spi_first: return stream 7, priority 1
+[DEBUG] [QUIC:] spi: test_drop: evict stream 7
+[DEBUG] [QUIC:] spi: test_drop: priority 1 now has no elements
+[DEBUG] [QUIC:] spi: test_drop: find_and_set_next_priority: prio 1 -> 4
+[DEBUG] [QUIC:] spi: test_drop: lsquic_spi_next: return stream 5, priority 4
+[DEBUG] [QUIC:] spi: test_drop: evict stream 5
+[DEBUG] [QUIC:] spi: test_drop: priority 4 now has no elements
+[DEBUG] [QUIC:] spi: test_drop: find_and_set_next_priority: prio 4 -> 200
+[DEBUG] [QUIC:] spi: test_drop: lsquic_spi_next: return stream 127, priority 200
+[DEBUG] [QUIC:] spi: test_drop: evict stream 127
+[DEBUG] [QUIC:] spi: test_drop: priority 200 now has no elements
+[DEBUG] [QUIC:] spi: test_drop: lsquic_spi_first: return stream 0, priority 0
+[DEBUG] [QUIC:] spi: test_drop: evict stream 0
+[DEBUG] [QUIC:] spi: test_drop: priority 0 now has no elements
+[DEBUG] [QUIC:] spi: test_drop: lsquic_spi_first: return stream 0, priority 0
+[DEBUG] [QUIC:] spi: test_drop: evict stream 0
+[DEBUG] [QUIC:] spi: test_drop: priority 0 now has no elements
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"spi" end time: Jan 19 19:31 CET
+"spi" time elapsed: 00:00:00
+----------------------------------------------------------
+
+43/58 Testing: stop_waiting_gquic_be
+43/58 Test: stop_waiting_gquic_be
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_stop_waiting_gquic_be"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"stop_waiting_gquic_be" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"stop_waiting_gquic_be" end time: Jan 19 19:31 CET
+"stop_waiting_gquic_be" time elapsed: 00:00:00
+----------------------------------------------------------
+
+44/58 Testing: streamgen
+44/58 Test: streamgen
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_streamgen"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"streamgen" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"streamgen" end time: Jan 19 19:31 CET
+"streamgen" time elapsed: 00:00:00
+----------------------------------------------------------
+
+45/58 Testing: streamparse
+45/58 Test: streamparse
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_streamparse"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"streamparse" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"streamparse" end time: Jan 19 19:31 CET
+"streamparse" time elapsed: 00:00:00
+----------------------------------------------------------
+
+46/58 Testing: trapa
+46/58 Test: trapa
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_trapa"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"trapa" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"trapa" end time: Jan 19 19:31 CET
+"trapa" time elapsed: 00:00:00
+----------------------------------------------------------
+
+47/58 Testing: varint
+47/58 Test: varint
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_varint"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"varint" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"varint" end time: Jan 19 19:31 CET
+"varint" time elapsed: 00:00:00
+----------------------------------------------------------
+
+48/58 Testing: ver_nego
+48/58 Test: ver_nego
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_ver_nego"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"ver_nego" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.48 sec
+----------------------------------------------------------
+Test Passed.
+"ver_nego" end time: Jan 19 19:31 CET
+"ver_nego" time elapsed: 00:00:00
+----------------------------------------------------------
+
+49/58 Testing: wuf_gquic_be
+49/58 Test: wuf_gquic_be
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_wuf_gquic_be"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"wuf_gquic_be" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"wuf_gquic_be" end time: Jan 19 19:31 CET
+"wuf_gquic_be" time elapsed: 00:00:00
+----------------------------------------------------------
+
+50/58 Testing: ack_merge
+50/58 Test: ack_merge
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_ack_merge"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"ack_merge" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"ack_merge" end time: Jan 19 19:31 CET
+"ack_merge" time elapsed: 00:00:00
+----------------------------------------------------------
+
+51/58 Testing: stream
+51/58 Test: stream
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_stream"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"stream" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+inserting 01234<FIN>
+inserting 01234<FIN>
+inserting 0123<FIN>4
+inserting 0123<FIN>4
+inserting 01243<FIN>
+inserting 01243<FIN>
+inserting 0124<FIN>3
+inserting 0124<FIN>3
+inserting 012<FIN>34
+inserting 012<FIN>34
+inserting 012<FIN>43
+inserting 012<FIN>43
+inserting 01324<FIN>
+inserting 01324<FIN>
+inserting 0132<FIN>4
+inserting 0132<FIN>4
+inserting 01342<FIN>
+inserting 01342<FIN>
+inserting 0134<FIN>2
+inserting 0134<FIN>2
+inserting 013<FIN>24
+inserting 013<FIN>24
+inserting 013<FIN>42
+inserting 013<FIN>42
+inserting 01423<FIN>
+inserting 01423<FIN>
+inserting 0142<FIN>3
+inserting 0142<FIN>3
+inserting 01432<FIN>
+inserting 01432<FIN>
+inserting 0143<FIN>2
+inserting 0143<FIN>2
+inserting 014<FIN>23
+inserting 014<FIN>23
+inserting 014<FIN>32
+inserting 014<FIN>32
+inserting 01<FIN>234
+inserting 01<FIN>234
+inserting 01<FIN>243
+inserting 01<FIN>243
+inserting 01<FIN>324
+inserting 01<FIN>324
+inserting 01<FIN>342
+inserting 01<FIN>342
+inserting 01<FIN>423
+inserting 01<FIN>423
+inserting 01<FIN>432
+inserting 01<FIN>432
+inserting 02134<FIN>
+inserting 02134<FIN>
+inserting 0213<FIN>4
+inserting 0213<FIN>4
+inserting 02143<FIN>
+inserting 02143<FIN>
+inserting 0214<FIN>3
+inserting 0214<FIN>3
+inserting 021<FIN>34
+inserting 021<FIN>34
+inserting 021<FIN>43
+inserting 021<FIN>43
+inserting 02314<FIN>
+inserting 02314<FIN>
+inserting 0231<FIN>4
+inserting 0231<FIN>4
+inserting 02341<FIN>
+inserting 02341<FIN>
+inserting 0234<FIN>1
+inserting 0234<FIN>1
+inserting 023<FIN>14
+inserting 023<FIN>14
+inserting 023<FIN>41
+inserting 023<FIN>41
+inserting 02413<FIN>
+inserting 02413<FIN>
+inserting 0241<FIN>3
+inserting 0241<FIN>3
+inserting 02431<FIN>
+inserting 02431<FIN>
+inserting 0243<FIN>1
+inserting 0243<FIN>1
+inserting 024<FIN>13
+inserting 024<FIN>13
+inserting 024<FIN>31
+inserting 024<FIN>31
+inserting 02<FIN>134
+inserting 02<FIN>134
+inserting 02<FIN>143
+inserting 02<FIN>143
+inserting 02<FIN>314
+inserting 02<FIN>314
+inserting 02<FIN>341
+inserting 02<FIN>341
+inserting 02<FIN>413
+inserting 02<FIN>413
+inserting 02<FIN>431
+inserting 02<FIN>431
+inserting 03124<FIN>
+inserting 03124<FIN>
+inserting 0312<FIN>4
+inserting 0312<FIN>4
+inserting 03142<FIN>
+inserting 03142<FIN>
+inserting 0314<FIN>2
+inserting 0314<FIN>2
+inserting 031<FIN>24
+inserting 031<FIN>24
+inserting 031<FIN>42
+inserting 031<FIN>42
+inserting 03214<FIN>
+inserting 03214<FIN>
+inserting 0321<FIN>4
+inserting 0321<FIN>4
+inserting 03241<FIN>
+inserting 03241<FIN>
+inserting 0324<FIN>1
+inserting 0324<FIN>1
+inserting 032<FIN>14
+inserting 032<FIN>14
+inserting 032<FIN>41
+inserting 032<FIN>41
+inserting 03412<FIN>
+inserting 03412<FIN>
+inserting 0341<FIN>2
+inserting 0341<FIN>2
+inserting 03421<FIN>
+inserting 03421<FIN>
+inserting 0342<FIN>1
+inserting 0342<FIN>1
+inserting 034<FIN>12
+inserting 034<FIN>12
+inserting 034<FIN>21
+inserting 034<FIN>21
+inserting 03<FIN>124
+inserting 03<FIN>124
+inserting 03<FIN>142
+inserting 03<FIN>142
+inserting 03<FIN>214
+inserting 03<FIN>214
+inserting 03<FIN>241
+inserting 03<FIN>241
+inserting 03<FIN>412
+inserting 03<FIN>412
+inserting 03<FIN>421
+inserting 03<FIN>421
+inserting 04123<FIN>
+inserting 04123<FIN>
+inserting 0412<FIN>3
+inserting 0412<FIN>3
+inserting 04132<FIN>
+inserting 04132<FIN>
+inserting 0413<FIN>2
+inserting 0413<FIN>2
+inserting 041<FIN>23
+inserting 041<FIN>23
+inserting 041<FIN>32
+inserting 041<FIN>32
+inserting 04213<FIN>
+inserting 04213<FIN>
+inserting 0421<FIN>3
+inserting 0421<FIN>3
+inserting 04231<FIN>
+inserting 04231<FIN>
+inserting 0423<FIN>1
+inserting 0423<FIN>1
+inserting 042<FIN>13
+inserting 042<FIN>13
+inserting 042<FIN>31
+inserting 042<FIN>31
+inserting 04312<FIN>
+inserting 04312<FIN>
+inserting 0431<FIN>2
+inserting 0431<FIN>2
+inserting 04321<FIN>
+inserting 04321<FIN>
+inserting 0432<FIN>1
+inserting 0432<FIN>1
+inserting 043<FIN>12
+inserting 043<FIN>12
+inserting 043<FIN>21
+inserting 043<FIN>21
+inserting 04<FIN>123
+inserting 04<FIN>123
+inserting 04<FIN>132
+inserting 04<FIN>132
+inserting 04<FIN>213
+inserting 04<FIN>213
+inserting 04<FIN>231
+inserting 04<FIN>231
+inserting 04<FIN>312
+inserting 04<FIN>312
+inserting 04<FIN>321
+inserting 04<FIN>321
+inserting 0<FIN>1234
+inserting 0<FIN>1234
+inserting 0<FIN>1243
+inserting 0<FIN>1243
+inserting 0<FIN>1324
+inserting 0<FIN>1324
+inserting 0<FIN>1342
+inserting 0<FIN>1342
+inserting 0<FIN>1423
+inserting 0<FIN>1423
+inserting 0<FIN>1432
+inserting 0<FIN>1432
+inserting 0<FIN>2134
+inserting 0<FIN>2134
+inserting 0<FIN>2143
+inserting 0<FIN>2143
+inserting 0<FIN>2314
+inserting 0<FIN>2314
+inserting 0<FIN>2341
+inserting 0<FIN>2341
+inserting 0<FIN>2413
+inserting 0<FIN>2413
+inserting 0<FIN>2431
+inserting 0<FIN>2431
+inserting 0<FIN>3124
+inserting 0<FIN>3124
+inserting 0<FIN>3142
+inserting 0<FIN>3142
+inserting 0<FIN>3214
+inserting 0<FIN>3214
+inserting 0<FIN>3241
+inserting 0<FIN>3241
+inserting 0<FIN>3412
+inserting 0<FIN>3412
+inserting 0<FIN>3421
+inserting 0<FIN>3421
+inserting 0<FIN>4123
+inserting 0<FIN>4123
+inserting 0<FIN>4132
+inserting 0<FIN>4132
+inserting 0<FIN>4213
+inserting 0<FIN>4213
+inserting 0<FIN>4231
+inserting 0<FIN>4231
+inserting 0<FIN>4312
+inserting 0<FIN>4312
+inserting 0<FIN>4321
+inserting 0<FIN>4321
+inserting 10234<FIN>
+inserting 10234<FIN>
+inserting 1023<FIN>4
+inserting 1023<FIN>4
+inserting 10243<FIN>
+inserting 10243<FIN>
+inserting 1024<FIN>3
+inserting 1024<FIN>3
+inserting 102<FIN>34
+inserting 102<FIN>34
+inserting 102<FIN>43
+inserting 102<FIN>43
+inserting 10324<FIN>
+inserting 10324<FIN>
+inserting 1032<FIN>4
+inserting 1032<FIN>4
+inserting 10342<FIN>
+inserting 10342<FIN>
+inserting 1034<FIN>2
+inserting 1034<FIN>2
+inserting 103<FIN>24
+inserting 103<FIN>24
+inserting 103<FIN>42
+inserting 103<FIN>42
+inserting 10423<FIN>
+inserting 10423<FIN>
+inserting 1042<FIN>3
+inserting 1042<FIN>3
+inserting 10432<FIN>
+inserting 10432<FIN>
+inserting 1043<FIN>2
+inserting 1043<FIN>2
+inserting 104<FIN>23
+inserting 104<FIN>23
+inserting 104<FIN>32
+inserting 104<FIN>32
+inserting 10<FIN>234
+inserting 10<FIN>234
+inserting 10<FIN>243
+inserting 10<FIN>243
+inserting 10<FIN>324
+inserting 10<FIN>324
+inserting 10<FIN>342
+inserting 10<FIN>342
+inserting 10<FIN>423
+inserting 10<FIN>423
+inserting 10<FIN>432
+inserting 10<FIN>432
+inserting 12034<FIN>
+inserting 12034<FIN>
+inserting 1203<FIN>4
+inserting 1203<FIN>4
+inserting 12043<FIN>
+inserting 12043<FIN>
+inserting 1204<FIN>3
+inserting 1204<FIN>3
+inserting 120<FIN>34
+inserting 120<FIN>34
+inserting 120<FIN>43
+inserting 120<FIN>43
+inserting 12304<FIN>
+inserting 12304<FIN>
+inserting 1230<FIN>4
+inserting 1230<FIN>4
+inserting 12340<FIN>
+inserting 12340<FIN>
+inserting 1234<FIN>0
+inserting 1234<FIN>0
+inserting 123<FIN>04
+inserting 123<FIN>04
+inserting 123<FIN>40
+inserting 123<FIN>40
+inserting 12403<FIN>
+inserting 12403<FIN>
+inserting 1240<FIN>3
+inserting 1240<FIN>3
+inserting 12430<FIN>
+inserting 12430<FIN>
+inserting 1243<FIN>0
+inserting 1243<FIN>0
+inserting 124<FIN>03
+inserting 124<FIN>03
+inserting 124<FIN>30
+inserting 124<FIN>30
+inserting 12<FIN>034
+inserting 12<FIN>034
+inserting 12<FIN>043
+inserting 12<FIN>043
+inserting 12<FIN>304
+inserting 12<FIN>304
+inserting 12<FIN>340
+inserting 12<FIN>340
+inserting 12<FIN>403
+inserting 12<FIN>403
+inserting 12<FIN>430
+inserting 12<FIN>430
+inserting 13024<FIN>
+inserting 13024<FIN>
+inserting 1302<FIN>4
+inserting 1302<FIN>4
+inserting 13042<FIN>
+inserting 13042<FIN>
+inserting 1304<FIN>2
+inserting 1304<FIN>2
+inserting 130<FIN>24
+inserting 130<FIN>24
+inserting 130<FIN>42
+inserting 130<FIN>42
+inserting 13204<FIN>
+inserting 13204<FIN>
+inserting 1320<FIN>4
+inserting 1320<FIN>4
+inserting 13240<FIN>
+inserting 13240<FIN>
+inserting 1324<FIN>0
+inserting 1324<FIN>0
+inserting 132<FIN>04
+inserting 132<FIN>04
+inserting 132<FIN>40
+inserting 132<FIN>40
+inserting 13402<FIN>
+inserting 13402<FIN>
+inserting 1340<FIN>2
+inserting 1340<FIN>2
+inserting 13420<FIN>
+inserting 13420<FIN>
+inserting 1342<FIN>0
+inserting 1342<FIN>0
+inserting 134<FIN>02
+inserting 134<FIN>02
+inserting 134<FIN>20
+inserting 134<FIN>20
+inserting 13<FIN>024
+inserting 13<FIN>024
+inserting 13<FIN>042
+inserting 13<FIN>042
+inserting 13<FIN>204
+inserting 13<FIN>204
+inserting 13<FIN>240
+inserting 13<FIN>240
+inserting 13<FIN>402
+inserting 13<FIN>402
+inserting 13<FIN>420
+inserting 13<FIN>420
+inserting 14023<FIN>
+inserting 14023<FIN>
+inserting 1402<FIN>3
+inserting 1402<FIN>3
+inserting 14032<FIN>
+inserting 14032<FIN>
+inserting 1403<FIN>2
+inserting 1403<FIN>2
+inserting 140<FIN>23
+inserting 140<FIN>23
+inserting 140<FIN>32
+inserting 140<FIN>32
+inserting 14203<FIN>
+inserting 14203<FIN>
+inserting 1420<FIN>3
+inserting 1420<FIN>3
+inserting 14230<FIN>
+inserting 14230<FIN>
+inserting 1423<FIN>0
+inserting 1423<FIN>0
+inserting 142<FIN>03
+inserting 142<FIN>03
+inserting 142<FIN>30
+inserting 142<FIN>30
+inserting 14302<FIN>
+inserting 14302<FIN>
+inserting 1430<FIN>2
+inserting 1430<FIN>2
+inserting 14320<FIN>
+inserting 14320<FIN>
+inserting 1432<FIN>0
+inserting 1432<FIN>0
+inserting 143<FIN>02
+inserting 143<FIN>02
+inserting 143<FIN>20
+inserting 143<FIN>20
+inserting 14<FIN>023
+inserting 14<FIN>023
+inserting 14<FIN>032
+inserting 14<FIN>032
+inserting 14<FIN>203
+inserting 14<FIN>203
+inserting 14<FIN>230
+inserting 14<FIN>230
+inserting 14<FIN>302
+inserting 14<FIN>302
+inserting 14<FIN>320
+inserting 14<FIN>320
+inserting 1<FIN>0234
+inserting 1<FIN>0234
+inserting 1<FIN>0243
+inserting 1<FIN>0243
+inserting 1<FIN>0324
+inserting 1<FIN>0324
+inserting 1<FIN>0342
+inserting 1<FIN>0342
+inserting 1<FIN>0423
+inserting 1<FIN>0423
+inserting 1<FIN>0432
+inserting 1<FIN>0432
+inserting 1<FIN>2034
+inserting 1<FIN>2034
+inserting 1<FIN>2043
+inserting 1<FIN>2043
+inserting 1<FIN>2304
+inserting 1<FIN>2304
+inserting 1<FIN>2340
+inserting 1<FIN>2340
+inserting 1<FIN>2403
+inserting 1<FIN>2403
+inserting 1<FIN>2430
+inserting 1<FIN>2430
+inserting 1<FIN>3024
+inserting 1<FIN>3024
+inserting 1<FIN>3042
+inserting 1<FIN>3042
+inserting 1<FIN>3204
+inserting 1<FIN>3204
+inserting 1<FIN>3240
+inserting 1<FIN>3240
+inserting 1<FIN>3402
+inserting 1<FIN>3402
+inserting 1<FIN>3420
+inserting 1<FIN>3420
+inserting 1<FIN>4023
+inserting 1<FIN>4023
+inserting 1<FIN>4032
+inserting 1<FIN>4032
+inserting 1<FIN>4203
+inserting 1<FIN>4203
+inserting 1<FIN>4230
+inserting 1<FIN>4230
+inserting 1<FIN>4302
+inserting 1<FIN>4302
+inserting 1<FIN>4320
+inserting 1<FIN>4320
+inserting 20134<FIN>
+inserting 20134<FIN>
+inserting 2013<FIN>4
+inserting 2013<FIN>4
+inserting 20143<FIN>
+inserting 20143<FIN>
+inserting 2014<FIN>3
+inserting 2014<FIN>3
+inserting 201<FIN>34
+inserting 201<FIN>34
+inserting 201<FIN>43
+inserting 201<FIN>43
+inserting 20314<FIN>
+inserting 20314<FIN>
+inserting 2031<FIN>4
+inserting 2031<FIN>4
+inserting 20341<FIN>
+inserting 20341<FIN>
+inserting 2034<FIN>1
+inserting 2034<FIN>1
+inserting 203<FIN>14
+inserting 203<FIN>14
+inserting 203<FIN>41
+inserting 203<FIN>41
+inserting 20413<FIN>
+inserting 20413<FIN>
+inserting 2041<FIN>3
+inserting 2041<FIN>3
+inserting 20431<FIN>
+inserting 20431<FIN>
+inserting 2043<FIN>1
+inserting 2043<FIN>1
+inserting 204<FIN>13
+inserting 204<FIN>13
+inserting 204<FIN>31
+inserting 204<FIN>31
+inserting 20<FIN>134
+inserting 20<FIN>134
+inserting 20<FIN>143
+inserting 20<FIN>143
+inserting 20<FIN>314
+inserting 20<FIN>314
+inserting 20<FIN>341
+inserting 20<FIN>341
+inserting 20<FIN>413
+inserting 20<FIN>413
+inserting 20<FIN>431
+inserting 20<FIN>431
+inserting 21034<FIN>
+inserting 21034<FIN>
+inserting 2103<FIN>4
+inserting 2103<FIN>4
+inserting 21043<FIN>
+inserting 21043<FIN>
+inserting 2104<FIN>3
+inserting 2104<FIN>3
+inserting 210<FIN>34
+inserting 210<FIN>34
+inserting 210<FIN>43
+inserting 210<FIN>43
+inserting 21304<FIN>
+inserting 21304<FIN>
+inserting 2130<FIN>4
+inserting 2130<FIN>4
+inserting 21340<FIN>
+inserting 21340<FIN>
+inserting 2134<FIN>0
+inserting 2134<FIN>0
+inserting 213<FIN>04
+inserting 213<FIN>04
+inserting 213<FIN>40
+inserting 213<FIN>40
+inserting 21403<FIN>
+inserting 21403<FIN>
+inserting 2140<FIN>3
+inserting 2140<FIN>3
+inserting 21430<FIN>
+inserting 21430<FIN>
+inserting 2143<FIN>0
+inserting 2143<FIN>0
+inserting 214<FIN>03
+inserting 214<FIN>03
+inserting 214<FIN>30
+inserting 214<FIN>30
+inserting 21<FIN>034
+inserting 21<FIN>034
+inserting 21<FIN>043
+inserting 21<FIN>043
+inserting 21<FIN>304
+inserting 21<FIN>304
+inserting 21<FIN>340
+inserting 21<FIN>340
+inserting 21<FIN>403
+inserting 21<FIN>403
+inserting 21<FIN>430
+inserting 21<FIN>430
+inserting 23014<FIN>
+inserting 23014<FIN>
+inserting 2301<FIN>4
+inserting 2301<FIN>4
+inserting 23041<FIN>
+inserting 23041<FIN>
+inserting 2304<FIN>1
+inserting 2304<FIN>1
+inserting 230<FIN>14
+inserting 230<FIN>14
+inserting 230<FIN>41
+inserting 230<FIN>41
+inserting 23104<FIN>
+inserting 23104<FIN>
+inserting 2310<FIN>4
+inserting 2310<FIN>4
+inserting 23140<FIN>
+inserting 23140<FIN>
+inserting 2314<FIN>0
+inserting 2314<FIN>0
+inserting 231<FIN>04
+inserting 231<FIN>04
+inserting 231<FIN>40
+inserting 231<FIN>40
+inserting 23401<FIN>
+inserting 23401<FIN>
+inserting 2340<FIN>1
+inserting 2340<FIN>1
+inserting 23410<FIN>
+inserting 23410<FIN>
+inserting 2341<FIN>0
+inserting 2341<FIN>0
+inserting 234<FIN>01
+inserting 234<FIN>01
+inserting 234<FIN>10
+inserting 234<FIN>10
+inserting 23<FIN>014
+inserting 23<FIN>014
+inserting 23<FIN>041
+inserting 23<FIN>041
+inserting 23<FIN>104
+inserting 23<FIN>104
+inserting 23<FIN>140
+inserting 23<FIN>140
+inserting 23<FIN>401
+inserting 23<FIN>401
+inserting 23<FIN>410
+inserting 23<FIN>410
+inserting 24013<FIN>
+inserting 24013<FIN>
+inserting 2401<FIN>3
+inserting 2401<FIN>3
+inserting 24031<FIN>
+inserting 24031<FIN>
+inserting 2403<FIN>1
+inserting 2403<FIN>1
+inserting 240<FIN>13
+inserting 240<FIN>13
+inserting 240<FIN>31
+inserting 240<FIN>31
+inserting 24103<FIN>
+inserting 24103<FIN>
+inserting 2410<FIN>3
+inserting 2410<FIN>3
+inserting 24130<FIN>
+inserting 24130<FIN>
+inserting 2413<FIN>0
+inserting 2413<FIN>0
+inserting 241<FIN>03
+inserting 241<FIN>03
+inserting 241<FIN>30
+inserting 241<FIN>30
+inserting 24301<FIN>
+inserting 24301<FIN>
+inserting 2430<FIN>1
+inserting 2430<FIN>1
+inserting 24310<FIN>
+inserting 24310<FIN>
+inserting 2431<FIN>0
+inserting 2431<FIN>0
+inserting 243<FIN>01
+inserting 243<FIN>01
+inserting 243<FIN>10
+inserting 243<FIN>10
+inserting 24<FIN>013
+inserting 24<FIN>013
+inserting 24<FIN>031
+inserting 24<FIN>031
+inserting 24<FIN>103
+inserting 24<FIN>103
+inserting 24<FIN>130
+inserting 24<FIN>130
+inserting 24<FIN>301
+inserting 24<FIN>301
+inserting 24<FIN>310
+inserting 24<FIN>310
+inserting 2<FIN>0134
+inserting 2<FIN>0134
+inserting 2<FIN>0143
+inserting 2<FIN>0143
+inserting 2<FIN>0314
+inserting 2<FIN>0314
+inserting 2<FIN>0341
+inserting 2<FIN>0341
+inserting 2<FIN>0413
+inserting 2<FIN>0413
+inserting 2<FIN>0431
+inserting 2<FIN>0431
+inserting 2<FIN>1034
+inserting 2<FIN>1034
+inserting 2<FIN>1043
+inserting 2<FIN>1043
+inserting 2<FIN>1304
+inserting 2<FIN>1304
+inserting 2<FIN>1340
+inserting 2<FIN>1340
+inserting 2<FIN>1403
+inserting 2<FIN>1403
+inserting 2<FIN>1430
+inserting 2<FIN>1430
+inserting 2<FIN>3014
+inserting 2<FIN>3014
+inserting 2<FIN>3041
+inserting 2<FIN>3041
+inserting 2<FIN>3104
+inserting 2<FIN>3104
+inserting 2<FIN>3140
+inserting 2<FIN>3140
+inserting 2<FIN>3401
+inserting 2<FIN>3401
+inserting 2<FIN>3410
+inserting 2<FIN>3410
+inserting 2<FIN>4013
+inserting 2<FIN>4013
+inserting 2<FIN>4031
+inserting 2<FIN>4031
+inserting 2<FIN>4103
+inserting 2<FIN>4103
+inserting 2<FIN>4130
+inserting 2<FIN>4130
+inserting 2<FIN>4301
+inserting 2<FIN>4301
+inserting 2<FIN>4310
+inserting 2<FIN>4310
+inserting 30124<FIN>
+inserting 30124<FIN>
+inserting 3012<FIN>4
+inserting 3012<FIN>4
+inserting 30142<FIN>
+inserting 30142<FIN>
+inserting 3014<FIN>2
+inserting 3014<FIN>2
+inserting 301<FIN>24
+inserting 301<FIN>24
+inserting 301<FIN>42
+inserting 301<FIN>42
+inserting 30214<FIN>
+inserting 30214<FIN>
+inserting 3021<FIN>4
+inserting 3021<FIN>4
+inserting 30241<FIN>
+inserting 30241<FIN>
+inserting 3024<FIN>1
+inserting 3024<FIN>1
+inserting 302<FIN>14
+inserting 302<FIN>14
+inserting 302<FIN>41
+inserting 302<FIN>41
+inserting 30412<FIN>
+inserting 30412<FIN>
+inserting 3041<FIN>2
+inserting 3041<FIN>2
+inserting 30421<FIN>
+inserting 30421<FIN>
+inserting 3042<FIN>1
+inserting 3042<FIN>1
+inserting 304<FIN>12
+inserting 304<FIN>12
+inserting 304<FIN>21
+inserting 304<FIN>21
+inserting 30<FIN>124
+inserting 30<FIN>124
+inserting 30<FIN>142
+inserting 30<FIN>142
+inserting 30<FIN>214
+inserting 30<FIN>214
+inserting 30<FIN>241
+inserting 30<FIN>241
+inserting 30<FIN>412
+inserting 30<FIN>412
+inserting 30<FIN>421
+inserting 30<FIN>421
+inserting 31024<FIN>
+inserting 31024<FIN>
+inserting 3102<FIN>4
+inserting 3102<FIN>4
+inserting 31042<FIN>
+inserting 31042<FIN>
+inserting 3104<FIN>2
+inserting 3104<FIN>2
+inserting 310<FIN>24
+inserting 310<FIN>24
+inserting 310<FIN>42
+inserting 310<FIN>42
+inserting 31204<FIN>
+inserting 31204<FIN>
+inserting 3120<FIN>4
+inserting 3120<FIN>4
+inserting 31240<FIN>
+inserting 31240<FIN>
+inserting 3124<FIN>0
+inserting 3124<FIN>0
+inserting 312<FIN>04
+inserting 312<FIN>04
+inserting 312<FIN>40
+inserting 312<FIN>40
+inserting 31402<FIN>
+inserting 31402<FIN>
+inserting 3140<FIN>2
+inserting 3140<FIN>2
+inserting 31420<FIN>
+inserting 31420<FIN>
+inserting 3142<FIN>0
+inserting 3142<FIN>0
+inserting 314<FIN>02
+inserting 314<FIN>02
+inserting 314<FIN>20
+inserting 314<FIN>20
+inserting 31<FIN>024
+inserting 31<FIN>024
+inserting 31<FIN>042
+inserting 31<FIN>042
+inserting 31<FIN>204
+inserting 31<FIN>204
+inserting 31<FIN>240
+inserting 31<FIN>240
+inserting 31<FIN>402
+inserting 31<FIN>402
+inserting 31<FIN>420
+inserting 31<FIN>420
+inserting 32014<FIN>
+inserting 32014<FIN>
+inserting 3201<FIN>4
+inserting 3201<FIN>4
+inserting 32041<FIN>
+inserting 32041<FIN>
+inserting 3204<FIN>1
+inserting 3204<FIN>1
+inserting 320<FIN>14
+inserting 320<FIN>14
+inserting 320<FIN>41
+inserting 320<FIN>41
+inserting 32104<FIN>
+inserting 32104<FIN>
+inserting 3210<FIN>4
+inserting 3210<FIN>4
+inserting 32140<FIN>
+inserting 32140<FIN>
+inserting 3214<FIN>0
+inserting 3214<FIN>0
+inserting 321<FIN>04
+inserting 321<FIN>04
+inserting 321<FIN>40
+inserting 321<FIN>40
+inserting 32401<FIN>
+inserting 32401<FIN>
+inserting 3240<FIN>1
+inserting 3240<FIN>1
+inserting 32410<FIN>
+inserting 32410<FIN>
+inserting 3241<FIN>0
+inserting 3241<FIN>0
+inserting 324<FIN>01
+inserting 324<FIN>01
+inserting 324<FIN>10
+inserting 324<FIN>10
+inserting 32<FIN>014
+inserting 32<FIN>014
+inserting 32<FIN>041
+inserting 32<FIN>041
+inserting 32<FIN>104
+inserting 32<FIN>104
+inserting 32<FIN>140
+inserting 32<FIN>140
+inserting 32<FIN>401
+inserting 32<FIN>401
+inserting 32<FIN>410
+inserting 32<FIN>410
+inserting 34012<FIN>
+inserting 34012<FIN>
+inserting 3401<FIN>2
+inserting 3401<FIN>2
+inserting 34021<FIN>
+inserting 34021<FIN>
+inserting 3402<FIN>1
+inserting 3402<FIN>1
+inserting 340<FIN>12
+inserting 340<FIN>12
+inserting 340<FIN>21
+inserting 340<FIN>21
+inserting 34102<FIN>
+inserting 34102<FIN>
+inserting 3410<FIN>2
+inserting 3410<FIN>2
+inserting 34120<FIN>
+inserting 34120<FIN>
+inserting 3412<FIN>0
+inserting 3412<FIN>0
+inserting 341<FIN>02
+inserting 341<FIN>02
+inserting 341<FIN>20
+inserting 341<FIN>20
+inserting 34201<FIN>
+inserting 34201<FIN>
+inserting 3420<FIN>1
+inserting 3420<FIN>1
+inserting 34210<FIN>
+inserting 34210<FIN>
+inserting 3421<FIN>0
+inserting 3421<FIN>0
+inserting 342<FIN>01
+inserting 342<FIN>01
+inserting 342<FIN>10
+inserting 342<FIN>10
+inserting 34<FIN>012
+inserting 34<FIN>012
+inserting 34<FIN>021
+inserting 34<FIN>021
+inserting 34<FIN>102
+inserting 34<FIN>102
+inserting 34<FIN>120
+inserting 34<FIN>120
+inserting 34<FIN>201
+inserting 34<FIN>201
+inserting 34<FIN>210
+inserting 34<FIN>210
+inserting 3<FIN>0124
+inserting 3<FIN>0124
+inserting 3<FIN>0142
+inserting 3<FIN>0142
+inserting 3<FIN>0214
+inserting 3<FIN>0214
+inserting 3<FIN>0241
+inserting 3<FIN>0241
+inserting 3<FIN>0412
+inserting 3<FIN>0412
+inserting 3<FIN>0421
+inserting 3<FIN>0421
+inserting 3<FIN>1024
+inserting 3<FIN>1024
+inserting 3<FIN>1042
+inserting 3<FIN>1042
+inserting 3<FIN>1204
+inserting 3<FIN>1204
+inserting 3<FIN>1240
+inserting 3<FIN>1240
+inserting 3<FIN>1402
+inserting 3<FIN>1402
+inserting 3<FIN>1420
+inserting 3<FIN>1420
+inserting 3<FIN>2014
+inserting 3<FIN>2014
+inserting 3<FIN>2041
+inserting 3<FIN>2041
+inserting 3<FIN>2104
+inserting 3<FIN>2104
+inserting 3<FIN>2140
+inserting 3<FIN>2140
+inserting 3<FIN>2401
+inserting 3<FIN>2401
+inserting 3<FIN>2410
+inserting 3<FIN>2410
+inserting 3<FIN>4012
+inserting 3<FIN>4012
+inserting 3<FIN>4021
+inserting 3<FIN>4021
+inserting 3<FIN>4102
+inserting 3<FIN>4102
+inserting 3<FIN>4120
+inserting 3<FIN>4120
+inserting 3<FIN>4201
+inserting 3<FIN>4201
+inserting 3<FIN>4210
+inserting 3<FIN>4210
+inserting 40123<FIN>
+inserting 40123<FIN>
+inserting 4012<FIN>3
+inserting 4012<FIN>3
+inserting 40132<FIN>
+inserting 40132<FIN>
+inserting 4013<FIN>2
+inserting 4013<FIN>2
+inserting 401<FIN>23
+inserting 401<FIN>23
+inserting 401<FIN>32
+inserting 401<FIN>32
+inserting 40213<FIN>
+inserting 40213<FIN>
+inserting 4021<FIN>3
+inserting 4021<FIN>3
+inserting 40231<FIN>
+inserting 40231<FIN>
+inserting 4023<FIN>1
+inserting 4023<FIN>1
+inserting 402<FIN>13
+inserting 402<FIN>13
+inserting 402<FIN>31
+inserting 402<FIN>31
+inserting 40312<FIN>
+inserting 40312<FIN>
+inserting 4031<FIN>2
+inserting 4031<FIN>2
+inserting 40321<FIN>
+inserting 40321<FIN>
+inserting 4032<FIN>1
+inserting 4032<FIN>1
+inserting 403<FIN>12
+inserting 403<FIN>12
+inserting 403<FIN>21
+inserting 403<FIN>21
+inserting 40<FIN>123
+inserting 40<FIN>123
+inserting 40<FIN>132
+inserting 40<FIN>132
+inserting 40<FIN>213
+inserting 40<FIN>213
+inserting 40<FIN>231
+inserting 40<FIN>231
+inserting 40<FIN>312
+inserting 40<FIN>312
+inserting 40<FIN>321
+inserting 40<FIN>321
+inserting 41023<FIN>
+inserting 41023<FIN>
+inserting 4102<FIN>3
+inserting 4102<FIN>3
+inserting 41032<FIN>
+inserting 41032<FIN>
+inserting 4103<FIN>2
+inserting 4103<FIN>2
+inserting 410<FIN>23
+inserting 410<FIN>23
+inserting 410<FIN>32
+inserting 410<FIN>32
+inserting 41203<FIN>
+inserting 41203<FIN>
+inserting 4120<FIN>3
+inserting 4120<FIN>3
+inserting 41230<FIN>
+inserting 41230<FIN>
+inserting 4123<FIN>0
+inserting 4123<FIN>0
+inserting 412<FIN>03
+inserting 412<FIN>03
+inserting 412<FIN>30
+inserting 412<FIN>30
+inserting 41302<FIN>
+inserting 41302<FIN>
+inserting 4130<FIN>2
+inserting 4130<FIN>2
+inserting 41320<FIN>
+inserting 41320<FIN>
+inserting 4132<FIN>0
+inserting 4132<FIN>0
+inserting 413<FIN>02
+inserting 413<FIN>02
+inserting 413<FIN>20
+inserting 413<FIN>20
+inserting 41<FIN>023
+inserting 41<FIN>023
+inserting 41<FIN>032
+inserting 41<FIN>032
+inserting 41<FIN>203
+inserting 41<FIN>203
+inserting 41<FIN>230
+inserting 41<FIN>230
+inserting 41<FIN>302
+inserting 41<FIN>302
+inserting 41<FIN>320
+inserting 41<FIN>320
+inserting 42013<FIN>
+inserting 42013<FIN>
+inserting 4201<FIN>3
+inserting 4201<FIN>3
+inserting 42031<FIN>
+inserting 42031<FIN>
+inserting 4203<FIN>1
+inserting 4203<FIN>1
+inserting 420<FIN>13
+inserting 420<FIN>13
+inserting 420<FIN>31
+inserting 420<FIN>31
+inserting 42103<FIN>
+inserting 42103<FIN>
+inserting 4210<FIN>3
+inserting 4210<FIN>3
+inserting 42130<FIN>
+inserting 42130<FIN>
+inserting 4213<FIN>0
+inserting 4213<FIN>0
+inserting 421<FIN>03
+inserting 421<FIN>03
+inserting 421<FIN>30
+inserting 421<FIN>30
+inserting 42301<FIN>
+inserting 42301<FIN>
+inserting 4230<FIN>1
+inserting 4230<FIN>1
+inserting 42310<FIN>
+inserting 42310<FIN>
+inserting 4231<FIN>0
+inserting 4231<FIN>0
+inserting 423<FIN>01
+inserting 423<FIN>01
+inserting 423<FIN>10
+inserting 423<FIN>10
+inserting 42<FIN>013
+inserting 42<FIN>013
+inserting 42<FIN>031
+inserting 42<FIN>031
+inserting 42<FIN>103
+inserting 42<FIN>103
+inserting 42<FIN>130
+inserting 42<FIN>130
+inserting 42<FIN>301
+inserting 42<FIN>301
+inserting 42<FIN>310
+inserting 42<FIN>310
+inserting 43012<FIN>
+inserting 43012<FIN>
+inserting 4301<FIN>2
+inserting 4301<FIN>2
+inserting 43021<FIN>
+inserting 43021<FIN>
+inserting 4302<FIN>1
+inserting 4302<FIN>1
+inserting 430<FIN>12
+inserting 430<FIN>12
+inserting 430<FIN>21
+inserting 430<FIN>21
+inserting 43102<FIN>
+inserting 43102<FIN>
+inserting 4310<FIN>2
+inserting 4310<FIN>2
+inserting 43120<FIN>
+inserting 43120<FIN>
+inserting 4312<FIN>0
+inserting 4312<FIN>0
+inserting 431<FIN>02
+inserting 431<FIN>02
+inserting 431<FIN>20
+inserting 431<FIN>20
+inserting 43201<FIN>
+inserting 43201<FIN>
+inserting 4320<FIN>1
+inserting 4320<FIN>1
+inserting 43210<FIN>
+inserting 43210<FIN>
+inserting 4321<FIN>0
+inserting 4321<FIN>0
+inserting 432<FIN>01
+inserting 432<FIN>01
+inserting 432<FIN>10
+inserting 432<FIN>10
+inserting 43<FIN>012
+inserting 43<FIN>012
+inserting 43<FIN>021
+inserting 43<FIN>021
+inserting 43<FIN>102
+inserting 43<FIN>102
+inserting 43<FIN>120
+inserting 43<FIN>120
+inserting 43<FIN>201
+inserting 43<FIN>201
+inserting 43<FIN>210
+inserting 43<FIN>210
+inserting 4<FIN>0123
+inserting 4<FIN>0123
+inserting 4<FIN>0132
+inserting 4<FIN>0132
+inserting 4<FIN>0213
+inserting 4<FIN>0213
+inserting 4<FIN>0231
+inserting 4<FIN>0231
+inserting 4<FIN>0312
+inserting 4<FIN>0312
+inserting 4<FIN>0321
+inserting 4<FIN>0321
+inserting 4<FIN>1023
+inserting 4<FIN>1023
+inserting 4<FIN>1032
+inserting 4<FIN>1032
+inserting 4<FIN>1203
+inserting 4<FIN>1203
+inserting 4<FIN>1230
+inserting 4<FIN>1230
+inserting 4<FIN>1302
+inserting 4<FIN>1302
+inserting 4<FIN>1320
+inserting 4<FIN>1320
+inserting 4<FIN>2013
+inserting 4<FIN>2013
+inserting 4<FIN>2031
+inserting 4<FIN>2031
+inserting 4<FIN>2103
+inserting 4<FIN>2103
+inserting 4<FIN>2130
+inserting 4<FIN>2130
+inserting 4<FIN>2301
+inserting 4<FIN>2301
+inserting 4<FIN>2310
+inserting 4<FIN>2310
+inserting 4<FIN>3012
+inserting 4<FIN>3012
+inserting 4<FIN>3021
+inserting 4<FIN>3021
+inserting 4<FIN>3102
+inserting 4<FIN>3102
+inserting 4<FIN>3120
+inserting 4<FIN>3120
+inserting 4<FIN>3201
+inserting 4<FIN>3201
+inserting 4<FIN>3210
+inserting 4<FIN>3210
+inserting <FIN>01234
+inserting <FIN>01234
+inserting <FIN>01243
+inserting <FIN>01243
+inserting <FIN>01324
+inserting <FIN>01324
+inserting <FIN>01342
+inserting <FIN>01342
+inserting <FIN>01423
+inserting <FIN>01423
+inserting <FIN>01432
+inserting <FIN>01432
+inserting <FIN>02134
+inserting <FIN>02134
+inserting <FIN>02143
+inserting <FIN>02143
+inserting <FIN>02314
+inserting <FIN>02314
+inserting <FIN>02341
+inserting <FIN>02341
+inserting <FIN>02413
+inserting <FIN>02413
+inserting <FIN>02431
+inserting <FIN>02431
+inserting <FIN>03124
+inserting <FIN>03124
+inserting <FIN>03142
+inserting <FIN>03142
+inserting <FIN>03214
+inserting <FIN>03214
+inserting <FIN>03241
+inserting <FIN>03241
+inserting <FIN>03412
+inserting <FIN>03412
+inserting <FIN>03421
+inserting <FIN>03421
+inserting <FIN>04123
+inserting <FIN>04123
+inserting <FIN>04132
+inserting <FIN>04132
+inserting <FIN>04213
+inserting <FIN>04213
+inserting <FIN>04231
+inserting <FIN>04231
+inserting <FIN>04312
+inserting <FIN>04312
+inserting <FIN>04321
+inserting <FIN>04321
+inserting <FIN>10234
+inserting <FIN>10234
+inserting <FIN>10243
+inserting <FIN>10243
+inserting <FIN>10324
+inserting <FIN>10324
+inserting <FIN>10342
+inserting <FIN>10342
+inserting <FIN>10423
+inserting <FIN>10423
+inserting <FIN>10432
+inserting <FIN>10432
+inserting <FIN>12034
+inserting <FIN>12034
+inserting <FIN>12043
+inserting <FIN>12043
+inserting <FIN>12304
+inserting <FIN>12304
+inserting <FIN>12340
+inserting <FIN>12340
+inserting <FIN>12403
+inserting <FIN>12403
+inserting <FIN>12430
+inserting <FIN>12430
+inserting <FIN>13024
+inserting <FIN>13024
+inserting <FIN>13042
+inserting <FIN>13042
+inserting <FIN>13204
+inserting <FIN>13204
+inserting <FIN>13240
+inserting <FIN>13240
+inserting <FIN>13402
+inserting <FIN>13402
+inserting <FIN>13420
+inserting <FIN>13420
+inserting <FIN>14023
+inserting <FIN>14023
+inserting <FIN>14032
+inserting <FIN>14032
+inserting <FIN>14203
+inserting <FIN>14203
+inserting <FIN>14230
+inserting <FIN>14230
+inserting <FIN>14302
+inserting <FIN>14302
+inserting <FIN>14320
+inserting <FIN>14320
+inserting <FIN>20134
+inserting <FIN>20134
+inserting <FIN>20143
+inserting <FIN>20143
+inserting <FIN>20314
+inserting <FIN>20314
+inserting <FIN>20341
+inserting <FIN>20341
+inserting <FIN>20413
+inserting <FIN>20413
+inserting <FIN>20431
+inserting <FIN>20431
+inserting <FIN>21034
+inserting <FIN>21034
+inserting <FIN>21043
+inserting <FIN>21043
+inserting <FIN>21304
+inserting <FIN>21304
+inserting <FIN>21340
+inserting <FIN>21340
+inserting <FIN>21403
+inserting <FIN>21403
+inserting <FIN>21430
+inserting <FIN>21430
+inserting <FIN>23014
+inserting <FIN>23014
+inserting <FIN>23041
+inserting <FIN>23041
+inserting <FIN>23104
+inserting <FIN>23104
+inserting <FIN>23140
+inserting <FIN>23140
+inserting <FIN>23401
+inserting <FIN>23401
+inserting <FIN>23410
+inserting <FIN>23410
+inserting <FIN>24013
+inserting <FIN>24013
+inserting <FIN>24031
+inserting <FIN>24031
+inserting <FIN>24103
+inserting <FIN>24103
+inserting <FIN>24130
+inserting <FIN>24130
+inserting <FIN>24301
+inserting <FIN>24301
+inserting <FIN>24310
+inserting <FIN>24310
+inserting <FIN>30124
+inserting <FIN>30124
+inserting <FIN>30142
+inserting <FIN>30142
+inserting <FIN>30214
+inserting <FIN>30214
+inserting <FIN>30241
+inserting <FIN>30241
+inserting <FIN>30412
+inserting <FIN>30412
+inserting <FIN>30421
+inserting <FIN>30421
+inserting <FIN>31024
+inserting <FIN>31024
+inserting <FIN>31042
+inserting <FIN>31042
+inserting <FIN>31204
+inserting <FIN>31204
+inserting <FIN>31240
+inserting <FIN>31240
+inserting <FIN>31402
+inserting <FIN>31402
+inserting <FIN>31420
+inserting <FIN>31420
+inserting <FIN>32014
+inserting <FIN>32014
+inserting <FIN>32041
+inserting <FIN>32041
+inserting <FIN>32104
+inserting <FIN>32104
+inserting <FIN>32140
+inserting <FIN>32140
+inserting <FIN>32401
+inserting <FIN>32401
+inserting <FIN>32410
+inserting <FIN>32410
+inserting <FIN>34012
+inserting <FIN>34012
+inserting <FIN>34021
+inserting <FIN>34021
+inserting <FIN>34102
+inserting <FIN>34102
+inserting <FIN>34120
+inserting <FIN>34120
+inserting <FIN>34201
+inserting <FIN>34201
+inserting <FIN>34210
+inserting <FIN>34210
+inserting <FIN>40123
+inserting <FIN>40123
+inserting <FIN>40132
+inserting <FIN>40132
+inserting <FIN>40213
+inserting <FIN>40213
+inserting <FIN>40231
+inserting <FIN>40231
+inserting <FIN>40312
+inserting <FIN>40312
+inserting <FIN>40321
+inserting <FIN>40321
+inserting <FIN>41023
+inserting <FIN>41023
+inserting <FIN>41032
+inserting <FIN>41032
+inserting <FIN>41203
+inserting <FIN>41203
+inserting <FIN>41230
+inserting <FIN>41230
+inserting <FIN>41302
+inserting <FIN>41302
+inserting <FIN>41320
+inserting <FIN>41320
+inserting <FIN>42013
+inserting <FIN>42013
+inserting <FIN>42031
+inserting <FIN>42031
+inserting <FIN>42103
+inserting <FIN>42103
+inserting <FIN>42130
+inserting <FIN>42130
+inserting <FIN>42301
+inserting <FIN>42301
+inserting <FIN>42310
+inserting <FIN>42310
+inserting <FIN>43012
+inserting <FIN>43012
+inserting <FIN>43021
+inserting <FIN>43021
+inserting <FIN>43102
+inserting <FIN>43102
+inserting <FIN>43120
+inserting <FIN>43120
+inserting <FIN>43201
+inserting <FIN>43201
+inserting <FIN>43210
+inserting <FIN>43210
+<end of output>
+Test time =  25.35 sec
+----------------------------------------------------------
+Test Passed.
+"stream" end time: Jan 19 19:31 CET
+"stream" time elapsed: 00:00:25
+----------------------------------------------------------
+
+52/58 Testing: stream_hash
+52/58 Test: stream_hash
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_stream" "-h"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"stream_hash" start time: Jan 19 19:31 CET
+Output:
+----------------------------------------------------------
+inserting 01234<FIN>
+inserting 01234<FIN>
+inserting 0123<FIN>4
+inserting 0123<FIN>4
+inserting 01243<FIN>
+inserting 01243<FIN>
+inserting 0124<FIN>3
+inserting 0124<FIN>3
+inserting 012<FIN>34
+inserting 012<FIN>34
+inserting 012<FIN>43
+inserting 012<FIN>43
+inserting 01324<FIN>
+inserting 01324<FIN>
+inserting 0132<FIN>4
+inserting 0132<FIN>4
+inserting 01342<FIN>
+inserting 01342<FIN>
+inserting 0134<FIN>2
+inserting 0134<FIN>2
+inserting 013<FIN>24
+inserting 013<FIN>24
+inserting 013<FIN>42
+inserting 013<FIN>42
+inserting 01423<FIN>
+inserting 01423<FIN>
+inserting 0142<FIN>3
+inserting 0142<FIN>3
+inserting 01432<FIN>
+inserting 01432<FIN>
+inserting 0143<FIN>2
+inserting 0143<FIN>2
+inserting 014<FIN>23
+inserting 014<FIN>23
+inserting 014<FIN>32
+inserting 014<FIN>32
+inserting 01<FIN>234
+inserting 01<FIN>234
+inserting 01<FIN>243
+inserting 01<FIN>243
+inserting 01<FIN>324
+inserting 01<FIN>324
+inserting 01<FIN>342
+inserting 01<FIN>342
+inserting 01<FIN>423
+inserting 01<FIN>423
+inserting 01<FIN>432
+inserting 01<FIN>432
+inserting 02134<FIN>
+inserting 02134<FIN>
+inserting 0213<FIN>4
+inserting 0213<FIN>4
+inserting 02143<FIN>
+inserting 02143<FIN>
+inserting 0214<FIN>3
+inserting 0214<FIN>3
+inserting 021<FIN>34
+inserting 021<FIN>34
+inserting 021<FIN>43
+inserting 021<FIN>43
+inserting 02314<FIN>
+inserting 02314<FIN>
+inserting 0231<FIN>4
+inserting 0231<FIN>4
+inserting 02341<FIN>
+inserting 02341<FIN>
+inserting 0234<FIN>1
+inserting 0234<FIN>1
+inserting 023<FIN>14
+inserting 023<FIN>14
+inserting 023<FIN>41
+inserting 023<FIN>41
+inserting 02413<FIN>
+inserting 02413<FIN>
+inserting 0241<FIN>3
+inserting 0241<FIN>3
+inserting 02431<FIN>
+inserting 02431<FIN>
+inserting 0243<FIN>1
+inserting 0243<FIN>1
+inserting 024<FIN>13
+inserting 024<FIN>13
+inserting 024<FIN>31
+inserting 024<FIN>31
+inserting 02<FIN>134
+inserting 02<FIN>134
+inserting 02<FIN>143
+inserting 02<FIN>143
+inserting 02<FIN>314
+inserting 02<FIN>314
+inserting 02<FIN>341
+inserting 02<FIN>341
+inserting 02<FIN>413
+inserting 02<FIN>413
+inserting 02<FIN>431
+inserting 02<FIN>431
+inserting 03124<FIN>
+inserting 03124<FIN>
+inserting 0312<FIN>4
+inserting 0312<FIN>4
+inserting 03142<FIN>
+inserting 03142<FIN>
+inserting 0314<FIN>2
+inserting 0314<FIN>2
+inserting 031<FIN>24
+inserting 031<FIN>24
+inserting 031<FIN>42
+inserting 031<FIN>42
+inserting 03214<FIN>
+inserting 03214<FIN>
+inserting 0321<FIN>4
+inserting 0321<FIN>4
+inserting 03241<FIN>
+inserting 03241<FIN>
+inserting 0324<FIN>1
+inserting 0324<FIN>1
+inserting 032<FIN>14
+inserting 032<FIN>14
+inserting 032<FIN>41
+inserting 032<FIN>41
+inserting 03412<FIN>
+inserting 03412<FIN>
+inserting 0341<FIN>2
+inserting 0341<FIN>2
+inserting 03421<FIN>
+inserting 03421<FIN>
+inserting 0342<FIN>1
+inserting 0342<FIN>1
+inserting 034<FIN>12
+inserting 034<FIN>12
+inserting 034<FIN>21
+inserting 034<FIN>21
+inserting 03<FIN>124
+inserting 03<FIN>124
+inserting 03<FIN>142
+inserting 03<FIN>142
+inserting 03<FIN>214
+inserting 03<FIN>214
+inserting 03<FIN>241
+inserting 03<FIN>241
+inserting 03<FIN>412
+inserting 03<FIN>412
+inserting 03<FIN>421
+inserting 03<FIN>421
+inserting 04123<FIN>
+inserting 04123<FIN>
+inserting 0412<FIN>3
+inserting 0412<FIN>3
+inserting 04132<FIN>
+inserting 04132<FIN>
+inserting 0413<FIN>2
+inserting 0413<FIN>2
+inserting 041<FIN>23
+inserting 041<FIN>23
+inserting 041<FIN>32
+inserting 041<FIN>32
+inserting 04213<FIN>
+inserting 04213<FIN>
+inserting 0421<FIN>3
+inserting 0421<FIN>3
+inserting 04231<FIN>
+inserting 04231<FIN>
+inserting 0423<FIN>1
+inserting 0423<FIN>1
+inserting 042<FIN>13
+inserting 042<FIN>13
+inserting 042<FIN>31
+inserting 042<FIN>31
+inserting 04312<FIN>
+inserting 04312<FIN>
+inserting 0431<FIN>2
+inserting 0431<FIN>2
+inserting 04321<FIN>
+inserting 04321<FIN>
+inserting 0432<FIN>1
+inserting 0432<FIN>1
+inserting 043<FIN>12
+inserting 043<FIN>12
+inserting 043<FIN>21
+inserting 043<FIN>21
+inserting 04<FIN>123
+inserting 04<FIN>123
+inserting 04<FIN>132
+inserting 04<FIN>132
+inserting 04<FIN>213
+inserting 04<FIN>213
+inserting 04<FIN>231
+inserting 04<FIN>231
+inserting 04<FIN>312
+inserting 04<FIN>312
+inserting 04<FIN>321
+inserting 04<FIN>321
+inserting 0<FIN>1234
+inserting 0<FIN>1234
+inserting 0<FIN>1243
+inserting 0<FIN>1243
+inserting 0<FIN>1324
+inserting 0<FIN>1324
+inserting 0<FIN>1342
+inserting 0<FIN>1342
+inserting 0<FIN>1423
+inserting 0<FIN>1423
+inserting 0<FIN>1432
+inserting 0<FIN>1432
+inserting 0<FIN>2134
+inserting 0<FIN>2134
+inserting 0<FIN>2143
+inserting 0<FIN>2143
+inserting 0<FIN>2314
+inserting 0<FIN>2314
+inserting 0<FIN>2341
+inserting 0<FIN>2341
+inserting 0<FIN>2413
+inserting 0<FIN>2413
+inserting 0<FIN>2431
+inserting 0<FIN>2431
+inserting 0<FIN>3124
+inserting 0<FIN>3124
+inserting 0<FIN>3142
+inserting 0<FIN>3142
+inserting 0<FIN>3214
+inserting 0<FIN>3214
+inserting 0<FIN>3241
+inserting 0<FIN>3241
+inserting 0<FIN>3412
+inserting 0<FIN>3412
+inserting 0<FIN>3421
+inserting 0<FIN>3421
+inserting 0<FIN>4123
+inserting 0<FIN>4123
+inserting 0<FIN>4132
+inserting 0<FIN>4132
+inserting 0<FIN>4213
+inserting 0<FIN>4213
+inserting 0<FIN>4231
+inserting 0<FIN>4231
+inserting 0<FIN>4312
+inserting 0<FIN>4312
+inserting 0<FIN>4321
+inserting 0<FIN>4321
+inserting 10234<FIN>
+inserting 10234<FIN>
+inserting 1023<FIN>4
+inserting 1023<FIN>4
+inserting 10243<FIN>
+inserting 10243<FIN>
+inserting 1024<FIN>3
+inserting 1024<FIN>3
+inserting 102<FIN>34
+inserting 102<FIN>34
+inserting 102<FIN>43
+inserting 102<FIN>43
+inserting 10324<FIN>
+inserting 10324<FIN>
+inserting 1032<FIN>4
+inserting 1032<FIN>4
+inserting 10342<FIN>
+inserting 10342<FIN>
+inserting 1034<FIN>2
+inserting 1034<FIN>2
+inserting 103<FIN>24
+inserting 103<FIN>24
+inserting 103<FIN>42
+inserting 103<FIN>42
+inserting 10423<FIN>
+inserting 10423<FIN>
+inserting 1042<FIN>3
+inserting 1042<FIN>3
+inserting 10432<FIN>
+inserting 10432<FIN>
+inserting 1043<FIN>2
+inserting 1043<FIN>2
+inserting 104<FIN>23
+inserting 104<FIN>23
+inserting 104<FIN>32
+inserting 104<FIN>32
+inserting 10<FIN>234
+inserting 10<FIN>234
+inserting 10<FIN>243
+inserting 10<FIN>243
+inserting 10<FIN>324
+inserting 10<FIN>324
+inserting 10<FIN>342
+inserting 10<FIN>342
+inserting 10<FIN>423
+inserting 10<FIN>423
+inserting 10<FIN>432
+inserting 10<FIN>432
+inserting 12034<FIN>
+inserting 12034<FIN>
+inserting 1203<FIN>4
+inserting 1203<FIN>4
+inserting 12043<FIN>
+inserting 12043<FIN>
+inserting 1204<FIN>3
+inserting 1204<FIN>3
+inserting 120<FIN>34
+inserting 120<FIN>34
+inserting 120<FIN>43
+inserting 120<FIN>43
+inserting 12304<FIN>
+inserting 12304<FIN>
+inserting 1230<FIN>4
+inserting 1230<FIN>4
+inserting 12340<FIN>
+inserting 12340<FIN>
+inserting 1234<FIN>0
+inserting 1234<FIN>0
+inserting 123<FIN>04
+inserting 123<FIN>04
+inserting 123<FIN>40
+inserting 123<FIN>40
+inserting 12403<FIN>
+inserting 12403<FIN>
+inserting 1240<FIN>3
+inserting 1240<FIN>3
+inserting 12430<FIN>
+inserting 12430<FIN>
+inserting 1243<FIN>0
+inserting 1243<FIN>0
+inserting 124<FIN>03
+inserting 124<FIN>03
+inserting 124<FIN>30
+inserting 124<FIN>30
+inserting 12<FIN>034
+inserting 12<FIN>034
+inserting 12<FIN>043
+inserting 12<FIN>043
+inserting 12<FIN>304
+inserting 12<FIN>304
+inserting 12<FIN>340
+inserting 12<FIN>340
+inserting 12<FIN>403
+inserting 12<FIN>403
+inserting 12<FIN>430
+inserting 12<FIN>430
+inserting 13024<FIN>
+inserting 13024<FIN>
+inserting 1302<FIN>4
+inserting 1302<FIN>4
+inserting 13042<FIN>
+inserting 13042<FIN>
+inserting 1304<FIN>2
+inserting 1304<FIN>2
+inserting 130<FIN>24
+inserting 130<FIN>24
+inserting 130<FIN>42
+inserting 130<FIN>42
+inserting 13204<FIN>
+inserting 13204<FIN>
+inserting 1320<FIN>4
+inserting 1320<FIN>4
+inserting 13240<FIN>
+inserting 13240<FIN>
+inserting 1324<FIN>0
+inserting 1324<FIN>0
+inserting 132<FIN>04
+inserting 132<FIN>04
+inserting 132<FIN>40
+inserting 132<FIN>40
+inserting 13402<FIN>
+inserting 13402<FIN>
+inserting 1340<FIN>2
+inserting 1340<FIN>2
+inserting 13420<FIN>
+inserting 13420<FIN>
+inserting 1342<FIN>0
+inserting 1342<FIN>0
+inserting 134<FIN>02
+inserting 134<FIN>02
+inserting 134<FIN>20
+inserting 134<FIN>20
+inserting 13<FIN>024
+inserting 13<FIN>024
+inserting 13<FIN>042
+inserting 13<FIN>042
+inserting 13<FIN>204
+inserting 13<FIN>204
+inserting 13<FIN>240
+inserting 13<FIN>240
+inserting 13<FIN>402
+inserting 13<FIN>402
+inserting 13<FIN>420
+inserting 13<FIN>420
+inserting 14023<FIN>
+inserting 14023<FIN>
+inserting 1402<FIN>3
+inserting 1402<FIN>3
+inserting 14032<FIN>
+inserting 14032<FIN>
+inserting 1403<FIN>2
+inserting 1403<FIN>2
+inserting 140<FIN>23
+inserting 140<FIN>23
+inserting 140<FIN>32
+inserting 140<FIN>32
+inserting 14203<FIN>
+inserting 14203<FIN>
+inserting 1420<FIN>3
+inserting 1420<FIN>3
+inserting 14230<FIN>
+inserting 14230<FIN>
+inserting 1423<FIN>0
+inserting 1423<FIN>0
+inserting 142<FIN>03
+inserting 142<FIN>03
+inserting 142<FIN>30
+inserting 142<FIN>30
+inserting 14302<FIN>
+inserting 14302<FIN>
+inserting 1430<FIN>2
+inserting 1430<FIN>2
+inserting 14320<FIN>
+inserting 14320<FIN>
+inserting 1432<FIN>0
+inserting 1432<FIN>0
+inserting 143<FIN>02
+inserting 143<FIN>02
+inserting 143<FIN>20
+inserting 143<FIN>20
+inserting 14<FIN>023
+inserting 14<FIN>023
+inserting 14<FIN>032
+inserting 14<FIN>032
+inserting 14<FIN>203
+inserting 14<FIN>203
+inserting 14<FIN>230
+inserting 14<FIN>230
+inserting 14<FIN>302
+inserting 14<FIN>302
+inserting 14<FIN>320
+inserting 14<FIN>320
+inserting 1<FIN>0234
+inserting 1<FIN>0234
+inserting 1<FIN>0243
+inserting 1<FIN>0243
+inserting 1<FIN>0324
+inserting 1<FIN>0324
+inserting 1<FIN>0342
+inserting 1<FIN>0342
+inserting 1<FIN>0423
+inserting 1<FIN>0423
+inserting 1<FIN>0432
+inserting 1<FIN>0432
+inserting 1<FIN>2034
+inserting 1<FIN>2034
+inserting 1<FIN>2043
+inserting 1<FIN>2043
+inserting 1<FIN>2304
+inserting 1<FIN>2304
+inserting 1<FIN>2340
+inserting 1<FIN>2340
+inserting 1<FIN>2403
+inserting 1<FIN>2403
+inserting 1<FIN>2430
+inserting 1<FIN>2430
+inserting 1<FIN>3024
+inserting 1<FIN>3024
+inserting 1<FIN>3042
+inserting 1<FIN>3042
+inserting 1<FIN>3204
+inserting 1<FIN>3204
+inserting 1<FIN>3240
+inserting 1<FIN>3240
+inserting 1<FIN>3402
+inserting 1<FIN>3402
+inserting 1<FIN>3420
+inserting 1<FIN>3420
+inserting 1<FIN>4023
+inserting 1<FIN>4023
+inserting 1<FIN>4032
+inserting 1<FIN>4032
+inserting 1<FIN>4203
+inserting 1<FIN>4203
+inserting 1<FIN>4230
+inserting 1<FIN>4230
+inserting 1<FIN>4302
+inserting 1<FIN>4302
+inserting 1<FIN>4320
+inserting 1<FIN>4320
+inserting 20134<FIN>
+inserting 20134<FIN>
+inserting 2013<FIN>4
+inserting 2013<FIN>4
+inserting 20143<FIN>
+inserting 20143<FIN>
+inserting 2014<FIN>3
+inserting 2014<FIN>3
+inserting 201<FIN>34
+inserting 201<FIN>34
+inserting 201<FIN>43
+inserting 201<FIN>43
+inserting 20314<FIN>
+inserting 20314<FIN>
+inserting 2031<FIN>4
+inserting 2031<FIN>4
+inserting 20341<FIN>
+inserting 20341<FIN>
+inserting 2034<FIN>1
+inserting 2034<FIN>1
+inserting 203<FIN>14
+inserting 203<FIN>14
+inserting 203<FIN>41
+inserting 203<FIN>41
+inserting 20413<FIN>
+inserting 20413<FIN>
+inserting 2041<FIN>3
+inserting 2041<FIN>3
+inserting 20431<FIN>
+inserting 20431<FIN>
+inserting 2043<FIN>1
+inserting 2043<FIN>1
+inserting 204<FIN>13
+inserting 204<FIN>13
+inserting 204<FIN>31
+inserting 204<FIN>31
+inserting 20<FIN>134
+inserting 20<FIN>134
+inserting 20<FIN>143
+inserting 20<FIN>143
+inserting 20<FIN>314
+inserting 20<FIN>314
+inserting 20<FIN>341
+inserting 20<FIN>341
+inserting 20<FIN>413
+inserting 20<FIN>413
+inserting 20<FIN>431
+inserting 20<FIN>431
+inserting 21034<FIN>
+inserting 21034<FIN>
+inserting 2103<FIN>4
+inserting 2103<FIN>4
+inserting 21043<FIN>
+inserting 21043<FIN>
+inserting 2104<FIN>3
+inserting 2104<FIN>3
+inserting 210<FIN>34
+inserting 210<FIN>34
+inserting 210<FIN>43
+inserting 210<FIN>43
+inserting 21304<FIN>
+inserting 21304<FIN>
+inserting 2130<FIN>4
+inserting 2130<FIN>4
+inserting 21340<FIN>
+inserting 21340<FIN>
+inserting 2134<FIN>0
+inserting 2134<FIN>0
+inserting 213<FIN>04
+inserting 213<FIN>04
+inserting 213<FIN>40
+inserting 213<FIN>40
+inserting 21403<FIN>
+inserting 21403<FIN>
+inserting 2140<FIN>3
+inserting 2140<FIN>3
+inserting 21430<FIN>
+inserting 21430<FIN>
+inserting 2143<FIN>0
+inserting 2143<FIN>0
+inserting 214<FIN>03
+inserting 214<FIN>03
+inserting 214<FIN>30
+inserting 214<FIN>30
+inserting 21<FIN>034
+inserting 21<FIN>034
+inserting 21<FIN>043
+inserting 21<FIN>043
+inserting 21<FIN>304
+inserting 21<FIN>304
+inserting 21<FIN>340
+inserting 21<FIN>340
+inserting 21<FIN>403
+inserting 21<FIN>403
+inserting 21<FIN>430
+inserting 21<FIN>430
+inserting 23014<FIN>
+inserting 23014<FIN>
+inserting 2301<FIN>4
+inserting 2301<FIN>4
+inserting 23041<FIN>
+inserting 23041<FIN>
+inserting 2304<FIN>1
+inserting 2304<FIN>1
+inserting 230<FIN>14
+inserting 230<FIN>14
+inserting 230<FIN>41
+inserting 230<FIN>41
+inserting 23104<FIN>
+inserting 23104<FIN>
+inserting 2310<FIN>4
+inserting 2310<FIN>4
+inserting 23140<FIN>
+inserting 23140<FIN>
+inserting 2314<FIN>0
+inserting 2314<FIN>0
+inserting 231<FIN>04
+inserting 231<FIN>04
+inserting 231<FIN>40
+inserting 231<FIN>40
+inserting 23401<FIN>
+inserting 23401<FIN>
+inserting 2340<FIN>1
+inserting 2340<FIN>1
+inserting 23410<FIN>
+inserting 23410<FIN>
+inserting 2341<FIN>0
+inserting 2341<FIN>0
+inserting 234<FIN>01
+inserting 234<FIN>01
+inserting 234<FIN>10
+inserting 234<FIN>10
+inserting 23<FIN>014
+inserting 23<FIN>014
+inserting 23<FIN>041
+inserting 23<FIN>041
+inserting 23<FIN>104
+inserting 23<FIN>104
+inserting 23<FIN>140
+inserting 23<FIN>140
+inserting 23<FIN>401
+inserting 23<FIN>401
+inserting 23<FIN>410
+inserting 23<FIN>410
+inserting 24013<FIN>
+inserting 24013<FIN>
+inserting 2401<FIN>3
+inserting 2401<FIN>3
+inserting 24031<FIN>
+inserting 24031<FIN>
+inserting 2403<FIN>1
+inserting 2403<FIN>1
+inserting 240<FIN>13
+inserting 240<FIN>13
+inserting 240<FIN>31
+inserting 240<FIN>31
+inserting 24103<FIN>
+inserting 24103<FIN>
+inserting 2410<FIN>3
+inserting 2410<FIN>3
+inserting 24130<FIN>
+inserting 24130<FIN>
+inserting 2413<FIN>0
+inserting 2413<FIN>0
+inserting 241<FIN>03
+inserting 241<FIN>03
+inserting 241<FIN>30
+inserting 241<FIN>30
+inserting 24301<FIN>
+inserting 24301<FIN>
+inserting 2430<FIN>1
+inserting 2430<FIN>1
+inserting 24310<FIN>
+inserting 24310<FIN>
+inserting 2431<FIN>0
+inserting 2431<FIN>0
+inserting 243<FIN>01
+inserting 243<FIN>01
+inserting 243<FIN>10
+inserting 243<FIN>10
+inserting 24<FIN>013
+inserting 24<FIN>013
+inserting 24<FIN>031
+inserting 24<FIN>031
+inserting 24<FIN>103
+inserting 24<FIN>103
+inserting 24<FIN>130
+inserting 24<FIN>130
+inserting 24<FIN>301
+inserting 24<FIN>301
+inserting 24<FIN>310
+inserting 24<FIN>310
+inserting 2<FIN>0134
+inserting 2<FIN>0134
+inserting 2<FIN>0143
+inserting 2<FIN>0143
+inserting 2<FIN>0314
+inserting 2<FIN>0314
+inserting 2<FIN>0341
+inserting 2<FIN>0341
+inserting 2<FIN>0413
+inserting 2<FIN>0413
+inserting 2<FIN>0431
+inserting 2<FIN>0431
+inserting 2<FIN>1034
+inserting 2<FIN>1034
+inserting 2<FIN>1043
+inserting 2<FIN>1043
+inserting 2<FIN>1304
+inserting 2<FIN>1304
+inserting 2<FIN>1340
+inserting 2<FIN>1340
+inserting 2<FIN>1403
+inserting 2<FIN>1403
+inserting 2<FIN>1430
+inserting 2<FIN>1430
+inserting 2<FIN>3014
+inserting 2<FIN>3014
+inserting 2<FIN>3041
+inserting 2<FIN>3041
+inserting 2<FIN>3104
+inserting 2<FIN>3104
+inserting 2<FIN>3140
+inserting 2<FIN>3140
+inserting 2<FIN>3401
+inserting 2<FIN>3401
+inserting 2<FIN>3410
+inserting 2<FIN>3410
+inserting 2<FIN>4013
+inserting 2<FIN>4013
+inserting 2<FIN>4031
+inserting 2<FIN>4031
+inserting 2<FIN>4103
+inserting 2<FIN>4103
+inserting 2<FIN>4130
+inserting 2<FIN>4130
+inserting 2<FIN>4301
+inserting 2<FIN>4301
+inserting 2<FIN>4310
+inserting 2<FIN>4310
+inserting 30124<FIN>
+inserting 30124<FIN>
+inserting 3012<FIN>4
+inserting 3012<FIN>4
+inserting 30142<FIN>
+inserting 30142<FIN>
+inserting 3014<FIN>2
+inserting 3014<FIN>2
+inserting 301<FIN>24
+inserting 301<FIN>24
+inserting 301<FIN>42
+inserting 301<FIN>42
+inserting 30214<FIN>
+inserting 30214<FIN>
+inserting 3021<FIN>4
+inserting 3021<FIN>4
+inserting 30241<FIN>
+inserting 30241<FIN>
+inserting 3024<FIN>1
+inserting 3024<FIN>1
+inserting 302<FIN>14
+inserting 302<FIN>14
+inserting 302<FIN>41
+inserting 302<FIN>41
+inserting 30412<FIN>
+inserting 30412<FIN>
+inserting 3041<FIN>2
+inserting 3041<FIN>2
+inserting 30421<FIN>
+inserting 30421<FIN>
+inserting 3042<FIN>1
+inserting 3042<FIN>1
+inserting 304<FIN>12
+inserting 304<FIN>12
+inserting 304<FIN>21
+inserting 304<FIN>21
+inserting 30<FIN>124
+inserting 30<FIN>124
+inserting 30<FIN>142
+inserting 30<FIN>142
+inserting 30<FIN>214
+inserting 30<FIN>214
+inserting 30<FIN>241
+inserting 30<FIN>241
+inserting 30<FIN>412
+inserting 30<FIN>412
+inserting 30<FIN>421
+inserting 30<FIN>421
+inserting 31024<FIN>
+inserting 31024<FIN>
+inserting 3102<FIN>4
+inserting 3102<FIN>4
+inserting 31042<FIN>
+inserting 31042<FIN>
+inserting 3104<FIN>2
+inserting 3104<FIN>2
+inserting 310<FIN>24
+inserting 310<FIN>24
+inserting 310<FIN>42
+inserting 310<FIN>42
+inserting 31204<FIN>
+inserting 31204<FIN>
+inserting 3120<FIN>4
+inserting 3120<FIN>4
+inserting 31240<FIN>
+inserting 31240<FIN>
+inserting 3124<FIN>0
+inserting 3124<FIN>0
+inserting 312<FIN>04
+inserting 312<FIN>04
+inserting 312<FIN>40
+inserting 312<FIN>40
+inserting 31402<FIN>
+inserting 31402<FIN>
+inserting 3140<FIN>2
+inserting 3140<FIN>2
+inserting 31420<FIN>
+inserting 31420<FIN>
+inserting 3142<FIN>0
+inserting 3142<FIN>0
+inserting 314<FIN>02
+inserting 314<FIN>02
+inserting 314<FIN>20
+inserting 314<FIN>20
+inserting 31<FIN>024
+inserting 31<FIN>024
+inserting 31<FIN>042
+inserting 31<FIN>042
+inserting 31<FIN>204
+inserting 31<FIN>204
+inserting 31<FIN>240
+inserting 31<FIN>240
+inserting 31<FIN>402
+inserting 31<FIN>402
+inserting 31<FIN>420
+inserting 31<FIN>420
+inserting 32014<FIN>
+inserting 32014<FIN>
+inserting 3201<FIN>4
+inserting 3201<FIN>4
+inserting 32041<FIN>
+inserting 32041<FIN>
+inserting 3204<FIN>1
+inserting 3204<FIN>1
+inserting 320<FIN>14
+inserting 320<FIN>14
+inserting 320<FIN>41
+inserting 320<FIN>41
+inserting 32104<FIN>
+inserting 32104<FIN>
+inserting 3210<FIN>4
+inserting 3210<FIN>4
+inserting 32140<FIN>
+inserting 32140<FIN>
+inserting 3214<FIN>0
+inserting 3214<FIN>0
+inserting 321<FIN>04
+inserting 321<FIN>04
+inserting 321<FIN>40
+inserting 321<FIN>40
+inserting 32401<FIN>
+inserting 32401<FIN>
+inserting 3240<FIN>1
+inserting 3240<FIN>1
+inserting 32410<FIN>
+inserting 32410<FIN>
+inserting 3241<FIN>0
+inserting 3241<FIN>0
+inserting 324<FIN>01
+inserting 324<FIN>01
+inserting 324<FIN>10
+inserting 324<FIN>10
+inserting 32<FIN>014
+inserting 32<FIN>014
+inserting 32<FIN>041
+inserting 32<FIN>041
+inserting 32<FIN>104
+inserting 32<FIN>104
+inserting 32<FIN>140
+inserting 32<FIN>140
+inserting 32<FIN>401
+inserting 32<FIN>401
+inserting 32<FIN>410
+inserting 32<FIN>410
+inserting 34012<FIN>
+inserting 34012<FIN>
+inserting 3401<FIN>2
+inserting 3401<FIN>2
+inserting 34021<FIN>
+inserting 34021<FIN>
+inserting 3402<FIN>1
+inserting 3402<FIN>1
+inserting 340<FIN>12
+inserting 340<FIN>12
+inserting 340<FIN>21
+inserting 340<FIN>21
+inserting 34102<FIN>
+inserting 34102<FIN>
+inserting 3410<FIN>2
+inserting 3410<FIN>2
+inserting 34120<FIN>
+inserting 34120<FIN>
+inserting 3412<FIN>0
+inserting 3412<FIN>0
+inserting 341<FIN>02
+inserting 341<FIN>02
+inserting 341<FIN>20
+inserting 341<FIN>20
+inserting 34201<FIN>
+inserting 34201<FIN>
+inserting 3420<FIN>1
+inserting 3420<FIN>1
+inserting 34210<FIN>
+inserting 34210<FIN>
+inserting 3421<FIN>0
+inserting 3421<FIN>0
+inserting 342<FIN>01
+inserting 342<FIN>01
+inserting 342<FIN>10
+inserting 342<FIN>10
+inserting 34<FIN>012
+inserting 34<FIN>012
+inserting 34<FIN>021
+inserting 34<FIN>021
+inserting 34<FIN>102
+inserting 34<FIN>102
+inserting 34<FIN>120
+inserting 34<FIN>120
+inserting 34<FIN>201
+inserting 34<FIN>201
+inserting 34<FIN>210
+inserting 34<FIN>210
+inserting 3<FIN>0124
+inserting 3<FIN>0124
+inserting 3<FIN>0142
+inserting 3<FIN>0142
+inserting 3<FIN>0214
+inserting 3<FIN>0214
+inserting 3<FIN>0241
+inserting 3<FIN>0241
+inserting 3<FIN>0412
+inserting 3<FIN>0412
+inserting 3<FIN>0421
+inserting 3<FIN>0421
+inserting 3<FIN>1024
+inserting 3<FIN>1024
+inserting 3<FIN>1042
+inserting 3<FIN>1042
+inserting 3<FIN>1204
+inserting 3<FIN>1204
+inserting 3<FIN>1240
+inserting 3<FIN>1240
+inserting 3<FIN>1402
+inserting 3<FIN>1402
+inserting 3<FIN>1420
+inserting 3<FIN>1420
+inserting 3<FIN>2014
+inserting 3<FIN>2014
+inserting 3<FIN>2041
+inserting 3<FIN>2041
+inserting 3<FIN>2104
+inserting 3<FIN>2104
+inserting 3<FIN>2140
+inserting 3<FIN>2140
+inserting 3<FIN>2401
+inserting 3<FIN>2401
+inserting 3<FIN>2410
+inserting 3<FIN>2410
+inserting 3<FIN>4012
+inserting 3<FIN>4012
+inserting 3<FIN>4021
+inserting 3<FIN>4021
+inserting 3<FIN>4102
+inserting 3<FIN>4102
+inserting 3<FIN>4120
+inserting 3<FIN>4120
+inserting 3<FIN>4201
+inserting 3<FIN>4201
+inserting 3<FIN>4210
+inserting 3<FIN>4210
+inserting 40123<FIN>
+inserting 40123<FIN>
+inserting 4012<FIN>3
+inserting 4012<FIN>3
+inserting 40132<FIN>
+inserting 40132<FIN>
+inserting 4013<FIN>2
+inserting 4013<FIN>2
+inserting 401<FIN>23
+inserting 401<FIN>23
+inserting 401<FIN>32
+inserting 401<FIN>32
+inserting 40213<FIN>
+inserting 40213<FIN>
+inserting 4021<FIN>3
+inserting 4021<FIN>3
+inserting 40231<FIN>
+inserting 40231<FIN>
+inserting 4023<FIN>1
+inserting 4023<FIN>1
+inserting 402<FIN>13
+inserting 402<FIN>13
+inserting 402<FIN>31
+inserting 402<FIN>31
+inserting 40312<FIN>
+inserting 40312<FIN>
+inserting 4031<FIN>2
+inserting 4031<FIN>2
+inserting 40321<FIN>
+inserting 40321<FIN>
+inserting 4032<FIN>1
+inserting 4032<FIN>1
+inserting 403<FIN>12
+inserting 403<FIN>12
+inserting 403<FIN>21
+inserting 403<FIN>21
+inserting 40<FIN>123
+inserting 40<FIN>123
+inserting 40<FIN>132
+inserting 40<FIN>132
+inserting 40<FIN>213
+inserting 40<FIN>213
+inserting 40<FIN>231
+inserting 40<FIN>231
+inserting 40<FIN>312
+inserting 40<FIN>312
+inserting 40<FIN>321
+inserting 40<FIN>321
+inserting 41023<FIN>
+inserting 41023<FIN>
+inserting 4102<FIN>3
+inserting 4102<FIN>3
+inserting 41032<FIN>
+inserting 41032<FIN>
+inserting 4103<FIN>2
+inserting 4103<FIN>2
+inserting 410<FIN>23
+inserting 410<FIN>23
+inserting 410<FIN>32
+inserting 410<FIN>32
+inserting 41203<FIN>
+inserting 41203<FIN>
+inserting 4120<FIN>3
+inserting 4120<FIN>3
+inserting 41230<FIN>
+inserting 41230<FIN>
+inserting 4123<FIN>0
+inserting 4123<FIN>0
+inserting 412<FIN>03
+inserting 412<FIN>03
+inserting 412<FIN>30
+inserting 412<FIN>30
+inserting 41302<FIN>
+inserting 41302<FIN>
+inserting 4130<FIN>2
+inserting 4130<FIN>2
+inserting 41320<FIN>
+inserting 41320<FIN>
+inserting 4132<FIN>0
+inserting 4132<FIN>0
+inserting 413<FIN>02
+inserting 413<FIN>02
+inserting 413<FIN>20
+inserting 413<FIN>20
+inserting 41<FIN>023
+inserting 41<FIN>023
+inserting 41<FIN>032
+inserting 41<FIN>032
+inserting 41<FIN>203
+inserting 41<FIN>203
+inserting 41<FIN>230
+inserting 41<FIN>230
+inserting 41<FIN>302
+inserting 41<FIN>302
+inserting 41<FIN>320
+inserting 41<FIN>320
+inserting 42013<FIN>
+inserting 42013<FIN>
+inserting 4201<FIN>3
+inserting 4201<FIN>3
+inserting 42031<FIN>
+inserting 42031<FIN>
+inserting 4203<FIN>1
+inserting 4203<FIN>1
+inserting 420<FIN>13
+inserting 420<FIN>13
+inserting 420<FIN>31
+inserting 420<FIN>31
+inserting 42103<FIN>
+inserting 42103<FIN>
+inserting 4210<FIN>3
+inserting 4210<FIN>3
+inserting 42130<FIN>
+inserting 42130<FIN>
+inserting 4213<FIN>0
+inserting 4213<FIN>0
+inserting 421<FIN>03
+inserting 421<FIN>03
+inserting 421<FIN>30
+inserting 421<FIN>30
+inserting 42301<FIN>
+inserting 42301<FIN>
+inserting 4230<FIN>1
+inserting 4230<FIN>1
+inserting 42310<FIN>
+inserting 42310<FIN>
+inserting 4231<FIN>0
+inserting 4231<FIN>0
+inserting 423<FIN>01
+inserting 423<FIN>01
+inserting 423<FIN>10
+inserting 423<FIN>10
+inserting 42<FIN>013
+inserting 42<FIN>013
+inserting 42<FIN>031
+inserting 42<FIN>031
+inserting 42<FIN>103
+inserting 42<FIN>103
+inserting 42<FIN>130
+inserting 42<FIN>130
+inserting 42<FIN>301
+inserting 42<FIN>301
+inserting 42<FIN>310
+inserting 42<FIN>310
+inserting 43012<FIN>
+inserting 43012<FIN>
+inserting 4301<FIN>2
+inserting 4301<FIN>2
+inserting 43021<FIN>
+inserting 43021<FIN>
+inserting 4302<FIN>1
+inserting 4302<FIN>1
+inserting 430<FIN>12
+inserting 430<FIN>12
+inserting 430<FIN>21
+inserting 430<FIN>21
+inserting 43102<FIN>
+inserting 43102<FIN>
+inserting 4310<FIN>2
+inserting 4310<FIN>2
+inserting 43120<FIN>
+inserting 43120<FIN>
+inserting 4312<FIN>0
+inserting 4312<FIN>0
+inserting 431<FIN>02
+inserting 431<FIN>02
+inserting 431<FIN>20
+inserting 431<FIN>20
+inserting 43201<FIN>
+inserting 43201<FIN>
+inserting 4320<FIN>1
+inserting 4320<FIN>1
+inserting 43210<FIN>
+inserting 43210<FIN>
+inserting 4321<FIN>0
+inserting 4321<FIN>0
+inserting 432<FIN>01
+inserting 432<FIN>01
+inserting 432<FIN>10
+inserting 432<FIN>10
+inserting 43<FIN>012
+inserting 43<FIN>012
+inserting 43<FIN>021
+inserting 43<FIN>021
+inserting 43<FIN>102
+inserting 43<FIN>102
+inserting 43<FIN>120
+inserting 43<FIN>120
+inserting 43<FIN>201
+inserting 43<FIN>201
+inserting 43<FIN>210
+inserting 43<FIN>210
+inserting 4<FIN>0123
+inserting 4<FIN>0123
+inserting 4<FIN>0132
+inserting 4<FIN>0132
+inserting 4<FIN>0213
+inserting 4<FIN>0213
+inserting 4<FIN>0231
+inserting 4<FIN>0231
+inserting 4<FIN>0312
+inserting 4<FIN>0312
+inserting 4<FIN>0321
+inserting 4<FIN>0321
+inserting 4<FIN>1023
+inserting 4<FIN>1023
+inserting 4<FIN>1032
+inserting 4<FIN>1032
+inserting 4<FIN>1203
+inserting 4<FIN>1203
+inserting 4<FIN>1230
+inserting 4<FIN>1230
+inserting 4<FIN>1302
+inserting 4<FIN>1302
+inserting 4<FIN>1320
+inserting 4<FIN>1320
+inserting 4<FIN>2013
+inserting 4<FIN>2013
+inserting 4<FIN>2031
+inserting 4<FIN>2031
+inserting 4<FIN>2103
+inserting 4<FIN>2103
+inserting 4<FIN>2130
+inserting 4<FIN>2130
+inserting 4<FIN>2301
+inserting 4<FIN>2301
+inserting 4<FIN>2310
+inserting 4<FIN>2310
+inserting 4<FIN>3012
+inserting 4<FIN>3012
+inserting 4<FIN>3021
+inserting 4<FIN>3021
+inserting 4<FIN>3102
+inserting 4<FIN>3102
+inserting 4<FIN>3120
+inserting 4<FIN>3120
+inserting 4<FIN>3201
+inserting 4<FIN>3201
+inserting 4<FIN>3210
+inserting 4<FIN>3210
+inserting <FIN>01234
+inserting <FIN>01234
+inserting <FIN>01243
+inserting <FIN>01243
+inserting <FIN>01324
+inserting <FIN>01324
+inserting <FIN>01342
+inserting <FIN>01342
+inserting <FIN>01423
+inserting <FIN>01423
+inserting <FIN>01432
+inserting <FIN>01432
+inserting <FIN>02134
+inserting <FIN>02134
+inserting <FIN>02143
+inserting <FIN>02143
+inserting <FIN>02314
+inserting <FIN>02314
+inserting <FIN>02341
+inserting <FIN>02341
+inserting <FIN>02413
+inserting <FIN>02413
+inserting <FIN>02431
+inserting <FIN>02431
+inserting <FIN>03124
+inserting <FIN>03124
+inserting <FIN>03142
+inserting <FIN>03142
+inserting <FIN>03214
+inserting <FIN>03214
+inserting <FIN>03241
+inserting <FIN>03241
+inserting <FIN>03412
+inserting <FIN>03412
+inserting <FIN>03421
+inserting <FIN>03421
+inserting <FIN>04123
+inserting <FIN>04123
+inserting <FIN>04132
+inserting <FIN>04132
+inserting <FIN>04213
+inserting <FIN>04213
+inserting <FIN>04231
+inserting <FIN>04231
+inserting <FIN>04312
+inserting <FIN>04312
+inserting <FIN>04321
+inserting <FIN>04321
+inserting <FIN>10234
+inserting <FIN>10234
+inserting <FIN>10243
+inserting <FIN>10243
+inserting <FIN>10324
+inserting <FIN>10324
+inserting <FIN>10342
+inserting <FIN>10342
+inserting <FIN>10423
+inserting <FIN>10423
+inserting <FIN>10432
+inserting <FIN>10432
+inserting <FIN>12034
+inserting <FIN>12034
+inserting <FIN>12043
+inserting <FIN>12043
+inserting <FIN>12304
+inserting <FIN>12304
+inserting <FIN>12340
+inserting <FIN>12340
+inserting <FIN>12403
+inserting <FIN>12403
+inserting <FIN>12430
+inserting <FIN>12430
+inserting <FIN>13024
+inserting <FIN>13024
+inserting <FIN>13042
+inserting <FIN>13042
+inserting <FIN>13204
+inserting <FIN>13204
+inserting <FIN>13240
+inserting <FIN>13240
+inserting <FIN>13402
+inserting <FIN>13402
+inserting <FIN>13420
+inserting <FIN>13420
+inserting <FIN>14023
+inserting <FIN>14023
+inserting <FIN>14032
+inserting <FIN>14032
+inserting <FIN>14203
+inserting <FIN>14203
+inserting <FIN>14230
+inserting <FIN>14230
+inserting <FIN>14302
+inserting <FIN>14302
+inserting <FIN>14320
+inserting <FIN>14320
+inserting <FIN>20134
+inserting <FIN>20134
+inserting <FIN>20143
+inserting <FIN>20143
+inserting <FIN>20314
+inserting <FIN>20314
+inserting <FIN>20341
+inserting <FIN>20341
+inserting <FIN>20413
+inserting <FIN>20413
+inserting <FIN>20431
+inserting <FIN>20431
+inserting <FIN>21034
+inserting <FIN>21034
+inserting <FIN>21043
+inserting <FIN>21043
+inserting <FIN>21304
+inserting <FIN>21304
+inserting <FIN>21340
+inserting <FIN>21340
+inserting <FIN>21403
+inserting <FIN>21403
+inserting <FIN>21430
+inserting <FIN>21430
+inserting <FIN>23014
+inserting <FIN>23014
+inserting <FIN>23041
+inserting <FIN>23041
+inserting <FIN>23104
+inserting <FIN>23104
+inserting <FIN>23140
+inserting <FIN>23140
+inserting <FIN>23401
+inserting <FIN>23401
+inserting <FIN>23410
+inserting <FIN>23410
+inserting <FIN>24013
+inserting <FIN>24013
+inserting <FIN>24031
+inserting <FIN>24031
+inserting <FIN>24103
+inserting <FIN>24103
+inserting <FIN>24130
+inserting <FIN>24130
+inserting <FIN>24301
+inserting <FIN>24301
+inserting <FIN>24310
+inserting <FIN>24310
+inserting <FIN>30124
+inserting <FIN>30124
+inserting <FIN>30142
+inserting <FIN>30142
+inserting <FIN>30214
+inserting <FIN>30214
+inserting <FIN>30241
+inserting <FIN>30241
+inserting <FIN>30412
+inserting <FIN>30412
+inserting <FIN>30421
+inserting <FIN>30421
+inserting <FIN>31024
+inserting <FIN>31024
+inserting <FIN>31042
+inserting <FIN>31042
+inserting <FIN>31204
+inserting <FIN>31204
+inserting <FIN>31240
+inserting <FIN>31240
+inserting <FIN>31402
+inserting <FIN>31402
+inserting <FIN>31420
+inserting <FIN>31420
+inserting <FIN>32014
+inserting <FIN>32014
+inserting <FIN>32041
+inserting <FIN>32041
+inserting <FIN>32104
+inserting <FIN>32104
+inserting <FIN>32140
+inserting <FIN>32140
+inserting <FIN>32401
+inserting <FIN>32401
+inserting <FIN>32410
+inserting <FIN>32410
+inserting <FIN>34012
+inserting <FIN>34012
+inserting <FIN>34021
+inserting <FIN>34021
+inserting <FIN>34102
+inserting <FIN>34102
+inserting <FIN>34120
+inserting <FIN>34120
+inserting <FIN>34201
+inserting <FIN>34201
+inserting <FIN>34210
+inserting <FIN>34210
+inserting <FIN>40123
+inserting <FIN>40123
+inserting <FIN>40132
+inserting <FIN>40132
+inserting <FIN>40213
+inserting <FIN>40213
+inserting <FIN>40231
+inserting <FIN>40231
+inserting <FIN>40312
+inserting <FIN>40312
+inserting <FIN>40321
+inserting <FIN>40321
+inserting <FIN>41023
+inserting <FIN>41023
+inserting <FIN>41032
+inserting <FIN>41032
+inserting <FIN>41203
+inserting <FIN>41203
+inserting <FIN>41230
+inserting <FIN>41230
+inserting <FIN>41302
+inserting <FIN>41302
+inserting <FIN>41320
+inserting <FIN>41320
+inserting <FIN>42013
+inserting <FIN>42013
+inserting <FIN>42031
+inserting <FIN>42031
+inserting <FIN>42103
+inserting <FIN>42103
+inserting <FIN>42130
+inserting <FIN>42130
+inserting <FIN>42301
+inserting <FIN>42301
+inserting <FIN>42310
+inserting <FIN>42310
+inserting <FIN>43012
+inserting <FIN>43012
+inserting <FIN>43021
+inserting <FIN>43021
+inserting <FIN>43102
+inserting <FIN>43102
+inserting <FIN>43120
+inserting <FIN>43120
+inserting <FIN>43201
+inserting <FIN>43201
+inserting <FIN>43210
+inserting <FIN>43210
+<end of output>
+Test time =  25.43 sec
+----------------------------------------------------------
+Test Passed.
+"stream_hash" end time: Jan 19 19:32 CET
+"stream_hash" time elapsed: 00:00:25
+----------------------------------------------------------
+
+53/58 Testing: stream_A
+53/58 Test: stream_A
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_stream" "-A"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"stream_A" start time: Jan 19 19:32 CET
+Output:
+----------------------------------------------------------
+inserting 01234<FIN>
+inserting 01234<FIN>
+inserting 0123<FIN>4
+inserting 0123<FIN>4
+inserting 01243<FIN>
+inserting 01243<FIN>
+inserting 0124<FIN>3
+inserting 0124<FIN>3
+inserting 012<FIN>34
+inserting 012<FIN>34
+inserting 012<FIN>43
+inserting 012<FIN>43
+inserting 01324<FIN>
+inserting 01324<FIN>
+inserting 0132<FIN>4
+inserting 0132<FIN>4
+inserting 01342<FIN>
+inserting 01342<FIN>
+inserting 0134<FIN>2
+inserting 0134<FIN>2
+inserting 013<FIN>24
+inserting 013<FIN>24
+inserting 013<FIN>42
+inserting 013<FIN>42
+inserting 01423<FIN>
+inserting 01423<FIN>
+inserting 0142<FIN>3
+inserting 0142<FIN>3
+inserting 01432<FIN>
+inserting 01432<FIN>
+inserting 0143<FIN>2
+inserting 0143<FIN>2
+inserting 014<FIN>23
+inserting 014<FIN>23
+inserting 014<FIN>32
+inserting 014<FIN>32
+inserting 01<FIN>234
+inserting 01<FIN>234
+inserting 01<FIN>243
+inserting 01<FIN>243
+inserting 01<FIN>324
+inserting 01<FIN>324
+inserting 01<FIN>342
+inserting 01<FIN>342
+inserting 01<FIN>423
+inserting 01<FIN>423
+inserting 01<FIN>432
+inserting 01<FIN>432
+inserting 02134<FIN>
+inserting 02134<FIN>
+inserting 0213<FIN>4
+inserting 0213<FIN>4
+inserting 02143<FIN>
+inserting 02143<FIN>
+inserting 0214<FIN>3
+inserting 0214<FIN>3
+inserting 021<FIN>34
+inserting 021<FIN>34
+inserting 021<FIN>43
+inserting 021<FIN>43
+inserting 02314<FIN>
+inserting 02314<FIN>
+inserting 0231<FIN>4
+inserting 0231<FIN>4
+inserting 02341<FIN>
+inserting 02341<FIN>
+inserting 0234<FIN>1
+inserting 0234<FIN>1
+inserting 023<FIN>14
+inserting 023<FIN>14
+inserting 023<FIN>41
+inserting 023<FIN>41
+inserting 02413<FIN>
+inserting 02413<FIN>
+inserting 0241<FIN>3
+inserting 0241<FIN>3
+inserting 02431<FIN>
+inserting 02431<FIN>
+inserting 0243<FIN>1
+inserting 0243<FIN>1
+inserting 024<FIN>13
+inserting 024<FIN>13
+inserting 024<FIN>31
+inserting 024<FIN>31
+inserting 02<FIN>134
+inserting 02<FIN>134
+inserting 02<FIN>143
+inserting 02<FIN>143
+inserting 02<FIN>314
+inserting 02<FIN>314
+inserting 02<FIN>341
+inserting 02<FIN>341
+inserting 02<FIN>413
+inserting 02<FIN>413
+inserting 02<FIN>431
+inserting 02<FIN>431
+inserting 03124<FIN>
+inserting 03124<FIN>
+inserting 0312<FIN>4
+inserting 0312<FIN>4
+inserting 03142<FIN>
+inserting 03142<FIN>
+inserting 0314<FIN>2
+inserting 0314<FIN>2
+inserting 031<FIN>24
+inserting 031<FIN>24
+inserting 031<FIN>42
+inserting 031<FIN>42
+inserting 03214<FIN>
+inserting 03214<FIN>
+inserting 0321<FIN>4
+inserting 0321<FIN>4
+inserting 03241<FIN>
+inserting 03241<FIN>
+inserting 0324<FIN>1
+inserting 0324<FIN>1
+inserting 032<FIN>14
+inserting 032<FIN>14
+inserting 032<FIN>41
+inserting 032<FIN>41
+inserting 03412<FIN>
+inserting 03412<FIN>
+inserting 0341<FIN>2
+inserting 0341<FIN>2
+inserting 03421<FIN>
+inserting 03421<FIN>
+inserting 0342<FIN>1
+inserting 0342<FIN>1
+inserting 034<FIN>12
+inserting 034<FIN>12
+inserting 034<FIN>21
+inserting 034<FIN>21
+inserting 03<FIN>124
+inserting 03<FIN>124
+inserting 03<FIN>142
+inserting 03<FIN>142
+inserting 03<FIN>214
+inserting 03<FIN>214
+inserting 03<FIN>241
+inserting 03<FIN>241
+inserting 03<FIN>412
+inserting 03<FIN>412
+inserting 03<FIN>421
+inserting 03<FIN>421
+inserting 04123<FIN>
+inserting 04123<FIN>
+inserting 0412<FIN>3
+inserting 0412<FIN>3
+inserting 04132<FIN>
+inserting 04132<FIN>
+inserting 0413<FIN>2
+inserting 0413<FIN>2
+inserting 041<FIN>23
+inserting 041<FIN>23
+inserting 041<FIN>32
+inserting 041<FIN>32
+inserting 04213<FIN>
+inserting 04213<FIN>
+inserting 0421<FIN>3
+inserting 0421<FIN>3
+inserting 04231<FIN>
+inserting 04231<FIN>
+inserting 0423<FIN>1
+inserting 0423<FIN>1
+inserting 042<FIN>13
+inserting 042<FIN>13
+inserting 042<FIN>31
+inserting 042<FIN>31
+inserting 04312<FIN>
+inserting 04312<FIN>
+inserting 0431<FIN>2
+inserting 0431<FIN>2
+inserting 04321<FIN>
+inserting 04321<FIN>
+inserting 0432<FIN>1
+inserting 0432<FIN>1
+inserting 043<FIN>12
+inserting 043<FIN>12
+inserting 043<FIN>21
+inserting 043<FIN>21
+inserting 04<FIN>123
+inserting 04<FIN>123
+inserting 04<FIN>132
+inserting 04<FIN>132
+inserting 04<FIN>213
+inserting 04<FIN>213
+inserting 04<FIN>231
+inserting 04<FIN>231
+inserting 04<FIN>312
+inserting 04<FIN>312
+inserting 04<FIN>321
+inserting 04<FIN>321
+inserting 0<FIN>1234
+inserting 0<FIN>1234
+inserting 0<FIN>1243
+inserting 0<FIN>1243
+inserting 0<FIN>1324
+inserting 0<FIN>1324
+inserting 0<FIN>1342
+inserting 0<FIN>1342
+inserting 0<FIN>1423
+inserting 0<FIN>1423
+inserting 0<FIN>1432
+inserting 0<FIN>1432
+inserting 0<FIN>2134
+inserting 0<FIN>2134
+inserting 0<FIN>2143
+inserting 0<FIN>2143
+inserting 0<FIN>2314
+inserting 0<FIN>2314
+inserting 0<FIN>2341
+inserting 0<FIN>2341
+inserting 0<FIN>2413
+inserting 0<FIN>2413
+inserting 0<FIN>2431
+inserting 0<FIN>2431
+inserting 0<FIN>3124
+inserting 0<FIN>3124
+inserting 0<FIN>3142
+inserting 0<FIN>3142
+inserting 0<FIN>3214
+inserting 0<FIN>3214
+inserting 0<FIN>3241
+inserting 0<FIN>3241
+inserting 0<FIN>3412
+inserting 0<FIN>3412
+inserting 0<FIN>3421
+inserting 0<FIN>3421
+inserting 0<FIN>4123
+inserting 0<FIN>4123
+inserting 0<FIN>4132
+inserting 0<FIN>4132
+inserting 0<FIN>4213
+inserting 0<FIN>4213
+inserting 0<FIN>4231
+inserting 0<FIN>4231
+inserting 0<FIN>4312
+inserting 0<FIN>4312
+inserting 0<FIN>4321
+inserting 0<FIN>4321
+inserting 10234<FIN>
+inserting 10234<FIN>
+inserting 1023<FIN>4
+inserting 1023<FIN>4
+inserting 10243<FIN>
+inserting 10243<FIN>
+inserting 1024<FIN>3
+inserting 1024<FIN>3
+inserting 102<FIN>34
+inserting 102<FIN>34
+inserting 102<FIN>43
+inserting 102<FIN>43
+inserting 10324<FIN>
+inserting 10324<FIN>
+inserting 1032<FIN>4
+inserting 1032<FIN>4
+inserting 10342<FIN>
+inserting 10342<FIN>
+inserting 1034<FIN>2
+inserting 1034<FIN>2
+inserting 103<FIN>24
+inserting 103<FIN>24
+inserting 103<FIN>42
+inserting 103<FIN>42
+inserting 10423<FIN>
+inserting 10423<FIN>
+inserting 1042<FIN>3
+inserting 1042<FIN>3
+inserting 10432<FIN>
+inserting 10432<FIN>
+inserting 1043<FIN>2
+inserting 1043<FIN>2
+inserting 104<FIN>23
+inserting 104<FIN>23
+inserting 104<FIN>32
+inserting 104<FIN>32
+inserting 10<FIN>234
+inserting 10<FIN>234
+inserting 10<FIN>243
+inserting 10<FIN>243
+inserting 10<FIN>324
+inserting 10<FIN>324
+inserting 10<FIN>342
+inserting 10<FIN>342
+inserting 10<FIN>423
+inserting 10<FIN>423
+inserting 10<FIN>432
+inserting 10<FIN>432
+inserting 12034<FIN>
+inserting 12034<FIN>
+inserting 1203<FIN>4
+inserting 1203<FIN>4
+inserting 12043<FIN>
+inserting 12043<FIN>
+inserting 1204<FIN>3
+inserting 1204<FIN>3
+inserting 120<FIN>34
+inserting 120<FIN>34
+inserting 120<FIN>43
+inserting 120<FIN>43
+inserting 12304<FIN>
+inserting 12304<FIN>
+inserting 1230<FIN>4
+inserting 1230<FIN>4
+inserting 12340<FIN>
+inserting 12340<FIN>
+inserting 1234<FIN>0
+inserting 1234<FIN>0
+inserting 123<FIN>04
+inserting 123<FIN>04
+inserting 123<FIN>40
+inserting 123<FIN>40
+inserting 12403<FIN>
+inserting 12403<FIN>
+inserting 1240<FIN>3
+inserting 1240<FIN>3
+inserting 12430<FIN>
+inserting 12430<FIN>
+inserting 1243<FIN>0
+inserting 1243<FIN>0
+inserting 124<FIN>03
+inserting 124<FIN>03
+inserting 124<FIN>30
+inserting 124<FIN>30
+inserting 12<FIN>034
+inserting 12<FIN>034
+inserting 12<FIN>043
+inserting 12<FIN>043
+inserting 12<FIN>304
+inserting 12<FIN>304
+inserting 12<FIN>340
+inserting 12<FIN>340
+inserting 12<FIN>403
+inserting 12<FIN>403
+inserting 12<FIN>430
+inserting 12<FIN>430
+inserting 13024<FIN>
+inserting 13024<FIN>
+inserting 1302<FIN>4
+inserting 1302<FIN>4
+inserting 13042<FIN>
+inserting 13042<FIN>
+inserting 1304<FIN>2
+inserting 1304<FIN>2
+inserting 130<FIN>24
+inserting 130<FIN>24
+inserting 130<FIN>42
+inserting 130<FIN>42
+inserting 13204<FIN>
+inserting 13204<FIN>
+inserting 1320<FIN>4
+inserting 1320<FIN>4
+inserting 13240<FIN>
+inserting 13240<FIN>
+inserting 1324<FIN>0
+inserting 1324<FIN>0
+inserting 132<FIN>04
+inserting 132<FIN>04
+inserting 132<FIN>40
+inserting 132<FIN>40
+inserting 13402<FIN>
+inserting 13402<FIN>
+inserting 1340<FIN>2
+inserting 1340<FIN>2
+inserting 13420<FIN>
+inserting 13420<FIN>
+inserting 1342<FIN>0
+inserting 1342<FIN>0
+inserting 134<FIN>02
+inserting 134<FIN>02
+inserting 134<FIN>20
+inserting 134<FIN>20
+inserting 13<FIN>024
+inserting 13<FIN>024
+inserting 13<FIN>042
+inserting 13<FIN>042
+inserting 13<FIN>204
+inserting 13<FIN>204
+inserting 13<FIN>240
+inserting 13<FIN>240
+inserting 13<FIN>402
+inserting 13<FIN>402
+inserting 13<FIN>420
+inserting 13<FIN>420
+inserting 14023<FIN>
+inserting 14023<FIN>
+inserting 1402<FIN>3
+inserting 1402<FIN>3
+inserting 14032<FIN>
+inserting 14032<FIN>
+inserting 1403<FIN>2
+inserting 1403<FIN>2
+inserting 140<FIN>23
+inserting 140<FIN>23
+inserting 140<FIN>32
+inserting 140<FIN>32
+inserting 14203<FIN>
+inserting 14203<FIN>
+inserting 1420<FIN>3
+inserting 1420<FIN>3
+inserting 14230<FIN>
+inserting 14230<FIN>
+inserting 1423<FIN>0
+inserting 1423<FIN>0
+inserting 142<FIN>03
+inserting 142<FIN>03
+inserting 142<FIN>30
+inserting 142<FIN>30
+inserting 14302<FIN>
+inserting 14302<FIN>
+inserting 1430<FIN>2
+inserting 1430<FIN>2
+inserting 14320<FIN>
+inserting 14320<FIN>
+inserting 1432<FIN>0
+inserting 1432<FIN>0
+inserting 143<FIN>02
+inserting 143<FIN>02
+inserting 143<FIN>20
+inserting 143<FIN>20
+inserting 14<FIN>023
+inserting 14<FIN>023
+inserting 14<FIN>032
+inserting 14<FIN>032
+inserting 14<FIN>203
+inserting 14<FIN>203
+inserting 14<FIN>230
+inserting 14<FIN>230
+inserting 14<FIN>302
+inserting 14<FIN>302
+inserting 14<FIN>320
+inserting 14<FIN>320
+inserting 1<FIN>0234
+inserting 1<FIN>0234
+inserting 1<FIN>0243
+inserting 1<FIN>0243
+inserting 1<FIN>0324
+inserting 1<FIN>0324
+inserting 1<FIN>0342
+inserting 1<FIN>0342
+inserting 1<FIN>0423
+inserting 1<FIN>0423
+inserting 1<FIN>0432
+inserting 1<FIN>0432
+inserting 1<FIN>2034
+inserting 1<FIN>2034
+inserting 1<FIN>2043
+inserting 1<FIN>2043
+inserting 1<FIN>2304
+inserting 1<FIN>2304
+inserting 1<FIN>2340
+inserting 1<FIN>2340
+inserting 1<FIN>2403
+inserting 1<FIN>2403
+inserting 1<FIN>2430
+inserting 1<FIN>2430
+inserting 1<FIN>3024
+inserting 1<FIN>3024
+inserting 1<FIN>3042
+inserting 1<FIN>3042
+inserting 1<FIN>3204
+inserting 1<FIN>3204
+inserting 1<FIN>3240
+inserting 1<FIN>3240
+inserting 1<FIN>3402
+inserting 1<FIN>3402
+inserting 1<FIN>3420
+inserting 1<FIN>3420
+inserting 1<FIN>4023
+inserting 1<FIN>4023
+inserting 1<FIN>4032
+inserting 1<FIN>4032
+inserting 1<FIN>4203
+inserting 1<FIN>4203
+inserting 1<FIN>4230
+inserting 1<FIN>4230
+inserting 1<FIN>4302
+inserting 1<FIN>4302
+inserting 1<FIN>4320
+inserting 1<FIN>4320
+inserting 20134<FIN>
+inserting 20134<FIN>
+inserting 2013<FIN>4
+inserting 2013<FIN>4
+inserting 20143<FIN>
+inserting 20143<FIN>
+inserting 2014<FIN>3
+inserting 2014<FIN>3
+inserting 201<FIN>34
+inserting 201<FIN>34
+inserting 201<FIN>43
+inserting 201<FIN>43
+inserting 20314<FIN>
+inserting 20314<FIN>
+inserting 2031<FIN>4
+inserting 2031<FIN>4
+inserting 20341<FIN>
+inserting 20341<FIN>
+inserting 2034<FIN>1
+inserting 2034<FIN>1
+inserting 203<FIN>14
+inserting 203<FIN>14
+inserting 203<FIN>41
+inserting 203<FIN>41
+inserting 20413<FIN>
+inserting 20413<FIN>
+inserting 2041<FIN>3
+inserting 2041<FIN>3
+inserting 20431<FIN>
+inserting 20431<FIN>
+inserting 2043<FIN>1
+inserting 2043<FIN>1
+inserting 204<FIN>13
+inserting 204<FIN>13
+inserting 204<FIN>31
+inserting 204<FIN>31
+inserting 20<FIN>134
+inserting 20<FIN>134
+inserting 20<FIN>143
+inserting 20<FIN>143
+inserting 20<FIN>314
+inserting 20<FIN>314
+inserting 20<FIN>341
+inserting 20<FIN>341
+inserting 20<FIN>413
+inserting 20<FIN>413
+inserting 20<FIN>431
+inserting 20<FIN>431
+inserting 21034<FIN>
+inserting 21034<FIN>
+inserting 2103<FIN>4
+inserting 2103<FIN>4
+inserting 21043<FIN>
+inserting 21043<FIN>
+inserting 2104<FIN>3
+inserting 2104<FIN>3
+inserting 210<FIN>34
+inserting 210<FIN>34
+inserting 210<FIN>43
+inserting 210<FIN>43
+inserting 21304<FIN>
+inserting 21304<FIN>
+inserting 2130<FIN>4
+inserting 2130<FIN>4
+inserting 21340<FIN>
+inserting 21340<FIN>
+inserting 2134<FIN>0
+inserting 2134<FIN>0
+inserting 213<FIN>04
+inserting 213<FIN>04
+inserting 213<FIN>40
+inserting 213<FIN>40
+inserting 21403<FIN>
+inserting 21403<FIN>
+inserting 2140<FIN>3
+inserting 2140<FIN>3
+inserting 21430<FIN>
+inserting 21430<FIN>
+inserting 2143<FIN>0
+inserting 2143<FIN>0
+inserting 214<FIN>03
+inserting 214<FIN>03
+inserting 214<FIN>30
+inserting 214<FIN>30
+inserting 21<FIN>034
+inserting 21<FIN>034
+inserting 21<FIN>043
+inserting 21<FIN>043
+inserting 21<FIN>304
+inserting 21<FIN>304
+inserting 21<FIN>340
+inserting 21<FIN>340
+inserting 21<FIN>403
+inserting 21<FIN>403
+inserting 21<FIN>430
+inserting 21<FIN>430
+inserting 23014<FIN>
+inserting 23014<FIN>
+inserting 2301<FIN>4
+inserting 2301<FIN>4
+inserting 23041<FIN>
+inserting 23041<FIN>
+inserting 2304<FIN>1
+inserting 2304<FIN>1
+inserting 230<FIN>14
+inserting 230<FIN>14
+inserting 230<FIN>41
+inserting 230<FIN>41
+inserting 23104<FIN>
+inserting 23104<FIN>
+inserting 2310<FIN>4
+inserting 2310<FIN>4
+inserting 23140<FIN>
+inserting 23140<FIN>
+inserting 2314<FIN>0
+inserting 2314<FIN>0
+inserting 231<FIN>04
+inserting 231<FIN>04
+inserting 231<FIN>40
+inserting 231<FIN>40
+inserting 23401<FIN>
+inserting 23401<FIN>
+inserting 2340<FIN>1
+inserting 2340<FIN>1
+inserting 23410<FIN>
+inserting 23410<FIN>
+inserting 2341<FIN>0
+inserting 2341<FIN>0
+inserting 234<FIN>01
+inserting 234<FIN>01
+inserting 234<FIN>10
+inserting 234<FIN>10
+inserting 23<FIN>014
+inserting 23<FIN>014
+inserting 23<FIN>041
+inserting 23<FIN>041
+inserting 23<FIN>104
+inserting 23<FIN>104
+inserting 23<FIN>140
+inserting 23<FIN>140
+inserting 23<FIN>401
+inserting 23<FIN>401
+inserting 23<FIN>410
+inserting 23<FIN>410
+inserting 24013<FIN>
+inserting 24013<FIN>
+inserting 2401<FIN>3
+inserting 2401<FIN>3
+inserting 24031<FIN>
+inserting 24031<FIN>
+inserting 2403<FIN>1
+inserting 2403<FIN>1
+inserting 240<FIN>13
+inserting 240<FIN>13
+inserting 240<FIN>31
+inserting 240<FIN>31
+inserting 24103<FIN>
+inserting 24103<FIN>
+inserting 2410<FIN>3
+inserting 2410<FIN>3
+inserting 24130<FIN>
+inserting 24130<FIN>
+inserting 2413<FIN>0
+inserting 2413<FIN>0
+inserting 241<FIN>03
+inserting 241<FIN>03
+inserting 241<FIN>30
+inserting 241<FIN>30
+inserting 24301<FIN>
+inserting 24301<FIN>
+inserting 2430<FIN>1
+inserting 2430<FIN>1
+inserting 24310<FIN>
+inserting 24310<FIN>
+inserting 2431<FIN>0
+inserting 2431<FIN>0
+inserting 243<FIN>01
+inserting 243<FIN>01
+inserting 243<FIN>10
+inserting 243<FIN>10
+inserting 24<FIN>013
+inserting 24<FIN>013
+inserting 24<FIN>031
+inserting 24<FIN>031
+inserting 24<FIN>103
+inserting 24<FIN>103
+inserting 24<FIN>130
+inserting 24<FIN>130
+inserting 24<FIN>301
+inserting 24<FIN>301
+inserting 24<FIN>310
+inserting 24<FIN>310
+inserting 2<FIN>0134
+inserting 2<FIN>0134
+inserting 2<FIN>0143
+inserting 2<FIN>0143
+inserting 2<FIN>0314
+inserting 2<FIN>0314
+inserting 2<FIN>0341
+inserting 2<FIN>0341
+inserting 2<FIN>0413
+inserting 2<FIN>0413
+inserting 2<FIN>0431
+inserting 2<FIN>0431
+inserting 2<FIN>1034
+inserting 2<FIN>1034
+inserting 2<FIN>1043
+inserting 2<FIN>1043
+inserting 2<FIN>1304
+inserting 2<FIN>1304
+inserting 2<FIN>1340
+inserting 2<FIN>1340
+inserting 2<FIN>1403
+inserting 2<FIN>1403
+inserting 2<FIN>1430
+inserting 2<FIN>1430
+inserting 2<FIN>3014
+inserting 2<FIN>3014
+inserting 2<FIN>3041
+inserting 2<FIN>3041
+inserting 2<FIN>3104
+inserting 2<FIN>3104
+inserting 2<FIN>3140
+inserting 2<FIN>3140
+inserting 2<FIN>3401
+inserting 2<FIN>3401
+inserting 2<FIN>3410
+inserting 2<FIN>3410
+inserting 2<FIN>4013
+inserting 2<FIN>4013
+inserting 2<FIN>4031
+inserting 2<FIN>4031
+inserting 2<FIN>4103
+inserting 2<FIN>4103
+inserting 2<FIN>4130
+inserting 2<FIN>4130
+inserting 2<FIN>4301
+inserting 2<FIN>4301
+inserting 2<FIN>4310
+inserting 2<FIN>4310
+inserting 30124<FIN>
+inserting 30124<FIN>
+inserting 3012<FIN>4
+inserting 3012<FIN>4
+inserting 30142<FIN>
+inserting 30142<FIN>
+inserting 3014<FIN>2
+inserting 3014<FIN>2
+inserting 301<FIN>24
+inserting 301<FIN>24
+inserting 301<FIN>42
+inserting 301<FIN>42
+inserting 30214<FIN>
+inserting 30214<FIN>
+inserting 3021<FIN>4
+inserting 3021<FIN>4
+inserting 30241<FIN>
+inserting 30241<FIN>
+inserting 3024<FIN>1
+inserting 3024<FIN>1
+inserting 302<FIN>14
+inserting 302<FIN>14
+inserting 302<FIN>41
+inserting 302<FIN>41
+inserting 30412<FIN>
+inserting 30412<FIN>
+inserting 3041<FIN>2
+inserting 3041<FIN>2
+inserting 30421<FIN>
+inserting 30421<FIN>
+inserting 3042<FIN>1
+inserting 3042<FIN>1
+inserting 304<FIN>12
+inserting 304<FIN>12
+inserting 304<FIN>21
+inserting 304<FIN>21
+inserting 30<FIN>124
+inserting 30<FIN>124
+inserting 30<FIN>142
+inserting 30<FIN>142
+inserting 30<FIN>214
+inserting 30<FIN>214
+inserting 30<FIN>241
+inserting 30<FIN>241
+inserting 30<FIN>412
+inserting 30<FIN>412
+inserting 30<FIN>421
+inserting 30<FIN>421
+inserting 31024<FIN>
+inserting 31024<FIN>
+inserting 3102<FIN>4
+inserting 3102<FIN>4
+inserting 31042<FIN>
+inserting 31042<FIN>
+inserting 3104<FIN>2
+inserting 3104<FIN>2
+inserting 310<FIN>24
+inserting 310<FIN>24
+inserting 310<FIN>42
+inserting 310<FIN>42
+inserting 31204<FIN>
+inserting 31204<FIN>
+inserting 3120<FIN>4
+inserting 3120<FIN>4
+inserting 31240<FIN>
+inserting 31240<FIN>
+inserting 3124<FIN>0
+inserting 3124<FIN>0
+inserting 312<FIN>04
+inserting 312<FIN>04
+inserting 312<FIN>40
+inserting 312<FIN>40
+inserting 31402<FIN>
+inserting 31402<FIN>
+inserting 3140<FIN>2
+inserting 3140<FIN>2
+inserting 31420<FIN>
+inserting 31420<FIN>
+inserting 3142<FIN>0
+inserting 3142<FIN>0
+inserting 314<FIN>02
+inserting 314<FIN>02
+inserting 314<FIN>20
+inserting 314<FIN>20
+inserting 31<FIN>024
+inserting 31<FIN>024
+inserting 31<FIN>042
+inserting 31<FIN>042
+inserting 31<FIN>204
+inserting 31<FIN>204
+inserting 31<FIN>240
+inserting 31<FIN>240
+inserting 31<FIN>402
+inserting 31<FIN>402
+inserting 31<FIN>420
+inserting 31<FIN>420
+inserting 32014<FIN>
+inserting 32014<FIN>
+inserting 3201<FIN>4
+inserting 3201<FIN>4
+inserting 32041<FIN>
+inserting 32041<FIN>
+inserting 3204<FIN>1
+inserting 3204<FIN>1
+inserting 320<FIN>14
+inserting 320<FIN>14
+inserting 320<FIN>41
+inserting 320<FIN>41
+inserting 32104<FIN>
+inserting 32104<FIN>
+inserting 3210<FIN>4
+inserting 3210<FIN>4
+inserting 32140<FIN>
+inserting 32140<FIN>
+inserting 3214<FIN>0
+inserting 3214<FIN>0
+inserting 321<FIN>04
+inserting 321<FIN>04
+inserting 321<FIN>40
+inserting 321<FIN>40
+inserting 32401<FIN>
+inserting 32401<FIN>
+inserting 3240<FIN>1
+inserting 3240<FIN>1
+inserting 32410<FIN>
+inserting 32410<FIN>
+inserting 3241<FIN>0
+inserting 3241<FIN>0
+inserting 324<FIN>01
+inserting 324<FIN>01
+inserting 324<FIN>10
+inserting 324<FIN>10
+inserting 32<FIN>014
+inserting 32<FIN>014
+inserting 32<FIN>041
+inserting 32<FIN>041
+inserting 32<FIN>104
+inserting 32<FIN>104
+inserting 32<FIN>140
+inserting 32<FIN>140
+inserting 32<FIN>401
+inserting 32<FIN>401
+inserting 32<FIN>410
+inserting 32<FIN>410
+inserting 34012<FIN>
+inserting 34012<FIN>
+inserting 3401<FIN>2
+inserting 3401<FIN>2
+inserting 34021<FIN>
+inserting 34021<FIN>
+inserting 3402<FIN>1
+inserting 3402<FIN>1
+inserting 340<FIN>12
+inserting 340<FIN>12
+inserting 340<FIN>21
+inserting 340<FIN>21
+inserting 34102<FIN>
+inserting 34102<FIN>
+inserting 3410<FIN>2
+inserting 3410<FIN>2
+inserting 34120<FIN>
+inserting 34120<FIN>
+inserting 3412<FIN>0
+inserting 3412<FIN>0
+inserting 341<FIN>02
+inserting 341<FIN>02
+inserting 341<FIN>20
+inserting 341<FIN>20
+inserting 34201<FIN>
+inserting 34201<FIN>
+inserting 3420<FIN>1
+inserting 3420<FIN>1
+inserting 34210<FIN>
+inserting 34210<FIN>
+inserting 3421<FIN>0
+inserting 3421<FIN>0
+inserting 342<FIN>01
+inserting 342<FIN>01
+inserting 342<FIN>10
+inserting 342<FIN>10
+inserting 34<FIN>012
+inserting 34<FIN>012
+inserting 34<FIN>021
+inserting 34<FIN>021
+inserting 34<FIN>102
+inserting 34<FIN>102
+inserting 34<FIN>120
+inserting 34<FIN>120
+inserting 34<FIN>201
+inserting 34<FIN>201
+inserting 34<FIN>210
+inserting 34<FIN>210
+inserting 3<FIN>0124
+inserting 3<FIN>0124
+inserting 3<FIN>0142
+inserting 3<FIN>0142
+inserting 3<FIN>0214
+inserting 3<FIN>0214
+inserting 3<FIN>0241
+inserting 3<FIN>0241
+inserting 3<FIN>0412
+inserting 3<FIN>0412
+inserting 3<FIN>0421
+inserting 3<FIN>0421
+inserting 3<FIN>1024
+inserting 3<FIN>1024
+inserting 3<FIN>1042
+inserting 3<FIN>1042
+inserting 3<FIN>1204
+inserting 3<FIN>1204
+inserting 3<FIN>1240
+inserting 3<FIN>1240
+inserting 3<FIN>1402
+inserting 3<FIN>1402
+inserting 3<FIN>1420
+inserting 3<FIN>1420
+inserting 3<FIN>2014
+inserting 3<FIN>2014
+inserting 3<FIN>2041
+inserting 3<FIN>2041
+inserting 3<FIN>2104
+inserting 3<FIN>2104
+inserting 3<FIN>2140
+inserting 3<FIN>2140
+inserting 3<FIN>2401
+inserting 3<FIN>2401
+inserting 3<FIN>2410
+inserting 3<FIN>2410
+inserting 3<FIN>4012
+inserting 3<FIN>4012
+inserting 3<FIN>4021
+inserting 3<FIN>4021
+inserting 3<FIN>4102
+inserting 3<FIN>4102
+inserting 3<FIN>4120
+inserting 3<FIN>4120
+inserting 3<FIN>4201
+inserting 3<FIN>4201
+inserting 3<FIN>4210
+inserting 3<FIN>4210
+inserting 40123<FIN>
+inserting 40123<FIN>
+inserting 4012<FIN>3
+inserting 4012<FIN>3
+inserting 40132<FIN>
+inserting 40132<FIN>
+inserting 4013<FIN>2
+inserting 4013<FIN>2
+inserting 401<FIN>23
+inserting 401<FIN>23
+inserting 401<FIN>32
+inserting 401<FIN>32
+inserting 40213<FIN>
+inserting 40213<FIN>
+inserting 4021<FIN>3
+inserting 4021<FIN>3
+inserting 40231<FIN>
+inserting 40231<FIN>
+inserting 4023<FIN>1
+inserting 4023<FIN>1
+inserting 402<FIN>13
+inserting 402<FIN>13
+inserting 402<FIN>31
+inserting 402<FIN>31
+inserting 40312<FIN>
+inserting 40312<FIN>
+inserting 4031<FIN>2
+inserting 4031<FIN>2
+inserting 40321<FIN>
+inserting 40321<FIN>
+inserting 4032<FIN>1
+inserting 4032<FIN>1
+inserting 403<FIN>12
+inserting 403<FIN>12
+inserting 403<FIN>21
+inserting 403<FIN>21
+inserting 40<FIN>123
+inserting 40<FIN>123
+inserting 40<FIN>132
+inserting 40<FIN>132
+inserting 40<FIN>213
+inserting 40<FIN>213
+inserting 40<FIN>231
+inserting 40<FIN>231
+inserting 40<FIN>312
+inserting 40<FIN>312
+inserting 40<FIN>321
+inserting 40<FIN>321
+inserting 41023<FIN>
+inserting 41023<FIN>
+inserting 4102<FIN>3
+inserting 4102<FIN>3
+inserting 41032<FIN>
+inserting 41032<FIN>
+inserting 4103<FIN>2
+inserting 4103<FIN>2
+inserting 410<FIN>23
+inserting 410<FIN>23
+inserting 410<FIN>32
+inserting 410<FIN>32
+inserting 41203<FIN>
+inserting 41203<FIN>
+inserting 4120<FIN>3
+inserting 4120<FIN>3
+inserting 41230<FIN>
+inserting 41230<FIN>
+inserting 4123<FIN>0
+inserting 4123<FIN>0
+inserting 412<FIN>03
+inserting 412<FIN>03
+inserting 412<FIN>30
+inserting 412<FIN>30
+inserting 41302<FIN>
+inserting 41302<FIN>
+inserting 4130<FIN>2
+inserting 4130<FIN>2
+inserting 41320<FIN>
+inserting 41320<FIN>
+inserting 4132<FIN>0
+inserting 4132<FIN>0
+inserting 413<FIN>02
+inserting 413<FIN>02
+inserting 413<FIN>20
+inserting 413<FIN>20
+inserting 41<FIN>023
+inserting 41<FIN>023
+inserting 41<FIN>032
+inserting 41<FIN>032
+inserting 41<FIN>203
+inserting 41<FIN>203
+inserting 41<FIN>230
+inserting 41<FIN>230
+inserting 41<FIN>302
+inserting 41<FIN>302
+inserting 41<FIN>320
+inserting 41<FIN>320
+inserting 42013<FIN>
+inserting 42013<FIN>
+inserting 4201<FIN>3
+inserting 4201<FIN>3
+inserting 42031<FIN>
+inserting 42031<FIN>
+inserting 4203<FIN>1
+inserting 4203<FIN>1
+inserting 420<FIN>13
+inserting 420<FIN>13
+inserting 420<FIN>31
+inserting 420<FIN>31
+inserting 42103<FIN>
+inserting 42103<FIN>
+inserting 4210<FIN>3
+inserting 4210<FIN>3
+inserting 42130<FIN>
+inserting 42130<FIN>
+inserting 4213<FIN>0
+inserting 4213<FIN>0
+inserting 421<FIN>03
+inserting 421<FIN>03
+inserting 421<FIN>30
+inserting 421<FIN>30
+inserting 42301<FIN>
+inserting 42301<FIN>
+inserting 4230<FIN>1
+inserting 4230<FIN>1
+inserting 42310<FIN>
+inserting 42310<FIN>
+inserting 4231<FIN>0
+inserting 4231<FIN>0
+inserting 423<FIN>01
+inserting 423<FIN>01
+inserting 423<FIN>10
+inserting 423<FIN>10
+inserting 42<FIN>013
+inserting 42<FIN>013
+inserting 42<FIN>031
+inserting 42<FIN>031
+inserting 42<FIN>103
+inserting 42<FIN>103
+inserting 42<FIN>130
+inserting 42<FIN>130
+inserting 42<FIN>301
+inserting 42<FIN>301
+inserting 42<FIN>310
+inserting 42<FIN>310
+inserting 43012<FIN>
+inserting 43012<FIN>
+inserting 4301<FIN>2
+inserting 4301<FIN>2
+inserting 43021<FIN>
+inserting 43021<FIN>
+inserting 4302<FIN>1
+inserting 4302<FIN>1
+inserting 430<FIN>12
+inserting 430<FIN>12
+inserting 430<FIN>21
+inserting 430<FIN>21
+inserting 43102<FIN>
+inserting 43102<FIN>
+inserting 4310<FIN>2
+inserting 4310<FIN>2
+inserting 43120<FIN>
+inserting 43120<FIN>
+inserting 4312<FIN>0
+inserting 4312<FIN>0
+inserting 431<FIN>02
+inserting 431<FIN>02
+inserting 431<FIN>20
+inserting 431<FIN>20
+inserting 43201<FIN>
+inserting 43201<FIN>
+inserting 4320<FIN>1
+inserting 4320<FIN>1
+inserting 43210<FIN>
+inserting 43210<FIN>
+inserting 4321<FIN>0
+inserting 4321<FIN>0
+inserting 432<FIN>01
+inserting 432<FIN>01
+inserting 432<FIN>10
+inserting 432<FIN>10
+inserting 43<FIN>012
+inserting 43<FIN>012
+inserting 43<FIN>021
+inserting 43<FIN>021
+inserting 43<FIN>102
+inserting 43<FIN>102
+inserting 43<FIN>120
+inserting 43<FIN>120
+inserting 43<FIN>201
+inserting 43<FIN>201
+inserting 43<FIN>210
+inserting 43<FIN>210
+inserting 4<FIN>0123
+inserting 4<FIN>0123
+inserting 4<FIN>0132
+inserting 4<FIN>0132
+inserting 4<FIN>0213
+inserting 4<FIN>0213
+inserting 4<FIN>0231
+inserting 4<FIN>0231
+inserting 4<FIN>0312
+inserting 4<FIN>0312
+inserting 4<FIN>0321
+inserting 4<FIN>0321
+inserting 4<FIN>1023
+inserting 4<FIN>1023
+inserting 4<FIN>1032
+inserting 4<FIN>1032
+inserting 4<FIN>1203
+inserting 4<FIN>1203
+inserting 4<FIN>1230
+inserting 4<FIN>1230
+inserting 4<FIN>1302
+inserting 4<FIN>1302
+inserting 4<FIN>1320
+inserting 4<FIN>1320
+inserting 4<FIN>2013
+inserting 4<FIN>2013
+inserting 4<FIN>2031
+inserting 4<FIN>2031
+inserting 4<FIN>2103
+inserting 4<FIN>2103
+inserting 4<FIN>2130
+inserting 4<FIN>2130
+inserting 4<FIN>2301
+inserting 4<FIN>2301
+inserting 4<FIN>2310
+inserting 4<FIN>2310
+inserting 4<FIN>3012
+inserting 4<FIN>3012
+inserting 4<FIN>3021
+inserting 4<FIN>3021
+inserting 4<FIN>3102
+inserting 4<FIN>3102
+inserting 4<FIN>3120
+inserting 4<FIN>3120
+inserting 4<FIN>3201
+inserting 4<FIN>3201
+inserting 4<FIN>3210
+inserting 4<FIN>3210
+inserting <FIN>01234
+inserting <FIN>01234
+inserting <FIN>01243
+inserting <FIN>01243
+inserting <FIN>01324
+inserting <FIN>01324
+inserting <FIN>01342
+inserting <FIN>01342
+inserting <FIN>01423
+inserting <FIN>01423
+inserting <FIN>01432
+inserting <FIN>01432
+inserting <FIN>02134
+inserting <FIN>02134
+inserting <FIN>02143
+inserting <FIN>02143
+inserting <FIN>02314
+inserting <FIN>02314
+inserting <FIN>02341
+inserting <FIN>02341
+inserting <FIN>02413
+inserting <FIN>02413
+inserting <FIN>02431
+inserting <FIN>02431
+inserting <FIN>03124
+inserting <FIN>03124
+inserting <FIN>03142
+inserting <FIN>03142
+inserting <FIN>03214
+inserting <FIN>03214
+inserting <FIN>03241
+inserting <FIN>03241
+inserting <FIN>03412
+inserting <FIN>03412
+inserting <FIN>03421
+inserting <FIN>03421
+inserting <FIN>04123
+inserting <FIN>04123
+inserting <FIN>04132
+inserting <FIN>04132
+inserting <FIN>04213
+inserting <FIN>04213
+inserting <FIN>04231
+inserting <FIN>04231
+inserting <FIN>04312
+inserting <FIN>04312
+inserting <FIN>04321
+inserting <FIN>04321
+inserting <FIN>10234
+inserting <FIN>10234
+inserting <FIN>10243
+inserting <FIN>10243
+inserting <FIN>10324
+inserting <FIN>10324
+inserting <FIN>10342
+inserting <FIN>10342
+inserting <FIN>10423
+inserting <FIN>10423
+inserting <FIN>10432
+inserting <FIN>10432
+inserting <FIN>12034
+inserting <FIN>12034
+inserting <FIN>12043
+inserting <FIN>12043
+inserting <FIN>12304
+inserting <FIN>12304
+inserting <FIN>12340
+inserting <FIN>12340
+inserting <FIN>12403
+inserting <FIN>12403
+inserting <FIN>12430
+inserting <FIN>12430
+inserting <FIN>13024
+inserting <FIN>13024
+inserting <FIN>13042
+inserting <FIN>13042
+inserting <FIN>13204
+inserting <FIN>13204
+inserting <FIN>13240
+inserting <FIN>13240
+inserting <FIN>13402
+inserting <FIN>13402
+inserting <FIN>13420
+inserting <FIN>13420
+inserting <FIN>14023
+inserting <FIN>14023
+inserting <FIN>14032
+inserting <FIN>14032
+inserting <FIN>14203
+inserting <FIN>14203
+inserting <FIN>14230
+inserting <FIN>14230
+inserting <FIN>14302
+inserting <FIN>14302
+inserting <FIN>14320
+inserting <FIN>14320
+inserting <FIN>20134
+inserting <FIN>20134
+inserting <FIN>20143
+inserting <FIN>20143
+inserting <FIN>20314
+inserting <FIN>20314
+inserting <FIN>20341
+inserting <FIN>20341
+inserting <FIN>20413
+inserting <FIN>20413
+inserting <FIN>20431
+inserting <FIN>20431
+inserting <FIN>21034
+inserting <FIN>21034
+inserting <FIN>21043
+inserting <FIN>21043
+inserting <FIN>21304
+inserting <FIN>21304
+inserting <FIN>21340
+inserting <FIN>21340
+inserting <FIN>21403
+inserting <FIN>21403
+inserting <FIN>21430
+inserting <FIN>21430
+inserting <FIN>23014
+inserting <FIN>23014
+inserting <FIN>23041
+inserting <FIN>23041
+inserting <FIN>23104
+inserting <FIN>23104
+inserting <FIN>23140
+inserting <FIN>23140
+inserting <FIN>23401
+inserting <FIN>23401
+inserting <FIN>23410
+inserting <FIN>23410
+inserting <FIN>24013
+inserting <FIN>24013
+inserting <FIN>24031
+inserting <FIN>24031
+inserting <FIN>24103
+inserting <FIN>24103
+inserting <FIN>24130
+inserting <FIN>24130
+inserting <FIN>24301
+inserting <FIN>24301
+inserting <FIN>24310
+inserting <FIN>24310
+inserting <FIN>30124
+inserting <FIN>30124
+inserting <FIN>30142
+inserting <FIN>30142
+inserting <FIN>30214
+inserting <FIN>30214
+inserting <FIN>30241
+inserting <FIN>30241
+inserting <FIN>30412
+inserting <FIN>30412
+inserting <FIN>30421
+inserting <FIN>30421
+inserting <FIN>31024
+inserting <FIN>31024
+inserting <FIN>31042
+inserting <FIN>31042
+inserting <FIN>31204
+inserting <FIN>31204
+inserting <FIN>31240
+inserting <FIN>31240
+inserting <FIN>31402
+inserting <FIN>31402
+inserting <FIN>31420
+inserting <FIN>31420
+inserting <FIN>32014
+inserting <FIN>32014
+inserting <FIN>32041
+inserting <FIN>32041
+inserting <FIN>32104
+inserting <FIN>32104
+inserting <FIN>32140
+inserting <FIN>32140
+inserting <FIN>32401
+inserting <FIN>32401
+inserting <FIN>32410
+inserting <FIN>32410
+inserting <FIN>34012
+inserting <FIN>34012
+inserting <FIN>34021
+inserting <FIN>34021
+inserting <FIN>34102
+inserting <FIN>34102
+inserting <FIN>34120
+inserting <FIN>34120
+inserting <FIN>34201
+inserting <FIN>34201
+inserting <FIN>34210
+inserting <FIN>34210
+inserting <FIN>40123
+inserting <FIN>40123
+inserting <FIN>40132
+inserting <FIN>40132
+inserting <FIN>40213
+inserting <FIN>40213
+inserting <FIN>40231
+inserting <FIN>40231
+inserting <FIN>40312
+inserting <FIN>40312
+inserting <FIN>40321
+inserting <FIN>40321
+inserting <FIN>41023
+inserting <FIN>41023
+inserting <FIN>41032
+inserting <FIN>41032
+inserting <FIN>41203
+inserting <FIN>41203
+inserting <FIN>41230
+inserting <FIN>41230
+inserting <FIN>41302
+inserting <FIN>41302
+inserting <FIN>41320
+inserting <FIN>41320
+inserting <FIN>42013
+inserting <FIN>42013
+inserting <FIN>42031
+inserting <FIN>42031
+inserting <FIN>42103
+inserting <FIN>42103
+inserting <FIN>42130
+inserting <FIN>42130
+inserting <FIN>42301
+inserting <FIN>42301
+inserting <FIN>42310
+inserting <FIN>42310
+inserting <FIN>43012
+inserting <FIN>43012
+inserting <FIN>43021
+inserting <FIN>43021
+inserting <FIN>43102
+inserting <FIN>43102
+inserting <FIN>43120
+inserting <FIN>43120
+inserting <FIN>43201
+inserting <FIN>43201
+inserting <FIN>43210
+inserting <FIN>43210
+<end of output>
+Test time =  25.11 sec
+----------------------------------------------------------
+Test Passed.
+"stream_A" end time: Jan 19 19:32 CET
+"stream_A" time elapsed: 00:00:25
+----------------------------------------------------------
+
+54/58 Testing: stream_hash_A
+54/58 Test: stream_hash_A
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_stream" "-A" "-h"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"stream_hash_A" start time: Jan 19 19:32 CET
+Output:
+----------------------------------------------------------
+inserting 01234<FIN>
+inserting 01234<FIN>
+inserting 0123<FIN>4
+inserting 0123<FIN>4
+inserting 01243<FIN>
+inserting 01243<FIN>
+inserting 0124<FIN>3
+inserting 0124<FIN>3
+inserting 012<FIN>34
+inserting 012<FIN>34
+inserting 012<FIN>43
+inserting 012<FIN>43
+inserting 01324<FIN>
+inserting 01324<FIN>
+inserting 0132<FIN>4
+inserting 0132<FIN>4
+inserting 01342<FIN>
+inserting 01342<FIN>
+inserting 0134<FIN>2
+inserting 0134<FIN>2
+inserting 013<FIN>24
+inserting 013<FIN>24
+inserting 013<FIN>42
+inserting 013<FIN>42
+inserting 01423<FIN>
+inserting 01423<FIN>
+inserting 0142<FIN>3
+inserting 0142<FIN>3
+inserting 01432<FIN>
+inserting 01432<FIN>
+inserting 0143<FIN>2
+inserting 0143<FIN>2
+inserting 014<FIN>23
+inserting 014<FIN>23
+inserting 014<FIN>32
+inserting 014<FIN>32
+inserting 01<FIN>234
+inserting 01<FIN>234
+inserting 01<FIN>243
+inserting 01<FIN>243
+inserting 01<FIN>324
+inserting 01<FIN>324
+inserting 01<FIN>342
+inserting 01<FIN>342
+inserting 01<FIN>423
+inserting 01<FIN>423
+inserting 01<FIN>432
+inserting 01<FIN>432
+inserting 02134<FIN>
+inserting 02134<FIN>
+inserting 0213<FIN>4
+inserting 0213<FIN>4
+inserting 02143<FIN>
+inserting 02143<FIN>
+inserting 0214<FIN>3
+inserting 0214<FIN>3
+inserting 021<FIN>34
+inserting 021<FIN>34
+inserting 021<FIN>43
+inserting 021<FIN>43
+inserting 02314<FIN>
+inserting 02314<FIN>
+inserting 0231<FIN>4
+inserting 0231<FIN>4
+inserting 02341<FIN>
+inserting 02341<FIN>
+inserting 0234<FIN>1
+inserting 0234<FIN>1
+inserting 023<FIN>14
+inserting 023<FIN>14
+inserting 023<FIN>41
+inserting 023<FIN>41
+inserting 02413<FIN>
+inserting 02413<FIN>
+inserting 0241<FIN>3
+inserting 0241<FIN>3
+inserting 02431<FIN>
+inserting 02431<FIN>
+inserting 0243<FIN>1
+inserting 0243<FIN>1
+inserting 024<FIN>13
+inserting 024<FIN>13
+inserting 024<FIN>31
+inserting 024<FIN>31
+inserting 02<FIN>134
+inserting 02<FIN>134
+inserting 02<FIN>143
+inserting 02<FIN>143
+inserting 02<FIN>314
+inserting 02<FIN>314
+inserting 02<FIN>341
+inserting 02<FIN>341
+inserting 02<FIN>413
+inserting 02<FIN>413
+inserting 02<FIN>431
+inserting 02<FIN>431
+inserting 03124<FIN>
+inserting 03124<FIN>
+inserting 0312<FIN>4
+inserting 0312<FIN>4
+inserting 03142<FIN>
+inserting 03142<FIN>
+inserting 0314<FIN>2
+inserting 0314<FIN>2
+inserting 031<FIN>24
+inserting 031<FIN>24
+inserting 031<FIN>42
+inserting 031<FIN>42
+inserting 03214<FIN>
+inserting 03214<FIN>
+inserting 0321<FIN>4
+inserting 0321<FIN>4
+inserting 03241<FIN>
+inserting 03241<FIN>
+inserting 0324<FIN>1
+inserting 0324<FIN>1
+inserting 032<FIN>14
+inserting 032<FIN>14
+inserting 032<FIN>41
+inserting 032<FIN>41
+inserting 03412<FIN>
+inserting 03412<FIN>
+inserting 0341<FIN>2
+inserting 0341<FIN>2
+inserting 03421<FIN>
+inserting 03421<FIN>
+inserting 0342<FIN>1
+inserting 0342<FIN>1
+inserting 034<FIN>12
+inserting 034<FIN>12
+inserting 034<FIN>21
+inserting 034<FIN>21
+inserting 03<FIN>124
+inserting 03<FIN>124
+inserting 03<FIN>142
+inserting 03<FIN>142
+inserting 03<FIN>214
+inserting 03<FIN>214
+inserting 03<FIN>241
+inserting 03<FIN>241
+inserting 03<FIN>412
+inserting 03<FIN>412
+inserting 03<FIN>421
+inserting 03<FIN>421
+inserting 04123<FIN>
+inserting 04123<FIN>
+inserting 0412<FIN>3
+inserting 0412<FIN>3
+inserting 04132<FIN>
+inserting 04132<FIN>
+inserting 0413<FIN>2
+inserting 0413<FIN>2
+inserting 041<FIN>23
+inserting 041<FIN>23
+inserting 041<FIN>32
+inserting 041<FIN>32
+inserting 04213<FIN>
+inserting 04213<FIN>
+inserting 0421<FIN>3
+inserting 0421<FIN>3
+inserting 04231<FIN>
+inserting 04231<FIN>
+inserting 0423<FIN>1
+inserting 0423<FIN>1
+inserting 042<FIN>13
+inserting 042<FIN>13
+inserting 042<FIN>31
+inserting 042<FIN>31
+inserting 04312<FIN>
+inserting 04312<FIN>
+inserting 0431<FIN>2
+inserting 0431<FIN>2
+inserting 04321<FIN>
+inserting 04321<FIN>
+inserting 0432<FIN>1
+inserting 0432<FIN>1
+inserting 043<FIN>12
+inserting 043<FIN>12
+inserting 043<FIN>21
+inserting 043<FIN>21
+inserting 04<FIN>123
+inserting 04<FIN>123
+inserting 04<FIN>132
+inserting 04<FIN>132
+inserting 04<FIN>213
+inserting 04<FIN>213
+inserting 04<FIN>231
+inserting 04<FIN>231
+inserting 04<FIN>312
+inserting 04<FIN>312
+inserting 04<FIN>321
+inserting 04<FIN>321
+inserting 0<FIN>1234
+inserting 0<FIN>1234
+inserting 0<FIN>1243
+inserting 0<FIN>1243
+inserting 0<FIN>1324
+inserting 0<FIN>1324
+inserting 0<FIN>1342
+inserting 0<FIN>1342
+inserting 0<FIN>1423
+inserting 0<FIN>1423
+inserting 0<FIN>1432
+inserting 0<FIN>1432
+inserting 0<FIN>2134
+inserting 0<FIN>2134
+inserting 0<FIN>2143
+inserting 0<FIN>2143
+inserting 0<FIN>2314
+inserting 0<FIN>2314
+inserting 0<FIN>2341
+inserting 0<FIN>2341
+inserting 0<FIN>2413
+inserting 0<FIN>2413
+inserting 0<FIN>2431
+inserting 0<FIN>2431
+inserting 0<FIN>3124
+inserting 0<FIN>3124
+inserting 0<FIN>3142
+inserting 0<FIN>3142
+inserting 0<FIN>3214
+inserting 0<FIN>3214
+inserting 0<FIN>3241
+inserting 0<FIN>3241
+inserting 0<FIN>3412
+inserting 0<FIN>3412
+inserting 0<FIN>3421
+inserting 0<FIN>3421
+inserting 0<FIN>4123
+inserting 0<FIN>4123
+inserting 0<FIN>4132
+inserting 0<FIN>4132
+inserting 0<FIN>4213
+inserting 0<FIN>4213
+inserting 0<FIN>4231
+inserting 0<FIN>4231
+inserting 0<FIN>4312
+inserting 0<FIN>4312
+inserting 0<FIN>4321
+inserting 0<FIN>4321
+inserting 10234<FIN>
+inserting 10234<FIN>
+inserting 1023<FIN>4
+inserting 1023<FIN>4
+inserting 10243<FIN>
+inserting 10243<FIN>
+inserting 1024<FIN>3
+inserting 1024<FIN>3
+inserting 102<FIN>34
+inserting 102<FIN>34
+inserting 102<FIN>43
+inserting 102<FIN>43
+inserting 10324<FIN>
+inserting 10324<FIN>
+inserting 1032<FIN>4
+inserting 1032<FIN>4
+inserting 10342<FIN>
+inserting 10342<FIN>
+inserting 1034<FIN>2
+inserting 1034<FIN>2
+inserting 103<FIN>24
+inserting 103<FIN>24
+inserting 103<FIN>42
+inserting 103<FIN>42
+inserting 10423<FIN>
+inserting 10423<FIN>
+inserting 1042<FIN>3
+inserting 1042<FIN>3
+inserting 10432<FIN>
+inserting 10432<FIN>
+inserting 1043<FIN>2
+inserting 1043<FIN>2
+inserting 104<FIN>23
+inserting 104<FIN>23
+inserting 104<FIN>32
+inserting 104<FIN>32
+inserting 10<FIN>234
+inserting 10<FIN>234
+inserting 10<FIN>243
+inserting 10<FIN>243
+inserting 10<FIN>324
+inserting 10<FIN>324
+inserting 10<FIN>342
+inserting 10<FIN>342
+inserting 10<FIN>423
+inserting 10<FIN>423
+inserting 10<FIN>432
+inserting 10<FIN>432
+inserting 12034<FIN>
+inserting 12034<FIN>
+inserting 1203<FIN>4
+inserting 1203<FIN>4
+inserting 12043<FIN>
+inserting 12043<FIN>
+inserting 1204<FIN>3
+inserting 1204<FIN>3
+inserting 120<FIN>34
+inserting 120<FIN>34
+inserting 120<FIN>43
+inserting 120<FIN>43
+inserting 12304<FIN>
+inserting 12304<FIN>
+inserting 1230<FIN>4
+inserting 1230<FIN>4
+inserting 12340<FIN>
+inserting 12340<FIN>
+inserting 1234<FIN>0
+inserting 1234<FIN>0
+inserting 123<FIN>04
+inserting 123<FIN>04
+inserting 123<FIN>40
+inserting 123<FIN>40
+inserting 12403<FIN>
+inserting 12403<FIN>
+inserting 1240<FIN>3
+inserting 1240<FIN>3
+inserting 12430<FIN>
+inserting 12430<FIN>
+inserting 1243<FIN>0
+inserting 1243<FIN>0
+inserting 124<FIN>03
+inserting 124<FIN>03
+inserting 124<FIN>30
+inserting 124<FIN>30
+inserting 12<FIN>034
+inserting 12<FIN>034
+inserting 12<FIN>043
+inserting 12<FIN>043
+inserting 12<FIN>304
+inserting 12<FIN>304
+inserting 12<FIN>340
+inserting 12<FIN>340
+inserting 12<FIN>403
+inserting 12<FIN>403
+inserting 12<FIN>430
+inserting 12<FIN>430
+inserting 13024<FIN>
+inserting 13024<FIN>
+inserting 1302<FIN>4
+inserting 1302<FIN>4
+inserting 13042<FIN>
+inserting 13042<FIN>
+inserting 1304<FIN>2
+inserting 1304<FIN>2
+inserting 130<FIN>24
+inserting 130<FIN>24
+inserting 130<FIN>42
+inserting 130<FIN>42
+inserting 13204<FIN>
+inserting 13204<FIN>
+inserting 1320<FIN>4
+inserting 1320<FIN>4
+inserting 13240<FIN>
+inserting 13240<FIN>
+inserting 1324<FIN>0
+inserting 1324<FIN>0
+inserting 132<FIN>04
+inserting 132<FIN>04
+inserting 132<FIN>40
+inserting 132<FIN>40
+inserting 13402<FIN>
+inserting 13402<FIN>
+inserting 1340<FIN>2
+inserting 1340<FIN>2
+inserting 13420<FIN>
+inserting 13420<FIN>
+inserting 1342<FIN>0
+inserting 1342<FIN>0
+inserting 134<FIN>02
+inserting 134<FIN>02
+inserting 134<FIN>20
+inserting 134<FIN>20
+inserting 13<FIN>024
+inserting 13<FIN>024
+inserting 13<FIN>042
+inserting 13<FIN>042
+inserting 13<FIN>204
+inserting 13<FIN>204
+inserting 13<FIN>240
+inserting 13<FIN>240
+inserting 13<FIN>402
+inserting 13<FIN>402
+inserting 13<FIN>420
+inserting 13<FIN>420
+inserting 14023<FIN>
+inserting 14023<FIN>
+inserting 1402<FIN>3
+inserting 1402<FIN>3
+inserting 14032<FIN>
+inserting 14032<FIN>
+inserting 1403<FIN>2
+inserting 1403<FIN>2
+inserting 140<FIN>23
+inserting 140<FIN>23
+inserting 140<FIN>32
+inserting 140<FIN>32
+inserting 14203<FIN>
+inserting 14203<FIN>
+inserting 1420<FIN>3
+inserting 1420<FIN>3
+inserting 14230<FIN>
+inserting 14230<FIN>
+inserting 1423<FIN>0
+inserting 1423<FIN>0
+inserting 142<FIN>03
+inserting 142<FIN>03
+inserting 142<FIN>30
+inserting 142<FIN>30
+inserting 14302<FIN>
+inserting 14302<FIN>
+inserting 1430<FIN>2
+inserting 1430<FIN>2
+inserting 14320<FIN>
+inserting 14320<FIN>
+inserting 1432<FIN>0
+inserting 1432<FIN>0
+inserting 143<FIN>02
+inserting 143<FIN>02
+inserting 143<FIN>20
+inserting 143<FIN>20
+inserting 14<FIN>023
+inserting 14<FIN>023
+inserting 14<FIN>032
+inserting 14<FIN>032
+inserting 14<FIN>203
+inserting 14<FIN>203
+inserting 14<FIN>230
+inserting 14<FIN>230
+inserting 14<FIN>302
+inserting 14<FIN>302
+inserting 14<FIN>320
+inserting 14<FIN>320
+inserting 1<FIN>0234
+inserting 1<FIN>0234
+inserting 1<FIN>0243
+inserting 1<FIN>0243
+inserting 1<FIN>0324
+inserting 1<FIN>0324
+inserting 1<FIN>0342
+inserting 1<FIN>0342
+inserting 1<FIN>0423
+inserting 1<FIN>0423
+inserting 1<FIN>0432
+inserting 1<FIN>0432
+inserting 1<FIN>2034
+inserting 1<FIN>2034
+inserting 1<FIN>2043
+inserting 1<FIN>2043
+inserting 1<FIN>2304
+inserting 1<FIN>2304
+inserting 1<FIN>2340
+inserting 1<FIN>2340
+inserting 1<FIN>2403
+inserting 1<FIN>2403
+inserting 1<FIN>2430
+inserting 1<FIN>2430
+inserting 1<FIN>3024
+inserting 1<FIN>3024
+inserting 1<FIN>3042
+inserting 1<FIN>3042
+inserting 1<FIN>3204
+inserting 1<FIN>3204
+inserting 1<FIN>3240
+inserting 1<FIN>3240
+inserting 1<FIN>3402
+inserting 1<FIN>3402
+inserting 1<FIN>3420
+inserting 1<FIN>3420
+inserting 1<FIN>4023
+inserting 1<FIN>4023
+inserting 1<FIN>4032
+inserting 1<FIN>4032
+inserting 1<FIN>4203
+inserting 1<FIN>4203
+inserting 1<FIN>4230
+inserting 1<FIN>4230
+inserting 1<FIN>4302
+inserting 1<FIN>4302
+inserting 1<FIN>4320
+inserting 1<FIN>4320
+inserting 20134<FIN>
+inserting 20134<FIN>
+inserting 2013<FIN>4
+inserting 2013<FIN>4
+inserting 20143<FIN>
+inserting 20143<FIN>
+inserting 2014<FIN>3
+inserting 2014<FIN>3
+inserting 201<FIN>34
+inserting 201<FIN>34
+inserting 201<FIN>43
+inserting 201<FIN>43
+inserting 20314<FIN>
+inserting 20314<FIN>
+inserting 2031<FIN>4
+inserting 2031<FIN>4
+inserting 20341<FIN>
+inserting 20341<FIN>
+inserting 2034<FIN>1
+inserting 2034<FIN>1
+inserting 203<FIN>14
+inserting 203<FIN>14
+inserting 203<FIN>41
+inserting 203<FIN>41
+inserting 20413<FIN>
+inserting 20413<FIN>
+inserting 2041<FIN>3
+inserting 2041<FIN>3
+inserting 20431<FIN>
+inserting 20431<FIN>
+inserting 2043<FIN>1
+inserting 2043<FIN>1
+inserting 204<FIN>13
+inserting 204<FIN>13
+inserting 204<FIN>31
+inserting 204<FIN>31
+inserting 20<FIN>134
+inserting 20<FIN>134
+inserting 20<FIN>143
+inserting 20<FIN>143
+inserting 20<FIN>314
+inserting 20<FIN>314
+inserting 20<FIN>341
+inserting 20<FIN>341
+inserting 20<FIN>413
+inserting 20<FIN>413
+inserting 20<FIN>431
+inserting 20<FIN>431
+inserting 21034<FIN>
+inserting 21034<FIN>
+inserting 2103<FIN>4
+inserting 2103<FIN>4
+inserting 21043<FIN>
+inserting 21043<FIN>
+inserting 2104<FIN>3
+inserting 2104<FIN>3
+inserting 210<FIN>34
+inserting 210<FIN>34
+inserting 210<FIN>43
+inserting 210<FIN>43
+inserting 21304<FIN>
+inserting 21304<FIN>
+inserting 2130<FIN>4
+inserting 2130<FIN>4
+inserting 21340<FIN>
+inserting 21340<FIN>
+inserting 2134<FIN>0
+inserting 2134<FIN>0
+inserting 213<FIN>04
+inserting 213<FIN>04
+inserting 213<FIN>40
+inserting 213<FIN>40
+inserting 21403<FIN>
+inserting 21403<FIN>
+inserting 2140<FIN>3
+inserting 2140<FIN>3
+inserting 21430<FIN>
+inserting 21430<FIN>
+inserting 2143<FIN>0
+inserting 2143<FIN>0
+inserting 214<FIN>03
+inserting 214<FIN>03
+inserting 214<FIN>30
+inserting 214<FIN>30
+inserting 21<FIN>034
+inserting 21<FIN>034
+inserting 21<FIN>043
+inserting 21<FIN>043
+inserting 21<FIN>304
+inserting 21<FIN>304
+inserting 21<FIN>340
+inserting 21<FIN>340
+inserting 21<FIN>403
+inserting 21<FIN>403
+inserting 21<FIN>430
+inserting 21<FIN>430
+inserting 23014<FIN>
+inserting 23014<FIN>
+inserting 2301<FIN>4
+inserting 2301<FIN>4
+inserting 23041<FIN>
+inserting 23041<FIN>
+inserting 2304<FIN>1
+inserting 2304<FIN>1
+inserting 230<FIN>14
+inserting 230<FIN>14
+inserting 230<FIN>41
+inserting 230<FIN>41
+inserting 23104<FIN>
+inserting 23104<FIN>
+inserting 2310<FIN>4
+inserting 2310<FIN>4
+inserting 23140<FIN>
+inserting 23140<FIN>
+inserting 2314<FIN>0
+inserting 2314<FIN>0
+inserting 231<FIN>04
+inserting 231<FIN>04
+inserting 231<FIN>40
+inserting 231<FIN>40
+inserting 23401<FIN>
+inserting 23401<FIN>
+inserting 2340<FIN>1
+inserting 2340<FIN>1
+inserting 23410<FIN>
+inserting 23410<FIN>
+inserting 2341<FIN>0
+inserting 2341<FIN>0
+inserting 234<FIN>01
+inserting 234<FIN>01
+inserting 234<FIN>10
+inserting 234<FIN>10
+inserting 23<FIN>014
+inserting 23<FIN>014
+inserting 23<FIN>041
+inserting 23<FIN>041
+inserting 23<FIN>104
+inserting 23<FIN>104
+inserting 23<FIN>140
+inserting 23<FIN>140
+inserting 23<FIN>401
+inserting 23<FIN>401
+inserting 23<FIN>410
+inserting 23<FIN>410
+inserting 24013<FIN>
+inserting 24013<FIN>
+inserting 2401<FIN>3
+inserting 2401<FIN>3
+inserting 24031<FIN>
+inserting 24031<FIN>
+inserting 2403<FIN>1
+inserting 2403<FIN>1
+inserting 240<FIN>13
+inserting 240<FIN>13
+inserting 240<FIN>31
+inserting 240<FIN>31
+inserting 24103<FIN>
+inserting 24103<FIN>
+inserting 2410<FIN>3
+inserting 2410<FIN>3
+inserting 24130<FIN>
+inserting 24130<FIN>
+inserting 2413<FIN>0
+inserting 2413<FIN>0
+inserting 241<FIN>03
+inserting 241<FIN>03
+inserting 241<FIN>30
+inserting 241<FIN>30
+inserting 24301<FIN>
+inserting 24301<FIN>
+inserting 2430<FIN>1
+inserting 2430<FIN>1
+inserting 24310<FIN>
+inserting 24310<FIN>
+inserting 2431<FIN>0
+inserting 2431<FIN>0
+inserting 243<FIN>01
+inserting 243<FIN>01
+inserting 243<FIN>10
+inserting 243<FIN>10
+inserting 24<FIN>013
+inserting 24<FIN>013
+inserting 24<FIN>031
+inserting 24<FIN>031
+inserting 24<FIN>103
+inserting 24<FIN>103
+inserting 24<FIN>130
+inserting 24<FIN>130
+inserting 24<FIN>301
+inserting 24<FIN>301
+inserting 24<FIN>310
+inserting 24<FIN>310
+inserting 2<FIN>0134
+inserting 2<FIN>0134
+inserting 2<FIN>0143
+inserting 2<FIN>0143
+inserting 2<FIN>0314
+inserting 2<FIN>0314
+inserting 2<FIN>0341
+inserting 2<FIN>0341
+inserting 2<FIN>0413
+inserting 2<FIN>0413
+inserting 2<FIN>0431
+inserting 2<FIN>0431
+inserting 2<FIN>1034
+inserting 2<FIN>1034
+inserting 2<FIN>1043
+inserting 2<FIN>1043
+inserting 2<FIN>1304
+inserting 2<FIN>1304
+inserting 2<FIN>1340
+inserting 2<FIN>1340
+inserting 2<FIN>1403
+inserting 2<FIN>1403
+inserting 2<FIN>1430
+inserting 2<FIN>1430
+inserting 2<FIN>3014
+inserting 2<FIN>3014
+inserting 2<FIN>3041
+inserting 2<FIN>3041
+inserting 2<FIN>3104
+inserting 2<FIN>3104
+inserting 2<FIN>3140
+inserting 2<FIN>3140
+inserting 2<FIN>3401
+inserting 2<FIN>3401
+inserting 2<FIN>3410
+inserting 2<FIN>3410
+inserting 2<FIN>4013
+inserting 2<FIN>4013
+inserting 2<FIN>4031
+inserting 2<FIN>4031
+inserting 2<FIN>4103
+inserting 2<FIN>4103
+inserting 2<FIN>4130
+inserting 2<FIN>4130
+inserting 2<FIN>4301
+inserting 2<FIN>4301
+inserting 2<FIN>4310
+inserting 2<FIN>4310
+inserting 30124<FIN>
+inserting 30124<FIN>
+inserting 3012<FIN>4
+inserting 3012<FIN>4
+inserting 30142<FIN>
+inserting 30142<FIN>
+inserting 3014<FIN>2
+inserting 3014<FIN>2
+inserting 301<FIN>24
+inserting 301<FIN>24
+inserting 301<FIN>42
+inserting 301<FIN>42
+inserting 30214<FIN>
+inserting 30214<FIN>
+inserting 3021<FIN>4
+inserting 3021<FIN>4
+inserting 30241<FIN>
+inserting 30241<FIN>
+inserting 3024<FIN>1
+inserting 3024<FIN>1
+inserting 302<FIN>14
+inserting 302<FIN>14
+inserting 302<FIN>41
+inserting 302<FIN>41
+inserting 30412<FIN>
+inserting 30412<FIN>
+inserting 3041<FIN>2
+inserting 3041<FIN>2
+inserting 30421<FIN>
+inserting 30421<FIN>
+inserting 3042<FIN>1
+inserting 3042<FIN>1
+inserting 304<FIN>12
+inserting 304<FIN>12
+inserting 304<FIN>21
+inserting 304<FIN>21
+inserting 30<FIN>124
+inserting 30<FIN>124
+inserting 30<FIN>142
+inserting 30<FIN>142
+inserting 30<FIN>214
+inserting 30<FIN>214
+inserting 30<FIN>241
+inserting 30<FIN>241
+inserting 30<FIN>412
+inserting 30<FIN>412
+inserting 30<FIN>421
+inserting 30<FIN>421
+inserting 31024<FIN>
+inserting 31024<FIN>
+inserting 3102<FIN>4
+inserting 3102<FIN>4
+inserting 31042<FIN>
+inserting 31042<FIN>
+inserting 3104<FIN>2
+inserting 3104<FIN>2
+inserting 310<FIN>24
+inserting 310<FIN>24
+inserting 310<FIN>42
+inserting 310<FIN>42
+inserting 31204<FIN>
+inserting 31204<FIN>
+inserting 3120<FIN>4
+inserting 3120<FIN>4
+inserting 31240<FIN>
+inserting 31240<FIN>
+inserting 3124<FIN>0
+inserting 3124<FIN>0
+inserting 312<FIN>04
+inserting 312<FIN>04
+inserting 312<FIN>40
+inserting 312<FIN>40
+inserting 31402<FIN>
+inserting 31402<FIN>
+inserting 3140<FIN>2
+inserting 3140<FIN>2
+inserting 31420<FIN>
+inserting 31420<FIN>
+inserting 3142<FIN>0
+inserting 3142<FIN>0
+inserting 314<FIN>02
+inserting 314<FIN>02
+inserting 314<FIN>20
+inserting 314<FIN>20
+inserting 31<FIN>024
+inserting 31<FIN>024
+inserting 31<FIN>042
+inserting 31<FIN>042
+inserting 31<FIN>204
+inserting 31<FIN>204
+inserting 31<FIN>240
+inserting 31<FIN>240
+inserting 31<FIN>402
+inserting 31<FIN>402
+inserting 31<FIN>420
+inserting 31<FIN>420
+inserting 32014<FIN>
+inserting 32014<FIN>
+inserting 3201<FIN>4
+inserting 3201<FIN>4
+inserting 32041<FIN>
+inserting 32041<FIN>
+inserting 3204<FIN>1
+inserting 3204<FIN>1
+inserting 320<FIN>14
+inserting 320<FIN>14
+inserting 320<FIN>41
+inserting 320<FIN>41
+inserting 32104<FIN>
+inserting 32104<FIN>
+inserting 3210<FIN>4
+inserting 3210<FIN>4
+inserting 32140<FIN>
+inserting 32140<FIN>
+inserting 3214<FIN>0
+inserting 3214<FIN>0
+inserting 321<FIN>04
+inserting 321<FIN>04
+inserting 321<FIN>40
+inserting 321<FIN>40
+inserting 32401<FIN>
+inserting 32401<FIN>
+inserting 3240<FIN>1
+inserting 3240<FIN>1
+inserting 32410<FIN>
+inserting 32410<FIN>
+inserting 3241<FIN>0
+inserting 3241<FIN>0
+inserting 324<FIN>01
+inserting 324<FIN>01
+inserting 324<FIN>10
+inserting 324<FIN>10
+inserting 32<FIN>014
+inserting 32<FIN>014
+inserting 32<FIN>041
+inserting 32<FIN>041
+inserting 32<FIN>104
+inserting 32<FIN>104
+inserting 32<FIN>140
+inserting 32<FIN>140
+inserting 32<FIN>401
+inserting 32<FIN>401
+inserting 32<FIN>410
+inserting 32<FIN>410
+inserting 34012<FIN>
+inserting 34012<FIN>
+inserting 3401<FIN>2
+inserting 3401<FIN>2
+inserting 34021<FIN>
+inserting 34021<FIN>
+inserting 3402<FIN>1
+inserting 3402<FIN>1
+inserting 340<FIN>12
+inserting 340<FIN>12
+inserting 340<FIN>21
+inserting 340<FIN>21
+inserting 34102<FIN>
+inserting 34102<FIN>
+inserting 3410<FIN>2
+inserting 3410<FIN>2
+inserting 34120<FIN>
+inserting 34120<FIN>
+inserting 3412<FIN>0
+inserting 3412<FIN>0
+inserting 341<FIN>02
+inserting 341<FIN>02
+inserting 341<FIN>20
+inserting 341<FIN>20
+inserting 34201<FIN>
+inserting 34201<FIN>
+inserting 3420<FIN>1
+inserting 3420<FIN>1
+inserting 34210<FIN>
+inserting 34210<FIN>
+inserting 3421<FIN>0
+inserting 3421<FIN>0
+inserting 342<FIN>01
+inserting 342<FIN>01
+inserting 342<FIN>10
+inserting 342<FIN>10
+inserting 34<FIN>012
+inserting 34<FIN>012
+inserting 34<FIN>021
+inserting 34<FIN>021
+inserting 34<FIN>102
+inserting 34<FIN>102
+inserting 34<FIN>120
+inserting 34<FIN>120
+inserting 34<FIN>201
+inserting 34<FIN>201
+inserting 34<FIN>210
+inserting 34<FIN>210
+inserting 3<FIN>0124
+inserting 3<FIN>0124
+inserting 3<FIN>0142
+inserting 3<FIN>0142
+inserting 3<FIN>0214
+inserting 3<FIN>0214
+inserting 3<FIN>0241
+inserting 3<FIN>0241
+inserting 3<FIN>0412
+inserting 3<FIN>0412
+inserting 3<FIN>0421
+inserting 3<FIN>0421
+inserting 3<FIN>1024
+inserting 3<FIN>1024
+inserting 3<FIN>1042
+inserting 3<FIN>1042
+inserting 3<FIN>1204
+inserting 3<FIN>1204
+inserting 3<FIN>1240
+inserting 3<FIN>1240
+inserting 3<FIN>1402
+inserting 3<FIN>1402
+inserting 3<FIN>1420
+inserting 3<FIN>1420
+inserting 3<FIN>2014
+inserting 3<FIN>2014
+inserting 3<FIN>2041
+inserting 3<FIN>2041
+inserting 3<FIN>2104
+inserting 3<FIN>2104
+inserting 3<FIN>2140
+inserting 3<FIN>2140
+inserting 3<FIN>2401
+inserting 3<FIN>2401
+inserting 3<FIN>2410
+inserting 3<FIN>2410
+inserting 3<FIN>4012
+inserting 3<FIN>4012
+inserting 3<FIN>4021
+inserting 3<FIN>4021
+inserting 3<FIN>4102
+inserting 3<FIN>4102
+inserting 3<FIN>4120
+inserting 3<FIN>4120
+inserting 3<FIN>4201
+inserting 3<FIN>4201
+inserting 3<FIN>4210
+inserting 3<FIN>4210
+inserting 40123<FIN>
+inserting 40123<FIN>
+inserting 4012<FIN>3
+inserting 4012<FIN>3
+inserting 40132<FIN>
+inserting 40132<FIN>
+inserting 4013<FIN>2
+inserting 4013<FIN>2
+inserting 401<FIN>23
+inserting 401<FIN>23
+inserting 401<FIN>32
+inserting 401<FIN>32
+inserting 40213<FIN>
+inserting 40213<FIN>
+inserting 4021<FIN>3
+inserting 4021<FIN>3
+inserting 40231<FIN>
+inserting 40231<FIN>
+inserting 4023<FIN>1
+inserting 4023<FIN>1
+inserting 402<FIN>13
+inserting 402<FIN>13
+inserting 402<FIN>31
+inserting 402<FIN>31
+inserting 40312<FIN>
+inserting 40312<FIN>
+inserting 4031<FIN>2
+inserting 4031<FIN>2
+inserting 40321<FIN>
+inserting 40321<FIN>
+inserting 4032<FIN>1
+inserting 4032<FIN>1
+inserting 403<FIN>12
+inserting 403<FIN>12
+inserting 403<FIN>21
+inserting 403<FIN>21
+inserting 40<FIN>123
+inserting 40<FIN>123
+inserting 40<FIN>132
+inserting 40<FIN>132
+inserting 40<FIN>213
+inserting 40<FIN>213
+inserting 40<FIN>231
+inserting 40<FIN>231
+inserting 40<FIN>312
+inserting 40<FIN>312
+inserting 40<FIN>321
+inserting 40<FIN>321
+inserting 41023<FIN>
+inserting 41023<FIN>
+inserting 4102<FIN>3
+inserting 4102<FIN>3
+inserting 41032<FIN>
+inserting 41032<FIN>
+inserting 4103<FIN>2
+inserting 4103<FIN>2
+inserting 410<FIN>23
+inserting 410<FIN>23
+inserting 410<FIN>32
+inserting 410<FIN>32
+inserting 41203<FIN>
+inserting 41203<FIN>
+inserting 4120<FIN>3
+inserting 4120<FIN>3
+inserting 41230<FIN>
+inserting 41230<FIN>
+inserting 4123<FIN>0
+inserting 4123<FIN>0
+inserting 412<FIN>03
+inserting 412<FIN>03
+inserting 412<FIN>30
+inserting 412<FIN>30
+inserting 41302<FIN>
+inserting 41302<FIN>
+inserting 4130<FIN>2
+inserting 4130<FIN>2
+inserting 41320<FIN>
+inserting 41320<FIN>
+inserting 4132<FIN>0
+inserting 4132<FIN>0
+inserting 413<FIN>02
+inserting 413<FIN>02
+inserting 413<FIN>20
+inserting 413<FIN>20
+inserting 41<FIN>023
+inserting 41<FIN>023
+inserting 41<FIN>032
+inserting 41<FIN>032
+inserting 41<FIN>203
+inserting 41<FIN>203
+inserting 41<FIN>230
+inserting 41<FIN>230
+inserting 41<FIN>302
+inserting 41<FIN>302
+inserting 41<FIN>320
+inserting 41<FIN>320
+inserting 42013<FIN>
+inserting 42013<FIN>
+inserting 4201<FIN>3
+inserting 4201<FIN>3
+inserting 42031<FIN>
+inserting 42031<FIN>
+inserting 4203<FIN>1
+inserting 4203<FIN>1
+inserting 420<FIN>13
+inserting 420<FIN>13
+inserting 420<FIN>31
+inserting 420<FIN>31
+inserting 42103<FIN>
+inserting 42103<FIN>
+inserting 4210<FIN>3
+inserting 4210<FIN>3
+inserting 42130<FIN>
+inserting 42130<FIN>
+inserting 4213<FIN>0
+inserting 4213<FIN>0
+inserting 421<FIN>03
+inserting 421<FIN>03
+inserting 421<FIN>30
+inserting 421<FIN>30
+inserting 42301<FIN>
+inserting 42301<FIN>
+inserting 4230<FIN>1
+inserting 4230<FIN>1
+inserting 42310<FIN>
+inserting 42310<FIN>
+inserting 4231<FIN>0
+inserting 4231<FIN>0
+inserting 423<FIN>01
+inserting 423<FIN>01
+inserting 423<FIN>10
+inserting 423<FIN>10
+inserting 42<FIN>013
+inserting 42<FIN>013
+inserting 42<FIN>031
+inserting 42<FIN>031
+inserting 42<FIN>103
+inserting 42<FIN>103
+inserting 42<FIN>130
+inserting 42<FIN>130
+inserting 42<FIN>301
+inserting 42<FIN>301
+inserting 42<FIN>310
+inserting 42<FIN>310
+inserting 43012<FIN>
+inserting 43012<FIN>
+inserting 4301<FIN>2
+inserting 4301<FIN>2
+inserting 43021<FIN>
+inserting 43021<FIN>
+inserting 4302<FIN>1
+inserting 4302<FIN>1
+inserting 430<FIN>12
+inserting 430<FIN>12
+inserting 430<FIN>21
+inserting 430<FIN>21
+inserting 43102<FIN>
+inserting 43102<FIN>
+inserting 4310<FIN>2
+inserting 4310<FIN>2
+inserting 43120<FIN>
+inserting 43120<FIN>
+inserting 4312<FIN>0
+inserting 4312<FIN>0
+inserting 431<FIN>02
+inserting 431<FIN>02
+inserting 431<FIN>20
+inserting 431<FIN>20
+inserting 43201<FIN>
+inserting 43201<FIN>
+inserting 4320<FIN>1
+inserting 4320<FIN>1
+inserting 43210<FIN>
+inserting 43210<FIN>
+inserting 4321<FIN>0
+inserting 4321<FIN>0
+inserting 432<FIN>01
+inserting 432<FIN>01
+inserting 432<FIN>10
+inserting 432<FIN>10
+inserting 43<FIN>012
+inserting 43<FIN>012
+inserting 43<FIN>021
+inserting 43<FIN>021
+inserting 43<FIN>102
+inserting 43<FIN>102
+inserting 43<FIN>120
+inserting 43<FIN>120
+inserting 43<FIN>201
+inserting 43<FIN>201
+inserting 43<FIN>210
+inserting 43<FIN>210
+inserting 4<FIN>0123
+inserting 4<FIN>0123
+inserting 4<FIN>0132
+inserting 4<FIN>0132
+inserting 4<FIN>0213
+inserting 4<FIN>0213
+inserting 4<FIN>0231
+inserting 4<FIN>0231
+inserting 4<FIN>0312
+inserting 4<FIN>0312
+inserting 4<FIN>0321
+inserting 4<FIN>0321
+inserting 4<FIN>1023
+inserting 4<FIN>1023
+inserting 4<FIN>1032
+inserting 4<FIN>1032
+inserting 4<FIN>1203
+inserting 4<FIN>1203
+inserting 4<FIN>1230
+inserting 4<FIN>1230
+inserting 4<FIN>1302
+inserting 4<FIN>1302
+inserting 4<FIN>1320
+inserting 4<FIN>1320
+inserting 4<FIN>2013
+inserting 4<FIN>2013
+inserting 4<FIN>2031
+inserting 4<FIN>2031
+inserting 4<FIN>2103
+inserting 4<FIN>2103
+inserting 4<FIN>2130
+inserting 4<FIN>2130
+inserting 4<FIN>2301
+inserting 4<FIN>2301
+inserting 4<FIN>2310
+inserting 4<FIN>2310
+inserting 4<FIN>3012
+inserting 4<FIN>3012
+inserting 4<FIN>3021
+inserting 4<FIN>3021
+inserting 4<FIN>3102
+inserting 4<FIN>3102
+inserting 4<FIN>3120
+inserting 4<FIN>3120
+inserting 4<FIN>3201
+inserting 4<FIN>3201
+inserting 4<FIN>3210
+inserting 4<FIN>3210
+inserting <FIN>01234
+inserting <FIN>01234
+inserting <FIN>01243
+inserting <FIN>01243
+inserting <FIN>01324
+inserting <FIN>01324
+inserting <FIN>01342
+inserting <FIN>01342
+inserting <FIN>01423
+inserting <FIN>01423
+inserting <FIN>01432
+inserting <FIN>01432
+inserting <FIN>02134
+inserting <FIN>02134
+inserting <FIN>02143
+inserting <FIN>02143
+inserting <FIN>02314
+inserting <FIN>02314
+inserting <FIN>02341
+inserting <FIN>02341
+inserting <FIN>02413
+inserting <FIN>02413
+inserting <FIN>02431
+inserting <FIN>02431
+inserting <FIN>03124
+inserting <FIN>03124
+inserting <FIN>03142
+inserting <FIN>03142
+inserting <FIN>03214
+inserting <FIN>03214
+inserting <FIN>03241
+inserting <FIN>03241
+inserting <FIN>03412
+inserting <FIN>03412
+inserting <FIN>03421
+inserting <FIN>03421
+inserting <FIN>04123
+inserting <FIN>04123
+inserting <FIN>04132
+inserting <FIN>04132
+inserting <FIN>04213
+inserting <FIN>04213
+inserting <FIN>04231
+inserting <FIN>04231
+inserting <FIN>04312
+inserting <FIN>04312
+inserting <FIN>04321
+inserting <FIN>04321
+inserting <FIN>10234
+inserting <FIN>10234
+inserting <FIN>10243
+inserting <FIN>10243
+inserting <FIN>10324
+inserting <FIN>10324
+inserting <FIN>10342
+inserting <FIN>10342
+inserting <FIN>10423
+inserting <FIN>10423
+inserting <FIN>10432
+inserting <FIN>10432
+inserting <FIN>12034
+inserting <FIN>12034
+inserting <FIN>12043
+inserting <FIN>12043
+inserting <FIN>12304
+inserting <FIN>12304
+inserting <FIN>12340
+inserting <FIN>12340
+inserting <FIN>12403
+inserting <FIN>12403
+inserting <FIN>12430
+inserting <FIN>12430
+inserting <FIN>13024
+inserting <FIN>13024
+inserting <FIN>13042
+inserting <FIN>13042
+inserting <FIN>13204
+inserting <FIN>13204
+inserting <FIN>13240
+inserting <FIN>13240
+inserting <FIN>13402
+inserting <FIN>13402
+inserting <FIN>13420
+inserting <FIN>13420
+inserting <FIN>14023
+inserting <FIN>14023
+inserting <FIN>14032
+inserting <FIN>14032
+inserting <FIN>14203
+inserting <FIN>14203
+inserting <FIN>14230
+inserting <FIN>14230
+inserting <FIN>14302
+inserting <FIN>14302
+inserting <FIN>14320
+inserting <FIN>14320
+inserting <FIN>20134
+inserting <FIN>20134
+inserting <FIN>20143
+inserting <FIN>20143
+inserting <FIN>20314
+inserting <FIN>20314
+inserting <FIN>20341
+inserting <FIN>20341
+inserting <FIN>20413
+inserting <FIN>20413
+inserting <FIN>20431
+inserting <FIN>20431
+inserting <FIN>21034
+inserting <FIN>21034
+inserting <FIN>21043
+inserting <FIN>21043
+inserting <FIN>21304
+inserting <FIN>21304
+inserting <FIN>21340
+inserting <FIN>21340
+inserting <FIN>21403
+inserting <FIN>21403
+inserting <FIN>21430
+inserting <FIN>21430
+inserting <FIN>23014
+inserting <FIN>23014
+inserting <FIN>23041
+inserting <FIN>23041
+inserting <FIN>23104
+inserting <FIN>23104
+inserting <FIN>23140
+inserting <FIN>23140
+inserting <FIN>23401
+inserting <FIN>23401
+inserting <FIN>23410
+inserting <FIN>23410
+inserting <FIN>24013
+inserting <FIN>24013
+inserting <FIN>24031
+inserting <FIN>24031
+inserting <FIN>24103
+inserting <FIN>24103
+inserting <FIN>24130
+inserting <FIN>24130
+inserting <FIN>24301
+inserting <FIN>24301
+inserting <FIN>24310
+inserting <FIN>24310
+inserting <FIN>30124
+inserting <FIN>30124
+inserting <FIN>30142
+inserting <FIN>30142
+inserting <FIN>30214
+inserting <FIN>30214
+inserting <FIN>30241
+inserting <FIN>30241
+inserting <FIN>30412
+inserting <FIN>30412
+inserting <FIN>30421
+inserting <FIN>30421
+inserting <FIN>31024
+inserting <FIN>31024
+inserting <FIN>31042
+inserting <FIN>31042
+inserting <FIN>31204
+inserting <FIN>31204
+inserting <FIN>31240
+inserting <FIN>31240
+inserting <FIN>31402
+inserting <FIN>31402
+inserting <FIN>31420
+inserting <FIN>31420
+inserting <FIN>32014
+inserting <FIN>32014
+inserting <FIN>32041
+inserting <FIN>32041
+inserting <FIN>32104
+inserting <FIN>32104
+inserting <FIN>32140
+inserting <FIN>32140
+inserting <FIN>32401
+inserting <FIN>32401
+inserting <FIN>32410
+inserting <FIN>32410
+inserting <FIN>34012
+inserting <FIN>34012
+inserting <FIN>34021
+inserting <FIN>34021
+inserting <FIN>34102
+inserting <FIN>34102
+inserting <FIN>34120
+inserting <FIN>34120
+inserting <FIN>34201
+inserting <FIN>34201
+inserting <FIN>34210
+inserting <FIN>34210
+inserting <FIN>40123
+inserting <FIN>40123
+inserting <FIN>40132
+inserting <FIN>40132
+inserting <FIN>40213
+inserting <FIN>40213
+inserting <FIN>40231
+inserting <FIN>40231
+inserting <FIN>40312
+inserting <FIN>40312
+inserting <FIN>40321
+inserting <FIN>40321
+inserting <FIN>41023
+inserting <FIN>41023
+inserting <FIN>41032
+inserting <FIN>41032
+inserting <FIN>41203
+inserting <FIN>41203
+inserting <FIN>41230
+inserting <FIN>41230
+inserting <FIN>41302
+inserting <FIN>41302
+inserting <FIN>41320
+inserting <FIN>41320
+inserting <FIN>42013
+inserting <FIN>42013
+inserting <FIN>42031
+inserting <FIN>42031
+inserting <FIN>42103
+inserting <FIN>42103
+inserting <FIN>42130
+inserting <FIN>42130
+inserting <FIN>42301
+inserting <FIN>42301
+inserting <FIN>42310
+inserting <FIN>42310
+inserting <FIN>43012
+inserting <FIN>43012
+inserting <FIN>43021
+inserting <FIN>43021
+inserting <FIN>43102
+inserting <FIN>43102
+inserting <FIN>43120
+inserting <FIN>43120
+inserting <FIN>43201
+inserting <FIN>43201
+inserting <FIN>43210
+inserting <FIN>43210
+<end of output>
+Test time =  25.72 sec
+----------------------------------------------------------
+Test Passed.
+"stream_hash_A" end time: Jan 19 19:33 CET
+"stream_hash_A" time elapsed: 00:00:25
+----------------------------------------------------------
+
+55/58 Testing: min_heap
+55/58 Test: min_heap
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_min_heap"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"min_heap" start time: Jan 19 19:33 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"min_heap" end time: Jan 19 19:33 CET
+"min_heap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+56/58 Testing: malo_pooled
+56/58 Test: malo_pooled
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_malo_pooled"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"malo_pooled" start time: Jan 19 19:33 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.45 sec
+----------------------------------------------------------
+Test Passed.
+"malo_pooled" end time: Jan 19 19:33 CET
+"malo_pooled" time elapsed: 00:00:00
+----------------------------------------------------------
+
+57/58 Testing: malo_nopool
+57/58 Test: malo_nopool
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_malo_nopool"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"malo_nopool" start time: Jan 19 19:33 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.46 sec
+----------------------------------------------------------
+Test Passed.
+"malo_nopool" end time: Jan 19 19:33 CET
+"malo_nopool" time elapsed: 00:00:00
+----------------------------------------------------------
+
+58/58 Testing: minmax
+58/58 Test: minmax
+Command: "/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/test_minmax"
+Directory: /Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests
+"minmax" start time: Jan 19 19:33 CET
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"minmax" end time: Jan 19 19:33 CET
+"minmax" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 19 19:33 CET
