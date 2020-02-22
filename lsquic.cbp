@@ -17,21 +17,31 @@
 					<DistClean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test">
+			<Target title="install/strip">
 				<Option working_dir="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 test"/>
+					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 install/strip"/>
 					<CompileFile command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rebuild_cache">
+			<Target title="install">
 				<Option working_dir="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 list_install_components"/>
 					<CompileFile command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
@@ -47,6 +57,56 @@
 					<DistClean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="install/local">
+				<Option working_dir="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="package">
+				<Option working_dir="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 package"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="package_source">
+				<Option working_dir="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 package_source"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="docs">
 				<Option working_dir="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic"/>
 				<Option type="4"/>
@@ -57,8 +117,8 @@
 					<DistClean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="http_client">
-				<Option output="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/http_client" prefix_auto="0" extension_auto="0"/>
+			<Target title="quic_perf">
+				<Option output="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/quic_perf" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -71,14 +131,14 @@
 					<Add directory="/usr/local/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 http_client"/>
+					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 quic_perf"/>
 					<CompileFile command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="http_client/fast">
-				<Option output="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/http_client" prefix_auto="0" extension_auto="0"/>
+			<Target title="quic_perf/fast">
+				<Option output="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/quic_perf" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -91,7 +151,7 @@
 					<Add directory="/usr/local/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 http_client/fast"/>
+					<Build command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 quic_perf/fast"/>
 					<CompileFile command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/Makefile&quot;  VERBOSE=1 clean"/>
@@ -3092,25 +3152,25 @@
 			<Option target="lsquic"/>
 		</Unit>
 		<Unit filename="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/http_client.c">
-			<Option target="http_client"/>
+			<Option target="quic_perf"/>
 		</Unit>
 		<Unit filename="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/prog.c">
-			<Option target="http_client"/>
+			<Option target="quic_perf"/>
 		</Unit>
 		<Unit filename="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/prog.h">
-			<Option target="http_client"/>
+			<Option target="quic_perf"/>
 		</Unit>
 		<Unit filename="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/test_cert.c">
-			<Option target="http_client"/>
+			<Option target="quic_perf"/>
 		</Unit>
 		<Unit filename="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/test_cert.h">
-			<Option target="http_client"/>
+			<Option target="quic_perf"/>
 		</Unit>
 		<Unit filename="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/test_common.c">
-			<Option target="http_client"/>
+			<Option target="quic_perf"/>
 		</Unit>
 		<Unit filename="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/test_common.h">
-			<Option target="http_client"/>
+			<Option target="quic_perf"/>
 		</Unit>
 		<Unit filename="/Users/aakash/MastersThesisTUM/2020/boringssl/lsquic/test/unittests/graph_cubic.c">
 			<Option target="graph_cubic"/>
