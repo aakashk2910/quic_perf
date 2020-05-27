@@ -81,8 +81,8 @@ as follows:
 1. Get the source code
 
 ```
-https://github.com/aakashk2910/lsquic.git
-cd lsquic
+https://github.com/aakashk2910/quic_perf.git
+cd quic_perf
 git submodule init
 git submodule update
 ```
