@@ -81,7 +81,7 @@ as follows:
 1. Get the source code
 
 ```
-git clone https://github.com/litespeedtech/lsquic.git
+https://github.com/aakashk2910/lsquic.git
 cd lsquic
 git submodule init
 git submodule update
@@ -100,28 +100,6 @@ make
 
 ```
 make test
-```
-
-Building with Docker
----------
-The library and the example client and server can be built with Docker.
-
-Initialize Git submodules:
-```
-cd lsquic
-git submodule init
-git submodule update
-```
-
-Build the Docker image:
-```
-docker build -t lsquic .
-```
-
-Then you can use the examples from the command line.  For example:
-```
-sudo docker run -it --rm lsquic http_client -s www.google.com  -p / -o version=Q046
-sudo docker run -p 12345:12345/udp -v /path/to/certs:/mnt/certs -it --rm lsquic http_server -c www.example.com,/mnt/certs/chain,/mnt/certs/key
 ```
 
 Platforms
